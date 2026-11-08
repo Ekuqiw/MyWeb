@@ -1,565 +1,923 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f5ee">
-  <meta name="description" content="王皓轩、余浩铭、李睿、余一男的七天宿舍生存计划。安排日常，处理夜归、约会与查寝，一起把日子过好。">
-  <title>113宿舍 · 室友生存计划</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%233e6655'/%3E%3Cpath d='M14 48V22l18-9 18 9v26M24 48V33h16v15' fill='none' stroke='%23f8f5ee' stroke-width='5'/%3E%3C/svg%3E">
-  <style>@charset "UTF-8";
-:root{--paper:#f8f5ee;--white:#fffdf8;--ink:#293d33;--muted:#818778;--line:#e5e2d6;--green:#426653;--coral:#d47758;--gold:#d8a952;--shadow:0 6px 20px #3f4b3310;--radius:18px;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
-*{box-sizing:border-box}body{margin:0}button,a,select{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button,a{touch-action:manipulation}button{color:inherit}button:disabled{cursor:default;opacity:.65}button:focus-visible,a:focus-visible,[role=button]:focus-visible{outline:3px solid var(--coral);outline-offset:5px}a{color:inherit;text-decoration:none}.icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.icon-definitions{position:absolute;width:0;height:0;overflow:hidden}.site-shell{max-width:1440px;margin:auto;padding:0 58px}.topbar{height:108px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px}.brand-mark{height:52px;width:58px;border:1.8px solid var(--green);border-radius:7px;background:var(--green);color:#f6f1dd;font:900 28px/33px Georgia,serif;text-align:center;transform:rotate(-5deg);box-shadow:3px 3px 0 #c4c9af;letter-spacing:-2px}.brand-mark span{display:block;font:8px/9px Arial,sans-serif;letter-spacing:3px;margin-left:3px}.brand-name{font-weight:800;font-size:21px;letter-spacing:1px}.brand-name small{display:block;font-weight:400;font-size:11px;letter-spacing:2px;color:var(--muted);margin-top:5px}.top-actions{display:flex;align-items:center;gap:16px}.save-status{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);margin-right:5px}.save-status>span,.live-dot{width:6px;height:6px;border-radius:50%;background:#77947c;display:inline-block}.icon-button{background:none;border:1px solid var(--line);border-radius:50%;width:37px;height:37px;display:grid;place-items:center}.icon-button .icon{width:18px;height:18px}.icon-button:hover,.help-button:hover{background:#eeecdf}.help-button{display:flex;align-items:center;gap:6px;background:none;border:0;font-size:12px;padding:10px 0 10px 5px}.help-button .icon{width:18px;height:18px}.intro{display:flex;align-items:center;justify-content:space-between;padding:36px 8px 28px;gap:30px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;display:flex;align-items:center;gap:9px}.tiny-star{font-size:21px;color:var(--coral)}.edition{margin-left:8px;color:#9a9f8e;font-size:9px;letter-spacing:1px;font-weight:400}.intro h1{position:relative;font-size:clamp(28px,3vw,43px);line-height:1.45;letter-spacing:1px;margin:7px 0 15px;font-weight:900;display:inline-block}.intro h1>span{color:var(--coral)}.title-squiggle{position:absolute;width:54%;height:12px;bottom:-3px;right:0;fill:none;stroke:#dba087;stroke-width:2.3;stroke-linecap:round}.intro p{margin:0;font-size:12px;color:#808679;line-height:1.9;letter-spacing:.3px}.mobile-break{display:none}.week-sticker{background:#f0ead7;position:relative;padding:16px 26px;border:1px solid #dcd4b8;outline:1px dashed #d4c7a7;outline-offset:-6px;transform:rotate(6deg);text-align:center;white-space:nowrap;margin-right:15px}.week-sticker span{display:block;font-size:8px;color:#92876d;letter-spacing:3px;line-height:1.8}.week-sticker strong{display:block;font-size:18px;letter-spacing:3px;padding:3px 0;color:#777c56}.week-progress{display:flex;align-items:center;gap:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 6px;margin-bottom:25px}.week-label{display:flex;align-items:center;gap:9px;font-size:12px;white-space:nowrap}.week-label>.icon{color:var(--coral);width:18px;height:18px}.week-label>span{font-size:11px;color:#9a9e90}.day-dots{display:flex;align-items:center;justify-content:space-between;flex:1;max-width:560px;list-style:none;margin:0;padding:0;position:relative}.day-dots:before{content:"";height:1px;background:var(--line);position:absolute;top:15px;left:3%;right:3%}.day-dots li{display:flex;align-items:center;gap:5px;position:relative;background:var(--paper);padding:0 5px;color:#999f90;font-size:10px}.day-dots b{display:grid;place-items:center;font-family:Georgia,serif;font-size:12px;width:29px;height:29px;border:1px solid #dfe1d4;border-radius:50%;font-weight:400}.day-dots .current{color:var(--green);font-weight:700}.day-dots .current b{background:var(--green);color:var(--paper);border-color:var(--green);box-shadow:0 0 0 4px #42665310}.day-dots .complete b{background:#e1e7da;border-color:#d5ddcd;color:var(--green)}.day-dots .icon{width:13px;height:13px}.week-caption{margin-left:auto;color:#9a9e90;font-size:10px}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:26px}.game-main{min-width:0}.room-card{border:1px solid #dedfd0;background:#eeeede;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}.room-bar{display:flex;align-items:center;height:49px;background:#f6f6eb;border-bottom:1px solid #e0e2d3;padding:0 22px;gap:18px;font-size:10px;color:#858b78}.room-bar h2{display:flex;align-items:center;gap:8px;font-size:12px;margin:0;letter-spacing:1px;color:var(--ink)}.weather{display:flex;align-items:center;gap:6px;margin-left:auto;font-size:10px}.weather .icon{width:15px;height:15px;color:#caa35e}.room-scene{position:relative;background:radial-gradient(ellipse at 48% 50%,#f8f4e5 20%,#f0efdf 70%);isolation:isolate;aspect-ratio:1000/600}.room-scene:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#b9b8a1 .7px,transparent .7px);background-size:6px 6px;z-index:-1}.room-caption{position:absolute;top:23px;left:27px;z-index:1}.room-caption strong{display:block;font-size:16px;font-weight:700;letter-spacing:1px}.room-caption>span:last-child{display:block;font-size:10px;color:#9a9d89;margin-top:8px}.paper-pin{display:none}.dorm-illustration{display:block;width:100%;height:100%;position:absolute;inset:0;overflow:visible}.scene-note{position:absolute;bottom:13px;right:22px;font-size:10px;color:#9c937e;letter-spacing:.3px;transform:rotate(-2deg)}.scene-note>span{font-size:15px;margin-right:4px}.room-bottom{display:flex;align-items:center;min-height:49px;padding:8px 20px;background:#f7f6eb;border-top:1px solid #e1e1d3;gap:12px}.room-bottom p{font-size:10px;color:#8a907d;margin:0}.online-members{display:flex;padding-left:5px}.mini-avatar{width:25px;height:25px;overflow:hidden;border-radius:50%;border:2px solid #f7f6eb;background:#e5e6d7;margin-left:-5px}.mini-avatar svg{width:100%;height:100%;transform:scale(1.5) translateY(2px)}.sketch-text{font:italic 13px Georgia,serif;color:#a09b7f;margin-left:auto;white-space:nowrap}.roommates-section{margin-top:25px}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:15px}.section-heading h2{font-size:14px;letter-spacing:.5px;margin:0;display:flex;align-items:center;gap:9px}.section-heading h2>span{font-size:10px;color:#939985;font-weight:400;letter-spacing:0}.section-heading>span{font-size:10px;color:#939985}.roommate-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.roommate-card{text-align:left;width:100%;border:1px solid var(--line);background:#fffdf8;border-radius:14px;padding:15px 12px 12px;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;overflow:hidden;box-shadow:0 3px 0 #e7e5da55}.roommate-card:hover{transform:translateY(-4px);border-color:#b9c7ae;box-shadow:0 8px 16px #3f4b3310}.roommate-card:before{content:"";position:absolute;width:75px;height:75px;top:-20px;right:-28px;border-radius:50%;background:var(--person-color);opacity:.12}.person-top{display:flex;align-items:center;gap:9px;position:relative}.avatar{width:43px;height:47px;background:var(--avatar-bg,#f1e5d1);border-radius:50%;flex-shrink:0;overflow:hidden}.avatar svg{width:100%;height:100%;transform:scale(1.1) translateY(2px)}.person-top h3{font-size:13px;letter-spacing:.5px;margin:0 0 5px}.person-role{font-size:9px;color:#8a8e7f;white-space:nowrap}.person-quote{font-size:10px;color:#a09d90;margin:12px 0 13px;line-height:1.65;min-height:32px}.assigned-activity{display:flex;align-items:center;justify-content:space-between;background:#f1f4eb;border-radius:7px;padding:8px 7px;gap:4px}.assigned-activity>span{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--green);white-space:nowrap}.assigned-activity .icon{width:13px;height:13px}.assigned-activity>.icon{width:13px;height:13px;color:#9fa98e;transform:rotate(-35deg)}.person-tag{display:inline-flex;align-items:center;gap:4px;font-size:8px;color:#9e8877;margin-top:10px;white-space:nowrap}.person-tag:before{content:"";height:4px;width:4px;background:#c8ad8f;border-radius:50%}.roommate-card[data-person="1"] .assigned-activity{background:#f8ebe6}.roommate-card[data-person="1"] .assigned-activity>span{color:#b57562}.roommate-card[data-person="2"] .assigned-activity{background:#eaf0f5}.roommate-card[data-person="2"] .assigned-activity>span{color:#6b8da9}.sidebar{display:flex;flex-direction:column;gap:17px}.status-card{border:1px solid var(--line);border-radius:16px;background:var(--white);padding:20px}.status-card .section-heading{margin-bottom:19px}.status-card .section-heading h2{font-size:13px}.status-label{font-size:9px!important;background:#eff3e8;color:#809073!important;padding:4px 7px;border-radius:4px}.budget{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;margin-bottom:16px;border-bottom:1px dashed #dfdfd1}.budget>div>span{display:block;font-size:10px;color:#8d937f;letter-spacing:.5px}.budget strong{display:flex;align-items:baseline;gap:4px;font-family:Georgia,"Microsoft YaHei",serif;font-size:35px;line-height:1.1;margin-top:8px;font-weight:400}.budget strong small{font-size:18px;margin-right:3px}.budget-icon{width:39px;height:39px;border-radius:50%;background:#f5ecce;color:#b99b54;display:grid;place-items:center}.budget-icon .icon{width:22px;height:22px}.metric{margin-top:14px}.metric-top{display:flex;align-items:center;gap:7px;margin-bottom:7px;font-size:10px}.metric-top>.icon{width:14px;height:14px;color:var(--metric-color)}.metric-number{margin-left:auto;display:flex;align-items:baseline;gap:3px;font-family:Arial,sans-serif;font-weight:700;font-size:12px}.metric-number small{font-size:9px;font-weight:400;color:#9ba18e}.metric-track{height:5px;background:#eeeee4;border-radius:20px;overflow:hidden}.metric-fill{height:100%;width:var(--value);background:var(--metric-color);border-radius:20px;transition:width .6s}.metric.low .metric-fill{background:#cf765c}.metric.low .metric-number{color:#c96952}.metric-delta{font-size:11px;font-family:Arial,sans-serif;color:#7b9270;margin-left:8px}.metric-delta.negative{color:#c68b70}.status-hint{font-size:9px;color:#a6a68e;margin:16px 0 0;line-height:1.7}.notice-card{position:relative;background:#f2e7c8;padding:21px 21px 15px;transform:rotate(1deg);border-radius:2px 2px 16px 2px;border:1px solid #e8dcb7;box-shadow:2px 4px 0 #e2d6b344}.tape{position:absolute;top:-7px;left:38%;width:66px;height:18px;background:#d8d9b3b0;transform:rotate(-7deg);clip-path:polygon(0 0,100% 4%,96% 91%,3% 100%)}.notice-kicker{font-size:9px;letter-spacing:2px;color:#9c8c62}.notice-card h3{font-size:21px;line-height:1.55;letter-spacing:1px;margin:11px 0 9px;font-weight:700;color:#655e3c}.notice-card p{font-size:10px;line-height:1.9;color:#9b8d65;margin:0}.notice-doodle{margin-top:12px;font-size:24px;color:#a8986d;text-align:right;transform:rotate(-5deg)}.notice-doodle span{font-size:10px;margin-left:4px}.forecast-card{padding:3px 3px 0}.forecast-card .section-heading{margin-bottom:9px}.forecast-card h2{font-size:11px}.forecast-card .section-heading>.icon{width:14px;height:14px;color:#c6a165}.forecast-chips{display:flex;flex-wrap:wrap;gap:6px}.forecast-chip{display:flex;align-items:center;gap:4px;font-size:9px;border:1px solid #e3e5d6;border-radius:5px;padding:5px 6px;background:#f2f4ea;color:#718367}.forecast-chip.negative{background:#f8eee5;color:#ad856d;border-color:#eddfd1}.forecast-chip .icon{width:11px;height:11px}.forecast-card p{font-size:9px;color:#a4a58f;line-height:1.8;margin:10px 0 0}.advance-button{display:flex;align-items:center;justify-content:space-between;background:var(--green);border:0;border-radius:11px;color:#f8f5e8;text-align:left;padding:16px 17px;box-shadow:0 4px 0 #2a4f3e;transition:transform .15s,background .15s}.advance-button:hover{background:#355945;transform:translateY(-2px)}.advance-button small{display:block;font-size:9px;color:#c4d3bb;font-weight:400;letter-spacing:1px;margin-bottom:4px}.advance-button strong{font-size:17px;letter-spacing:1px}.button-arrow{width:33px;height:33px;background:#ffffff14;border-radius:50%;display:grid;place-items:center}.button-arrow .icon{width:20px;height:20px}.reset-button{background:none;border:0;font-size:10px;color:#929985;display:flex;align-items:center;justify-content:center;gap:6px;margin:0}.reset-button:hover{color:var(--coral)}.reset-button .icon{width:12px;height:12px}.journal-section{margin:30px 0 0}.journal-section .section-heading{margin-bottom:13px}.journal-section h2>.icon{width:17px;height:17px;color:#879675}.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.journal-item{border:1px solid var(--line);border-radius:10px;padding:15px 17px;display:flex;gap:12px;background:#f5f3e9}.journal-day{font:italic 20px/1.4 Georgia,serif;color:#c1b79f;min-width:22px}.journal-item.event .journal-day{color:#cd9278}.journal-item p{font-size:11px;line-height:1.9;margin:0;color:#858b79}.journal-item p>span{font-size:9px;color:#aaa994;display:block;margin-top:4px}.journal-item:first-child{background:#faf2e4;border-color:#eadbc3}.journal-item:first-child p{color:#8e7f66}.journal-empty{grid-column:1/-1}footer{margin-top:37px;border-top:1px solid var(--line);padding:22px 0 25px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1px;color:#9ca18f;gap:14px}footer>span:first-child{font-size:8px}footer i{font-style:normal;padding:0 6px;color:#c5c4b3}.footer-dot{padding:0 8px}.room-character{cursor:pointer;transition:opacity .3s}.room-character:hover .character-body{filter:brightness(1.04)}.room-character .character-float{animation:breathe 4s ease-in-out infinite;transform-origin:50% 80%}.room-character:nth-child(2n) .character-float{animation-delay:-2s}.room-character .bubble{animation:float 6s ease-in-out infinite}.room-character.sleepy .character-float{animation:none}.room-character.sleepy .zzz{animation:float 3s ease-in-out infinite}.room-character.away .character-body{opacity:.25}.room-character text{font-family:"Microsoft YaHei",sans-serif}.night .room-scene{background:radial-gradient(ellipse at 48% 50%,#e4e6dd 20%,#daddcf 70%)}.night .weather{color:#78837b}.night .dorm-illustration{filter:saturate(.78)}
-dialog{padding:0;border:1px solid #e0dfd0;border-radius:23px;background:var(--white);color:var(--ink);max-width:min(530px,calc(100vw - 30px));width:100%;box-shadow:0 25px 100px #1e352f35;max-height:90dvh;overflow:auto}dialog::backdrop{background:#203b3480;backdrop-filter:blur(5px)}dialog[open]{animation:modal-in .2s ease-out}.modal-body{padding:34px;position:relative}.modal-close{position:absolute;right:17px;top:16px;width:30px;height:30px;border:0;background:#f0f0e6;display:grid;place-items:center;border-radius:50%;color:#8a927f}.modal-close .icon{width:16px;height:16px}.modal-kicker{display:block;font-size:10px;letter-spacing:2px;color:#909c7f;margin-bottom:8px}.modal-body h2{font-size:25px;letter-spacing:.5px;line-height:1.5;margin:0 0 12px}.modal-description{font-size:12px;line-height:2;color:#89917d;margin:0 0 23px}.action-person{display:flex;align-items:center;gap:12px;margin-bottom:18px}.action-person .avatar{height:58px;width:58px}.action-person strong{display:block;font-size:16px}.action-person small{display:block;color:#9a9f8c;font-size:10px;margin-top:6px}.action-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action-option{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:11px;background:#faf9f1;text-align:left;padding:14px 10px;position:relative;min-height:89px}.action-option.selected{border-color:var(--green);background:#edf3e6}.action-option>.icon{width:20px;height:20px;color:#8e9d7f;margin-top:2px}.action-option strong{font-size:12px;display:block;line-height:1.6}.action-option small{display:block;font-size:9px;line-height:1.8;margin-top:5px;color:#989e88}.selected-tick{position:absolute;right:6px;top:6px;background:var(--green);color:#fff;border-radius:50%;width:13px;height:13px;display:grid;place-items:center}.selected-tick .icon{width:9px;height:9px}.event-body{text-align:center;padding:33px 34px 27px}.event-illustration{width:82px;height:82px;background:#f2e7c8;border-radius:23px;display:grid;place-items:center;margin:0 auto 22px;transform:rotate(-7deg);border:1px solid #e5d6ad;color:#ac8b50}.event-illustration>.icon{width:42px;height:42px;transform:rotate(7deg);stroke-width:1.3}.event-body>.modal-description{text-align:left;margin:0 0 22px}.event-body h2{font-size:25px}.event-choices{display:grid;gap:10px}.event-choice{border:1px solid #d9dfcc;background:#f3f5eb;border-radius:11px;padding:15px 17px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px;transition:background .15s,transform .15s}.event-choice:hover{background:#e7efdd;transform:translateY(-1px)}.event-choice strong{font-size:12px;display:block;line-height:1.7}.event-choice small{font-size:10px;display:block;color:#9a9e85;margin-top:6px}.event-choice>.icon{width:17px;height:17px;color:#8c9c7b}.event-choice:nth-child(2){background:#faf7ee;border-color:#e5e0cf}.event-choice:nth-child(2):hover{background:#f1e9d8}.event-footnote{font-size:9px;color:#aaa993;letter-spacing:.6px;margin:22px 0 0}.help-step{display:flex;gap:16px;margin:23px 0}.help-step>b{font:italic 24px Georgia,serif;color:#c8b992}.help-step strong{font-size:13px}.help-step p{font-size:11px;line-height:1.9;color:#939b86;margin:6px 0 0}.help-save{font-size:10px;color:#a3a68f;margin:25px 0 17px}.solid-button{border:0;background:var(--green);color:#fffdf0;border-radius:9px;padding:13px 19px;font-size:12px;font-weight:700}.solid-button:hover{background:#355644}.help-save+.solid-button{width:100%}.secondary-button{border:1px solid var(--line);background:#f6f5eb;border-radius:9px;padding:12px 17px;font-size:12px}.reset-choices{display:flex;justify-content:flex-end;gap:9px}.ending-body{text-align:center}.ending-art{display:flex;align-items:flex-end;justify-content:center;margin:4px 0 22px}.ending-art .avatar{height:72px;width:65px;margin:0 -3px;border:3px solid var(--white);transform:rotate(-6deg)}.ending-art .avatar:nth-child(2n){transform:rotate(6deg);height:80px}.ending-badge{display:inline-block;background:#f0e4bc;color:#9b823e;border-radius:20px;padding:7px 15px;font-size:11px;letter-spacing:2px;margin-bottom:14px}.ending-body h2{font-size:25px}.ending-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:15px 0 25px}.ending-stat{min-width:60px}.ending-stat strong{display:block;font:25px Georgia,serif;color:#75886a}.ending-stat span{display:block;font-size:9px;color:#a1a48e;margin-top:6px}.ending-actions{display:flex;justify-content:center;gap:9px}.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);padding:13px 22px;background:#314f41;color:#f8f5e8;box-shadow:0 4px 20px #253b3330;font-size:12px;line-height:1.7;border-radius:11px;max-width:min(600px,calc(100vw - 32px));width:max-content;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:99;pointer-events:none}.toast.visible{opacity:1;transform:translate(-50%,0);visibility:visible}
-@keyframes breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes modal-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@media(min-width:1600px){.site-shell{max-width:1500px}.room-scene{aspect-ratio:1000/565}.intro{padding-top:40px;padding-bottom:33px}}
-@media(max-width:1180px){.site-shell{padding:0 30px}.game-layout{grid-template-columns:minmax(0,1fr) 252px;gap:20px}.week-caption{display:none}.day-dots{max-width:none}.intro h1{font-size:35px}.room-bar{padding:0 16px;gap:12px}.room-caption{top:18px;left:20px}.room-caption strong{font-size:13px}.roommates-section .section-heading>span{display:none}.person-top{gap:7px}.avatar{width:34px;height:38px}.person-top h3{font-size:12px}.person-role{font-size:8px}.roommate-card{padding:12px 9px}.roommate-grid{gap:8px}.person-quote{font-size:9px}.assigned-activity{padding:7px 4px}.assigned-activity>span{font-size:9px;gap:3px}.person-tag{font-size:7px}.sidebar{gap:14px}.status-card{padding:17px}.notice-card{padding:19px 17px 13px}.notice-card h3{font-size:19px}.scene-note{bottom:10px;font-size:8px}.sketch-text{font-size:11px}.room-bottom{padding:8px 14px;gap:7px}.room-bottom p{font-size:9px}.journal-item{padding:12px}.journal-item p{font-size:10px}}
-@media(max-width:900px){.site-shell{padding:0 23px}.topbar{height:90px}.intro{padding:30px 0 25px}.intro h1{font-size:32px}.week-sticker{padding:12px 17px;margin-right:4px}.week-sticker strong{font-size:15px}.week-sticker span{font-size:7px;letter-spacing:2px}.game-layout{grid-template-columns:minmax(0,1fr) 225px;gap:16px}.week-progress{gap:16px;padding:14px 0}.day-dots li{padding:0 3px}.day-dots li>span{display:none}.roommate-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.person-top .avatar{width:40px;height:43px}.person-top h3{font-size:13px}.person-role{font-size:9px}.person-quote{min-height:16px;margin:9px 0;font-size:10px}.assigned-activity{padding:8px}.assigned-activity>span{font-size:10px}.person-tag{font-size:8px;margin-top:7px}.weather{display:none}.room-scene{aspect-ratio:1000/680}.dorm-illustration{top:30px;height:calc(100% - 30px)}.room-caption strong{font-size:12px}.room-caption>span:last-child{font-size:8px}.scene-note{right:12px;font-size:7px}.sketch-text{display:none}.room-bottom p{font-size:8px}.notice-card h3{font-size:18px}.budget strong{font-size:31px}.journal{grid-template-columns:1fr 1fr}.journal-item:last-child{display:none}.journal-empty:last-child{display:flex}.week-label{font-size:11px;gap:7px}.section-heading h2{font-size:13px}.section-heading h2>span{font-size:9px}}
-@media(max-width:680px){.site-shell{padding:0 18px}.topbar{height:83px;gap:10px}.brand-mark{width:46px;height:44px;font-size:24px;line-height:28px}.brand-mark span{font-size:7px;line-height:8px;letter-spacing:2px}.brand-name{font-size:17px}.brand-name small{font-size:8px;letter-spacing:1.1px}.brand{gap:11px}.top-actions{gap:10px}.save-status{display:none}.help-button{padding-left:0;font-size:10px}.help-button>.icon{width:17px;height:17px}.icon-button{height:32px;width:32px}.icon-button .icon{width:16px;height:16px}.intro{padding:28px 0 23px;position:relative}.eyebrow{font-size:9px;letter-spacing:1px;gap:7px}.tiny-star{font-size:18px}.edition{font-size:8px;margin-left:2px}.intro h1{font-size:clamp(25px,6.7vw,37px);letter-spacing:.1px;line-height:1.5;margin:9px 0 12px}.intro p{font-size:10px;line-height:1.9}.mobile-break{display:block}.week-sticker{display:none}.week-progress{gap:12px;margin-bottom:18px;padding:13px 0}.week-label{font-size:10px;gap:5px}.week-label>.icon{width:15px;height:15px}.week-label>span{font-size:9px}.day-dots b{width:23px;height:23px;font-size:10px}.day-dots:before{top:11px}.day-dots li{padding:0 2px}.game-layout{grid-template-columns:1fr;gap:20px}.room-bar{height:42px;font-size:9px;padding:0 15px}.room-bar h2{font-size:11px}.room-bar>span:nth-child(2){margin-left:auto}.weather{display:none}.room-scene{aspect-ratio:1000/660}.room-caption{left:18px;top:17px}.room-caption strong{font-size:13px;letter-spacing:.3px}.room-caption>span:last-child{font-size:8px;margin-top:6px}.dorm-illustration{top:30px;height:calc(100% - 30px)}.scene-note{font-size:7px;right:15px;bottom:8px}.scene-note>span{font-size:11px}.room-bottom{padding:8px 15px;min-height:42px;gap:8px}.room-bottom p{font-size:9px}.roommates-section{margin-top:22px}.roommates-section .section-heading h2{font-size:13px;gap:6px}.section-heading h2>span{font-size:8px}.roommate-grid{gap:11px}.roommate-card{padding:14px 12px 12px}.person-top{gap:10px}.person-top .avatar{width:42px;height:46px}.person-top h3{font-size:14px}.person-role{font-size:9px}.person-quote{font-size:10px;margin:10px 0 12px;min-height:29px}.assigned-activity{padding:8px}.assigned-activity>span{font-size:11px}.person-tag{font-size:8px}.sidebar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;align-items:start}.status-card{grid-row:span 2;padding:15px 13px}.status-card .section-heading{gap:3px;margin-bottom:15px}.status-card .section-heading h2{font-size:12px}.status-label{font-size:7px!important;padding:3px 4px}.budget{padding-bottom:13px;margin-bottom:12px}.budget>div>span{font-size:9px}.budget strong{font-size:29px}.budget-icon{width:30px;height:30px}.budget-icon .icon{width:18px;height:18px}.budget strong small{font-size:15px}.metric{margin-top:13px}.metric-top{font-size:9px;gap:5px}.metric-top>.icon{height:12px;width:12px}.metric-number{font-size:11px}.metric-number small{font-size:8px}.status-hint{font-size:8px;line-height:1.9;margin-top:16px}.notice-card{padding:17px 13px 12px}.notice-kicker{font-size:8px;letter-spacing:1px}.notice-card h3{font-size:16px;margin:10px 0 8px;letter-spacing:.4px}.notice-card p{font-size:9px}.notice-doodle{margin-top:5px;font-size:20px}.notice-doodle span{font-size:8px}.forecast-card{padding:0 2px}.forecast-card h2{font-size:10px}.forecast-card .section-heading{margin-bottom:8px}.forecast-card p{font-size:8px;margin-top:8px}.forecast-chip{font-size:8px;padding:4px 5px;gap:3px}.forecast-chips{gap:4px}.advance-button{grid-column:1/-1;padding:15px 20px}.advance-button small{font-size:9px}.advance-button strong{font-size:18px}.reset-button{grid-column:1/-1;margin-top:-3px;font-size:10px;padding:3px}.journal-section{margin-top:25px}.journal{grid-template-columns:1fr;gap:9px}.journal-item{padding:13px 15px}.journal-item:nth-child(n+4){display:none}.journal-item:last-child{display:flex}.journal-item p{font-size:11px}.journal-item p>span{font-size:8px}.journal-section .section-heading{gap:5px}.journal-section h2{font-size:12px;gap:6px}.journal-count{font-size:9px!important}.journal-section h2>span{font-size:8px}footer{margin-top:27px;padding:18px 0;flex-direction:column;align-items:center;gap:12px;font-size:8px;letter-spacing:.6px}.modal-body{padding:29px 22px}.modal-body h2{font-size:23px}.modal-description{font-size:12px}.event-body{padding:29px 23px 23px}.event-body h2{font-size:23px}.event-illustration{width:68px;height:68px;margin-bottom:20px;border-radius:19px}.event-illustration>.icon{width:35px;height:35px}.event-choice{padding:13px 12px}.event-choice strong{font-size:11px}.event-choice small{font-size:9px}.action-options{gap:8px}.action-option{padding:12px 9px;gap:7px}.action-option strong{font-size:11px}.action-option small{font-size:8px}.action-option>.icon{width:18px;height:18px}.ending-art .avatar{width:57px;height:63px}.ending-art .avatar:nth-child(2n){height:70px}.ending-stats{gap:10px}.ending-stat{min-width:45px}.ending-stat strong{font-size:22px}.ending-stat span{font-size:8px}.ending-actions{gap:7px}.ending-actions button{padding:12px;font-size:11px}.toast{font-size:11px;bottom:20px;padding:12px 17px}.week-progress:has(.day-dots .current:last-child) .week-label{color:var(--coral)}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f3e8">
+  <meta name="description" content="113宿舍午夜大作战。控制王皓轩、余浩铭、李睿或余一男，三分钟搞定查寝、约会急送和深夜科研接应。">
+  <title>113宿舍 · 午夜大作战</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233e5948'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='900' font-size='29' fill='%23f8e3a7'%3E113%3C/text%3E%3C/svg%3E">
+  <style>:root{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:#2c3a32;background:#f7f3e8;--green:#405e4c;--orange:#d78150;--muted:#919581;--line:#e2e2d1;--paper:#fffdf4;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer;color:inherit}button:disabled{cursor:default}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:3px solid #df9c63;outline-offset:4px}a{color:inherit;text-decoration:none}.app-shell{max-width:1480px;margin:auto;padding:0 48px}.topbar{height:100px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;gap:15px;font-size:21px;font-weight:800;letter-spacing:1px}.brand>span:last-child>small{font-size:10px;font-weight:400;display:block;color:var(--muted);margin-top:6px;letter-spacing:2px}.brand-mark{display:block;width:64px;height:55px;background:var(--green);color:#f9e7b5;border-radius:8px;text-align:center;font:900 32px/39px Georgia,serif;letter-spacing:-1px;transform:rotate(-5deg);box-shadow:3px 3px 0 #c8cfb4}.brand-mark small{font:6px/9px Arial,sans-serif;letter-spacing:1.4px;display:block}.header-right{display:flex;gap:25px;align-items:center}.best{text-align:right}.best>span{display:block;font-size:9px;color:var(--muted);letter-spacing:1px}.best strong{display:block;margin-top:4px;font:700 20px "Courier New",monospace;color:#688260}.round-button{border:1px solid #dcdfcd;background:none;width:37px;height:37px;border-radius:50%;font-size:21px;position:relative;color:#73836b}.off-mark{font-size:12px;position:absolute;right:4px;bottom:4px;line-height:10px}.help-button{border:0;background:none;font-size:11px;padding:10px 0}.help-button>span{border:1px solid #929d86;border-radius:50%;height:16px;width:16px;display:inline-grid;place-items:center;margin-left:4px;font-size:11px}.hero{display:flex;align-items:center;justify-content:space-between;padding:32px 2px 28px;gap:25px}.eyebrow{font:9px/1.5 "Courier New",monospace;letter-spacing:1.5px;display:flex;gap:7px;align-items:center;font-weight:700;color:#78846b}.eyebrow>span:last-child{color:#a8ab95;font-size:8px;margin-left:10px;white-space:nowrap}.live-light{height:6px;width:6px;background:var(--orange);border-radius:50%}.hero h1{font-size:clamp(30px,3.3vw,47px);font-weight:900;letter-spacing:1px;margin:12px 0 13px;line-height:1.3}.hero h1>span:first-child{color:var(--orange);position:relative}.hero h1>span:first-child:after{content:"";height:6px;border-radius:50%;position:absolute;left:0;right:0;bottom:-5px;border-top:2px solid #dca981;transform:rotate(-2deg)}.title-star{font-size:28px;color:#d6b36b;display:inline-block;transform:rotate(15deg);margin-left:16px;vertical-align:middle}.hero p{font-size:11px;color:#8f9580;line-height:1.9;margin:0}.hero p>strong{color:#76866b;font-weight:500;margin-left:9px}.hero-note{transform:rotate(5deg);padding:14px 23px;background:#ece8cf;border:1px solid #dcd7b7;outline:1px dashed #d0c7a2;outline-offset:-5px;text-align:center;min-width:205px;margin-right:9px}.hero-note>span{font-size:7px;letter-spacing:1px;color:#9d9370}.hero-note strong{display:block;font-size:20px;color:#76754e;margin:6px 0}.hero-note small{font-size:9px;color:#a49a78}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:23px;align-items:start}.arena-panel{min-width:0}.game-hud{display:flex;align-items:center;gap:20px;background:#425c4b;color:#f8f0d6;border-radius:15px 15px 0 0;padding:15px 20px;border-bottom:2px solid #283d32}.level-badge{display:flex;align-items:center;gap:12px;flex:1}.level-badge>span{font:italic 30px Georgia,serif;color:#dcc886;line-height:1}.level-badge small{font-size:8px;color:#b6c7ad;display:block;letter-spacing:1px;margin-bottom:5px}.level-badge strong{font-size:13px;letter-spacing:1px}.hud-timer{text-align:center;padding:0 25px;border-left:1px solid #667c62;border-right:1px solid #667c62;min-width:125px}.hud-timer small,.hud-score small{display:block;font-size:8px;letter-spacing:1px;color:#bbcaad;margin-bottom:4px}.hud-timer>strong{font:700 29px/1.1 "Courier New",monospace;letter-spacing:0}.hud-timer.urgent>strong{color:#ffc18e;animation:urgent .6s infinite alternate}.hud-score{min-width:80px;text-align:right}.hud-score strong{font:700 24px/1.2 "Courier New",monospace;color:#f3d489}.pause-button{color:#e0e9cd;border:1px solid #75886c;border-radius:7px;background:#ffffff09;height:31px;width:31px;letter-spacing:2px;font-size:15px;padding:0 0 0 2px}.pause-button:disabled{opacity:.3}.canvas-wrap{position:relative;aspect-ratio:1000/620;background:#263a36;overflow:hidden;isolation:isolate;border-left:1px solid #34483e;border-right:1px solid #34483e}canvas{display:block;width:100%;height:100%;touch-action:none;outline-offset:-4px!important;cursor:crosshair}.canvas-overlay{position:absolute;inset:0;z-index:4;display:flex;align-items:center;justify-content:center;background:#132d2782;backdrop-filter:blur(3px);padding:18px}.canvas-overlay.hidden{display:none}.overlay-card{width:min(430px,100%);background:#faf5e5;border:2px solid #ece2c5;border-radius:15px;padding:26px 29px;text-align:center;box-shadow:0 15px 0 #152f2430;max-height:100%;overflow:auto}.overlay-kicker{font:700 9px "Courier New",monospace;letter-spacing:2px;color:#a59a74}.overlay-card h2{font-size:30px;line-height:1.5;letter-spacing:1px;margin:11px 0 9px}.overlay-card h2 em{font-style:normal;color:var(--orange)}.overlay-card p{font-size:11px;color:#92977d;line-height:1.9;margin:0 0 17px}.overlay-portrait{width:58px;height:63px;display:block;margin:12px auto 0}.overlay-portrait svg{width:100%;height:100%}.primary-button{border:0;border-radius:8px;background:var(--green);color:#f6f2d7;padding:13px 22px;font-size:13px;font-weight:700;box-shadow:0 3px 0 #294332;letter-spacing:.6px}.primary-button:hover{background:#33513e;transform:translateY(-1px)}.overlay-card .primary-button{width:100%;padding:14px;margin-top:3px}.secondary-button{background:none;border:1px solid #d6dbc4;border-radius:7px;padding:9px 17px;font-size:10px;color:#899275}.overlay-card .secondary-button{margin-top:13px}.overlay-keyboard{display:flex;justify-content:center;gap:14px;font-size:8px;color:#a1a38a;margin-top:17px}.overlay-instructions{display:flex;justify-content:center;gap:10px;margin:15px 0 18px}.overlay-instructions>span{background:#edeeda;border:1px solid #dfe4ca;border-radius:7px;padding:8px 12px;font-size:10px;line-height:1.7}.overlay-instructions b{font-size:18px;display:block;line-height:1.5}.overlay-selected{margin:11px 0 15px;display:flex;justify-content:center;gap:6px;font-size:10px;color:#7c8b6d}.result-stat-row{display:flex;justify-content:center;gap:26px;padding:13px 0 18px}.result-stat-row strong{display:block;font:700 26px "Courier New",monospace;color:#697e59}.result-stat-row span{font-size:8px;color:#a1a186;display:block;margin-top:4px}.overlay-grade{font:900 55px Georgia,serif;color:#d0a55c;line-height:1.1;margin:9px 0}.new-record{display:inline-block;font-size:9px;background:#f0d991;color:#9e7e37;padding:4px 10px;border-radius:20px;margin:0 0 9px}.canvas-overlay:has(.overlay-card.end-card){background:#182d24b0}.combo-pop{position:absolute;top:20px;left:23px;pointer-events:none;color:#f2cf70;z-index:2;font:900 23px "Courier New",monospace;text-shadow:2px 2px #293a36;transform:rotate(-5deg)}.combo-pop small{font-size:10px;display:block;color:#f0e6b7;letter-spacing:2px;margin-top:3px}.arena-bottom{background:#eeefdd;border:1px solid #d9dfc7;border-top:0;border-radius:0 0 12px 12px;display:flex;justify-content:space-between;gap:10px;padding:13px 17px;min-height:47px;align-items:center}#game-hint{display:flex;align-items:center;gap:8px;font-size:10px;color:#7b896c;line-height:1.7}#game-hint>span:first-child{font:20px Georgia,serif;color:#cc9d61}.keyboard-tip{font-size:8px;color:#98a184;white-space:nowrap}kbd{font:9px "Courier New",monospace;display:inline-block;border:1px solid #d4d9c2;border-bottom-width:2px;padding:2px 4px;border-radius:3px;margin:0 3px;background:#f6f7e9;color:#8c977b}.below-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:9px;color:#9fa38b;padding:11px 1px 0;line-height:1.8}.below-controls>button{background:none;border:0;color:#9a9f86;font-size:9px;padding:2px;white-space:nowrap}.sidebar{display:flex;flex-direction:column;gap:13px}.mission-card,.chaos-card,.skill-card,.group-card{border:1px solid var(--line);border-radius:13px;padding:17px;background:var(--paper)}.card-heading{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-bottom:13px}.card-heading h2{font-size:12px;letter-spacing:.5px;margin:0;display:flex;align-items:center;gap:6px}.card-heading>span{font-size:9px;color:#9ba28b}.mission-card .card-heading>span{font:700 13px "Courier New",monospace;color:#83996d}.level-route{display:flex;align-items:center;gap:6px;margin:6px 0 14px}.level-route>span{display:grid;place-items:center;font:700 10px "Courier New",monospace;height:24px;width:24px;border-radius:50%;border:1px solid #dce0cd;color:#a5ad93}.level-route>span.active{background:#e7eccf;color:#6c8353;border-color:#c4d1a8}.level-route>span.done{background:#45604c;color:#f6e5ac;border-color:#45604c}.level-route>i{height:1px;background:#e4e6d7;flex:1}.mission-card>p{font-size:10px;color:#969c86;line-height:1.9;margin:0 0 13px}#task-list{margin:0;padding:0;list-style:none}#task-list>li{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:10px;color:#717f65;line-height:1.6}#task-list>li>span:first-child{font-size:16px;width:22px;flex-shrink:0;text-align:center}#task-list>li>small{font-size:8px;color:#a4a892;margin-left:auto}#task-list>li.done{opacity:.4;text-decoration:line-through}.task-check{margin-left:auto;font-size:11px;color:#75896b}.carrying{background:#f1f1e0;border-radius:7px;padding:10px;margin-top:11px;border:1px dashed #d9dfc4}.carrying>span{font-size:11px;display:block;line-height:1.6;color:#81916c}.carrying>small{font-size:8px;color:#a0a58b;display:block;margin-top:5px;line-height:1.7}.carrying.active{background:#f3e4c4;border-color:#dbc18f}.carrying.active>span{color:#a27d43}.carrying.active>small{color:#b19770}.chaos-card{padding:14px 17px}.chaos-card .card-heading{margin-bottom:10px}.chaos-track{height:6px;background:#eeefdf;border-radius:8px;overflow:hidden}.chaos-track>div{height:100%;width:0;background:#b4c28d;border-radius:8px;transition:width .15s}.chaos-card>p{font-size:9px;color:#a4a68b;margin:9px 0 0}.chaos-card.danger .chaos-track>div{background:#d78969}.chaos-card.danger .card-heading strong{color:#ca8061}.skill-card{background:#ecefdb;border-color:#d6dec5;padding:14px}.skill-card .card-heading{margin:0 0 10px}.skill-card .card-heading>span{font:8px "Courier New",monospace;border:1px solid #c9d3b7;border-radius:3px;padding:2px 4px;color:#8a9a75}#skill-button{display:flex;align-items:center;gap:9px;text-align:left;border:0;background:none;width:100%;padding:0}.skill-icon{font-size:25px}#skill-button strong{font-size:11px;display:block;white-space:nowrap}#skill-button small{font-size:8px;color:#9ba888;display:block;margin-top:5px;line-height:1.7}#skill-cooldown{margin-left:auto;background:#d8e1ba;border:1px solid #c7d3a5;border-radius:5px;font:9px "Courier New",monospace;color:#7a8e5d;padding:6px;white-space:nowrap}#skill-button:disabled #skill-cooldown{background:#e1e5d0;color:#9ca68c;border-color:#d3dac4}.group-card{padding:14px 16px}.group-card .card-heading{margin-bottom:13px}.group-card .card-heading h2{font-size:10px}.group-dot{height:5px;width:5px;background:#9fb382;border-radius:50%}.chat-feed{display:flex;flex-direction:column;gap:11px;max-height:145px;overflow:hidden}.chat-message{display:flex;gap:7px;align-items:flex-start;animation:chat-in .22s ease-out}.chat-avatar{width:25px;height:28px;border-radius:7px;background:#efebd7;overflow:hidden;flex-shrink:0}.chat-avatar svg{width:100%;height:100%}.chat-message strong{display:block;font-size:8px;color:#9aa18b;margin-bottom:4px;font-weight:400}.chat-message p{font-size:9px;line-height:1.8;margin:0;color:#89927a}.cast-section{margin-top:24px}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px}.section-heading h2{margin:0;font-size:13px;letter-spacing:.6px}.section-heading>span{font-size:9px;color:#9ca28a}.character-select{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.character-card{position:relative;display:flex;align-items:center;text-align:left;gap:11px;border:1px solid #e0e2d2;background:#faf9ee;border-radius:11px;padding:13px 15px;overflow:hidden;transition:border-color .15s,background .15s,transform .15s}.character-card:hover:enabled{transform:translateY(-3px);border-color:#b9c5a6}.character-card.selected{border-color:#9daf85;background:#eaf0dc;box-shadow:0 0 0 2px #d7dfbf60}.character-card:disabled{opacity:.6}.character-card.selected:disabled{opacity:1}.character-portrait{height:55px;width:49px;flex-shrink:0}.character-portrait svg{width:100%;height:100%}.character-info strong{font-size:12px;display:block}.character-info>span{font-size:8px;color:#a4a68d;display:block;margin:5px 0}.character-info p{font-size:9px;line-height:1.7;margin:5px 0 0;color:#83966e}.selected-label{position:absolute;top:6px;right:8px;color:#88a06b;font-size:7px}footer{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:23px 0;margin-top:29px;font-size:8px;letter-spacing:.7px;color:#a2a58f;gap:13px}footer i{font-style:normal;margin:0 6px;color:#c2b48e}.mobile-movement,.mobile-action{display:none}dialog{border:1px solid #dfe2ce;border-radius:18px;background:var(--paper);color:#3d4d3b;width:min(490px,calc(100vw - 30px));padding:0;box-shadow:0 15px 80px #18312440;max-height:90dvh;overflow:auto}dialog::backdrop{background:#213c347d;backdrop-filter:blur(4px)}.help-content{padding:30px;position:relative}#close-help{position:absolute;top:13px;right:15px;border:0;background:#eceddf;color:#929b81;height:27px;width:27px;border-radius:50%;font-size:19px}.dialog-kicker{font-size:9px;letter-spacing:1px;color:#a0aa8d}.help-content h2{font-size:25px;margin:13px 0 23px}.help-content ol{list-style:none;counter-reset:step;padding:0;margin:0}.help-content li{position:relative;padding-left:35px;margin-bottom:20px;counter-increment:step}.help-content li:before{content:"0" counter(step);position:absolute;left:0;font:italic 22px Georgia,serif;color:#c1b58b}.help-content li strong{font-size:12px}.help-content li p{font-size:10px;line-height:1.9;color:#969d84;margin:7px 0 0}.help-extra{font-size:9px;color:#a4ab90;line-height:1.8;margin:5px 0 21px}.help-content>.primary-button{width:100%}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,15px);font-size:11px;line-height:1.8;padding:11px 20px;border-radius:8px;background:#345241;color:#f5f2d7;z-index:20;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;width:max-content;max-width:calc(100vw - 35px);pointer-events:none}.toast.visible{opacity:1;visibility:visible;transform:translate(-50%,0)}.running .character-card:disabled{cursor:default}.freeze-badge{color:#a8d3f2!important}.urgent-frame{box-shadow:inset 0 0 0 2px #df9164}.overlay-card .round-label{font-size:12px;color:#9ea582;margin:12px 0 7px}.overlay-card .level-preview{background:#ededd9;border:1px solid #dce1c7;border-radius:8px;padding:11px;font-size:11px;line-height:1.8;margin:15px 0}.overlay-selected b{color:#5c7950}.saved-note{font-size:9px;color:#a4a98b;margin-top:12px}.overlay-actions{display:flex;gap:8px;justify-content:center;margin-top:12px}.overlay-actions .secondary-button{margin:0;flex:1}.overlay-card .overlay-actions .primary-button{margin:0;flex:1;width:auto;padding:11px;font-size:11px}
+.task-button{display:flex;align-items:center;gap:8px;width:100%;text-align:left;border:0;background:none;padding:0;color:inherit;font-size:10px;line-height:1.6}.task-button>span:first-child{font-size:16px;width:22px;flex-shrink:0;text-align:center}.task-button>small{font-size:8px;color:#a4a892;margin-left:auto}.task-button:enabled:hover{color:#c58b4e}.task-button:disabled{cursor:default}.task-button:disabled:not(.done .task-button)>small{color:#b3b29a}#deliver-button{background:#e9cc91;border:1px solid #dbc08a;color:#846d3e;border-radius:5px;font-size:9px;padding:6px 8px;margin-top:7px;width:100%;text-align:left}.freeze-badge strong{color:#c1e8f8!important}
+@keyframes urgent{to{opacity:.5}}@keyframes chat-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1180px){.app-shell{padding:0 28px}.game-layout{grid-template-columns:minmax(0,1fr) 240px;gap:18px}.hero h1{font-size:36px}.game-hud{gap:14px;padding:13px 16px}.hud-timer{padding:0 16px;min-width:107px}.hud-timer strong{font-size:26px}.hud-score{min-width:67px}.hud-score strong{font-size:21px}.keyboard-tip{display:none}.character-card{padding:12px 10px;gap:8px}.character-portrait{width:39px;height:46px}.character-info strong{font-size:11px}.character-info p{font-size:8px}.character-info>span{font-size:7px}.mission-card,.chaos-card,.group-card{padding:14px}.overlay-card{padding:22px 25px}.overlay-card h2{font-size:27px}.overlay-card .overlay-portrait{width:49px;height:52px;margin-top:7px}.overlay-instructions{margin:10px 0 13px}.overlay-card p{font-size:10px;margin-bottom:12px}.overlay-selected{font-size:9px;margin:10px 0 12px}}
+@media(max-width:930px){.app-shell{padding:0 23px}.topbar{height:88px}.hero{padding:26px 0 23px}.hero h1{font-size:33px}.hero-note{padding:12px 16px;min-width:170px}.hero-note strong{font-size:17px}.hero-note small{font-size:8px}.hero-note>span{font-size:6px}.game-layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.mission-card{grid-row:span 2}.group-card{grid-column:2/4}.group-card .chat-feed{flex-direction:row;max-height:75px;gap:15px}.group-card .chat-message{flex:1;min-width:0}.group-card .chat-message:nth-child(n+3){display:none}.game-hud{padding:14px 20px}.hero p{font-size:10px}.canvas-wrap{aspect-ratio:1000/620}.overlay-card{padding:25px 30px}.overlay-card h2{font-size:30px}.overlay-card .overlay-portrait{height:62px;width:57px}.overlay-card p{font-size:11px;margin:0 0 17px}.overlay-instructions{margin:15px 0}.cast-section{margin-top:22px}.character-select{grid-template-columns:repeat(2,minmax(0,1fr))}.character-card{padding:14px 17px;gap:12px}.character-portrait{width:46px;height:52px}.character-info strong{font-size:13px}.character-info>span{font-size:8px}.character-info p{font-size:10px}.section-heading>span{font-size:8px}.keyboard-tip{display:block;font-size:8px}.below-controls>span{font-size:9px}.hero h1{margin-top:13px}.hero p>strong{margin-left:6px}}
+@media(max-width:600px){.app-shell{padding:0 13px}.topbar{height:79px;gap:10px}.brand{font-size:16px;gap:10px}.brand-mark{height:44px;width:51px;font-size:27px;line-height:31px}.brand-mark small{font-size:5px;letter-spacing:.8px}.brand>span:last-child>small{font-size:8px;letter-spacing:1px}.header-right{gap:13px}.best>span{font-size:7px}.best strong{font-size:16px}.round-button{height:29px;width:29px;font-size:17px}.help-button{font-size:9px}.help-button>span{display:none}.hero{padding:25px 1px 21px}.hero h1{font-size:30px;letter-spacing:.3px;margin:10px 0 12px;white-space:nowrap}.title-star{font-size:22px;margin-left:9px}.hero p{font-size:9px;line-height:1.9}.hero p>strong{display:block;margin:3px 0 0}.eyebrow{font-size:7px;letter-spacing:.8px;gap:5px}.eyebrow>span:last-child{font-size:6px;margin-left:3px}.hero-note{display:none}.game-hud{gap:10px;padding:12px 12px;border-radius:12px 12px 0 0}.level-badge{gap:8px}.level-badge>span{font-size:25px}.level-badge small{font-size:6px;letter-spacing:.3px;margin-bottom:4px}.level-badge strong{font-size:11px;letter-spacing:.3px}.hud-timer{min-width:82px;padding:0 10px}.hud-timer strong{font-size:23px}.hud-timer small,.hud-score small{font-size:6px;margin-bottom:3px}.hud-score{min-width:57px}.hud-score strong{font-size:19px}.pause-button{height:26px;width:26px;font-size:12px;letter-spacing:1px}.canvas-wrap{aspect-ratio:1000/760}.canvas-wrap canvas{position:absolute;inset:0;height:100%;object-fit:fill}.canvas-overlay{padding:12px}.overlay-card{padding:18px 18px 17px;border-radius:12px}.overlay-card h2{font-size:23px;margin:7px 0}.overlay-kicker{font-size:7px;letter-spacing:1px}.overlay-card p{font-size:9px;line-height:1.9;margin-bottom:10px}.overlay-card .overlay-portrait{height:39px;width:36px;margin-top:3px}.overlay-instructions{margin:9px 0 12px;gap:7px}.overlay-instructions>span{font-size:8px;padding:5px 11px;border-radius:5px}.overlay-instructions b{font-size:15px}.overlay-selected{font-size:8px;margin:6px 0 10px}.overlay-card .primary-button{font-size:12px;padding:11px;box-shadow:0 2px 0 #294332}.overlay-keyboard{display:none}.overlay-card .secondary-button{margin-top:10px;font-size:9px;padding:7px 15px}.saved-note{font-size:8px;margin-top:8px}.overlay-grade{font-size:39px;margin:5px 0}.result-stat-row{gap:22px;padding:8px 0 12px}.result-stat-row strong{font-size:23px}.result-stat-row span{font-size:7px}.overlay-card .level-preview{font-size:9px;margin:9px 0;padding:8px}.overlay-card .round-label{font-size:10px;margin:8px 0 4px}.new-record{font-size:8px;padding:3px 9px}.arena-bottom{padding:9px 12px;min-height:45px}.keyboard-tip{display:none}#game-hint{font-size:9px;gap:5px}#game-hint>span:first-child{font-size:17px}.below-controls{padding-top:9px;font-size:8px;gap:6px}.below-controls>span{font-size:8px;line-height:1.7;max-width:70%}.below-controls>button{font-size:8px}.below-controls kbd{display:none}.sidebar{gap:10px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.mission-card{grid-row:span 3}.group-card{grid-column:1/-1}.mission-card,.chaos-card,.skill-card,.group-card{padding:12px;border-radius:10px}.card-heading{margin-bottom:9px}.card-heading h2{font-size:10px;letter-spacing:.2px}.card-heading>span{font-size:8px}.mission-card>p{font-size:8px;line-height:1.8;margin-bottom:8px}.level-route{gap:4px;margin:6px 0 10px}.level-route>span{height:20px;width:20px;font-size:8px}#task-list>li{font-size:9px;gap:5px;padding:6px 0}#task-list>li>span:first-child{font-size:14px;width:17px}#task-list>li>small{font-size:7px}.carrying{padding:8px;margin-top:9px}.carrying>span{font-size:10px}.carrying>small{font-size:7px}.chaos-card>p{font-size:8px;line-height:1.7}.chaos-track{height:5px}.skill-card .card-heading{margin-bottom:10px}.skill-card .card-heading>span{font-size:6px}.skill-icon{font-size:20px}#skill-button{gap:5px;flex-wrap:wrap}#skill-button strong{font-size:10px}#skill-button small{font-size:7px;line-height:1.7;max-width:95px}#skill-cooldown{font-size:8px;padding:4px;position:absolute;top:11px;right:12px}.skill-card{position:relative}.skill-card .card-heading>span{display:none}.group-card .chat-feed{max-height:76px;gap:12px}.group-card .card-heading h2{font-size:10px}.chat-message p{font-size:8px}.chat-message strong{font-size:7px}.chat-avatar{height:23px;width:22px}.cast-section{margin-top:22px}.section-heading{align-items:start;flex-direction:column;gap:7px;margin-bottom:11px}.section-heading h2{font-size:12px}.section-heading>span{font-size:8px}.character-select{gap:9px}.character-card{padding:11px 10px;gap:8px;border-radius:9px}.character-portrait{height:43px;width:35px}.character-info strong{font-size:11px}.character-info>span{font-size:7px;margin:4px 0}.character-info p{font-size:8px;line-height:1.6;max-width:102px}.selected-label{font-size:6px;right:5px;top:5px}.game-layout{gap:17px}footer{flex-direction:column;align-items:center;gap:12px;font-size:7px;margin-top:25px;padding:19px 0;letter-spacing:.4px}footer i{margin:0 5px}.combo-pop{top:13px;left:14px;font-size:18px}.combo-pop small{font-size:8px}.help-content{padding:25px 22px}.help-content h2{font-size:23px}.help-content li strong{font-size:11px}.help-content li p{font-size:9px}.help-content li{margin-bottom:17px;padding-left:30px}.help-content li:before{font-size:20px}.dialog-kicker{font-size:8px}.help-extra{font-size:8px}.running .mobile-movement,.running .mobile-action{display:flex}.mobile-movement{position:absolute;bottom:16px;left:15px;width:85px;height:85px;border-radius:50%;background:#e8ead124;border:1px solid #f4f3d152;z-index:2;align-items:center;justify-content:center;touch-action:none;user-select:none}.mobile-movement>span{width:29px;height:29px;border:1px solid #f3f2d345;border-radius:50%}.mobile-movement>div{position:absolute;top:25px;left:25px;height:33px;width:33px;border-radius:50%;background:#f6e6a481;border:1px solid #fff1b8aa;pointer-events:none}.mobile-action{position:absolute;bottom:20px;right:14px;align-items:flex-end;gap:13px;z-index:2;touch-action:none}.mobile-action button{user-select:none;-webkit-user-select:none;touch-action:none;border:1px solid #f8ebbd8c;background:#e8c36dd4;color:#444f34;border-radius:50%;width:59px;height:59px;font-size:12px;font-weight:700;box-shadow:0 4px 0 #2b3c3260}.mobile-action button:first-child{height:45px;width:45px;font-size:9px;background:#b9cea5d9;color:#3b5544;border-color:#dbedc5a0}.mobile-action small{display:block;font-size:6px;font-weight:400;letter-spacing:.3px;margin-top:3px}.mobile-action button>span{display:none}.mobile-action button:active{transform:translateY(3px);box-shadow:none}.mobile-action button:disabled{opacity:.45}.overlay-card .overlay-actions .primary-button{font-size:10px;padding:10px}.overlay-card .overlay-actions .secondary-button{font-size:9px;padding:9px;margin:0}}
+@media(hover:none) and (min-width:601px){.running .mobile-movement,.running .mobile-action{display:flex}.mobile-movement{position:absolute;bottom:18px;left:20px;width:100px;height:100px;border:1px solid #e6ebd254;border-radius:50%;background:#e4e9d426;align-items:center;justify-content:center;touch-action:none;z-index:2}.mobile-movement>div{width:40px;height:40px;background:#f4df9580;border-radius:50%;position:absolute;left:30px;top:30px}.mobile-action{position:absolute;right:20px;bottom:23px;gap:14px;z-index:2}.mobile-action button{height:65px;width:65px;border-radius:50%;border:1px solid #f9e5a5;background:#e8c36dd4;color:#40513a;font-size:13px;font-weight:700}.mobile-action small{display:block;font-size:8px;margin-top:4px}.mobile-action button>span{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
-    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></symbol>
-    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 8h-4a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4H9m3-10v12"/></symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5c-3-3-7-1-8 2-1-3-5-5-8-2-5 5 3 11 8 15 5-4 13-10 8-15Z"/></symbol>
-    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6C9 4 5 4 3 5v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-2-1-6-1-9 1v14"/></symbol>
-    <symbol id="i-broom" viewBox="0 0 24 24"><path d="m16 3-7 11m-2-2 8 5-3 5-10-4 5-6Zm1 4-2 4m5-2-2 3"/></symbol>
-    <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="6" width="17" height="12" rx="3"/><path d="M22 10v4M6 10v4m4-4v4m4-4v4"/></symbol>
-    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A9 9 0 0 1 10 3 9 9 0 1 0 20 14Z"/></symbol>
-    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 7h10c3 0 5 11 3 12-2 1-5-3-5-3H9s-3 4-5 3C2 18 4 7 7 7Z"/><path d="M8 10v5m-2.5-2.5h5M16 11h.1m2 3h.1"/></symbol>
-    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
-    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v7l-6 9c-1 2 0 2 2 2h12c2 0 3 0 2-2l-6-9V3M7 15h10"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
-    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1-1 7M3 4v6h6"/></symbol>
-    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3c-1 .4-1 1-1 2m0 3h.01"/></symbol>
-    <symbol id="i-volume" viewBox="0 0 24 24"><path d="m3 9 4 0 5-5v16l-5-5H3V9Zm13-2c4 2 4 8 0 10m3-13c6 4 6 12 0 16"/></symbol>
-    <symbol id="i-muted" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3V9Zm13 0 6 6m0-6-6 6"/></symbol>
-    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M3 8a15 15 0 0 1 18 0M6 12a10 10 0 0 1 12 0m-9 4a5 5 0 0 1 6 0m-3 4h.01"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
-    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/></symbol>
-  </defs></svg>
-  <div class="site-shell">
-    <header class="topbar">
-      <a href="./" class="brand" aria-label="113宿舍首页"><span class="brand-mark">113<span>ROOM</span></span><span class="brand-name">113 宿舍<small>一屋四人，七天故事。</small></span></a>
-      <div class="top-actions"><span class="save-status" id="save-status"><span></span>进度自动保存</span><button class="icon-button" id="sound-button" aria-label="开启音效" title="开启音效"><svg class="icon"><use href="#i-muted"/></svg></button><button class="help-button" id="help-button"><svg class="icon"><use href="#i-help"/></svg><span>怎么玩</span></button></div>
-    </header>
+  <div class="app-shell">
+    <header class="topbar"><a class="brand" href="./"><span class="brand-mark">113<small>AFTER HOURS</small></span><span>午夜大作战<small>一个寝室，四种离谱。</small></span></a><div class="header-right"><div class="best"><span>个人最高</span><strong id="best-score">0000</strong></div><button class="round-button" id="sound-button" aria-label="开启音效" title="开启音效">♫<span class="off-mark">×</span></button><button class="help-button" id="help-button">怎么玩 <span>?</span></button></div></header>
     <main>
-      <section class="intro">
-        <div><div class="eyebrow"><span class="tiny-star">✳</span> 室友生存计划 <span class="edition">VOL. 01</span></div><h1>有福同享，<span>有早八各上。</span><svg class="title-squiggle" viewBox="0 0 320 15" aria-hidden="true"><path d="M3 10Q105-2 211 8T315 6"/></svg></h1><p>约会的、做实验的、等饭的，还有一个操心的你。<br class="mobile-break">让四个人的小日子，顺利过完这一周。</p></div>
-        <div class="week-sticker"><span>OUR LITTLE</span><strong>混乱，但快乐</strong><span>ROOMMATE LIFE ↗</span></div>
-      </section>
-      <section class="week-progress" aria-label="七天挑战进度"><div class="week-label"><svg class="icon"><use href="#i-sun"/></svg><strong id="day-label">第 1 天</strong><span>/ 7 天</span></div><ol id="day-dots" class="day-dots"></ol><span class="week-caption">把平凡的一周，过成我们的故事。</span></section>
+      <section class="hero"><div><div class="eyebrow"><span class="live-light"></span>113 DORM · MIDNIGHT MAYHEM <span>ARCADE / 02</span></div><h1>全寝就你<span>还醒着。</span><span class="title-star">✳</span></h1><p>查寝要来了，浩铭要约会，李睿还没吃饭。<strong>这把，你来救场。</strong></p></div><div class="hero-note"><span>ONE ROOM. THREE MISSIONS.</span><strong>一局 ≈ 3 分钟</strong><small>手速、走位，还有一点室友情。</small></div></section>
       <div class="game-layout">
-        <div class="game-main">
-          <section class="room-card" aria-labelledby="room-heading"><div class="room-bar"><h2 id="room-heading"><span class="live-dot"></span>113 号寝室</h2><span id="room-time">星期一 · 16:30</span><span class="weather"><svg class="icon"><use href="#i-sun"/></svg>窗外有点阳光</span></div>
-            <div class="room-scene" id="room-scene">
-              <div class="room-caption"><span class="paper-pin"></span><strong id="scene-quote">人齐了，但没完全齐。</strong><span id="scene-subtitle">点击下方室友，安排今天的日常</span></div>
-              <svg class="dorm-illustration" viewBox="0 0 1000 575" role="img" aria-labelledby="room-art-title"><title id="room-art-title">暖色手绘四人宿舍，有双层床、书桌、实验笔记和恋爱便签</title>
-                <defs>
-                  <pattern id="floorboards" width="95" height="62" patternUnits="userSpaceOnUse" patternTransform="skewX(-30)"><rect width="95" height="62" fill="#e5c4a2"/><path d="M0 0h95v62H0Z" fill="none" stroke="#cfab87" stroke-width="1.2"/><path d="M13 31h37m19 0h12" stroke="#d8b391" stroke-width="1"/></pattern>
-                  <pattern id="quilt" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#96b4a4"/><path d="M0 0h30v30H0Zm0 15h30M15 0v30" fill="none" stroke="#e8eee0" stroke-opacity=".5"/></pattern>
-                  <pattern id="pink-quilt" width="25" height="25" patternUnits="userSpaceOnUse"><rect width="25" height="25" fill="#d99a91"/><path d="M0 12h25M12 0v25" stroke="#eabdb3" stroke-width="2"/></pattern>
-                  <linearGradient id="window-sky" x2="0" y2="1"><stop stop-color="#b8d4d6"/><stop offset="1" stop-color="#e9e7ce"/></linearGradient>
-                  <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#8d7151" flood-opacity=".13"/></filter>
-                </defs>
-                <ellipse cx="501" cy="518" rx="397" ry="35" fill="#b59a7b" opacity=".12"/>
-                <g stroke="#6d6654" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M87 222 480 91 914 223v235L515 557 87 408Z" fill="#d8c3a8" stroke="none"/>
-                  <path d="M87 215 480 83v260L87 411Z" fill="#e1e6d7"/>
-                  <path d="m480 83 434 132v242L480 343Z" fill="#efdfc6"/>
-                  <path d="m87 411 393-68 434 114-399 100Z" fill="url(#floorboards)"/>
-                  <path d="M87 400 480 332l434 114v11L480 343 87 411Z" fill="#b1b69e"/>
-                  <path d="m96 227 370-123" stroke="#c0ccb7"/><path d="m491 104 411 124" stroke="#ddc9ab"/>
-                  <path d="m530 137 157 48v130l-157-40Z" fill="#899e93"/>
-                  <path d="m540 149 137 42v111l-137-36Z" fill="url(#window-sky)" stroke="#f8f4e5" stroke-width="6"/>
-                  <path d="m550 247 25-24 15 8 20-41 17 13 18 61 25 9v23l-120-31Z" fill="#a4b9a8" stroke="none"/>
-                  <path d="m610 171 0 111m-67-65 132 37" stroke="#fffaf0" stroke-width="5"/>
-                  <path d="m527 130 170 53" stroke="#74654e" stroke-width="5"/>
-                  <path d="m530 134 19 6v139l-20 0Z" fill="#e5bd75"/><path d="m676 178 18 6v130l-18-14Z" fill="#e5bd75"/>
-                  <path d="m541 156 0 112m146-61v84" stroke="#c59e5c" stroke-width="1.6"/>
-                  <path d="m702 226 114 32v79l-114-28Z" fill="#bb9470"/>
-                  <path d="m715 240 39 11-3 39-40-10Z" fill="#fff2c9" stroke="none" transform="rotate(-3 732 264)"/><path d="m764 254 38 10v40l-38-10Z" fill="#e7ad9c" stroke="none"/>
-                  <text x="717" y="266" font-size="10" fill="#746550" stroke="none" transform="rotate(15 717 266)">实验顺利</text><text x="767" y="282" font-size="10" fill="#765348" stroke="none" transform="rotate(15 767 282)">约会中 ♡</text>
-                  <path d="m196 204 100-32v66l-100 30Z" fill="#f8f0dc"/><path d="m207 212 78-25" stroke="#dfb05e" stroke-width="6"/>
-                  <text x="213" y="239" fill="#71806b" stroke="none" font-size="14" font-weight="bold" transform="rotate(-17 213 239)">好好吃饭</text>
-                  <path d="m318 183 74-22v53l-74 20Z" fill="#d0b290"/><path d="m325 188 25-8v22l-25 7Z" fill="#f5dfac" stroke="none"/><path d="m356 179 28-8v24l-28 7Z" fill="#a8bdaf" stroke="none"/>
-                  <path d="M142 274 450 183" stroke="#79755d" stroke-width="1.2"/>
-                  <g fill="#ffe6a2" stroke="#b9a071" stroke-width="1.4"><circle cx="163" cy="274" r="5"/><circle cx="216" cy="258" r="5"/><circle cx="271" cy="241" r="5"/><circle cx="326" cy="225" r="5"/><circle cx="381" cy="209" r="5"/><circle cx="434" cy="193" r="5"/></g>
-                  <g id="left-bunk" filter="url(#soft-shadow)">
-                    <path d="m123 315 110-35 196 61-109 33Z" fill="#aa8a65"/><path d="m123 315 197 59v16l-197-59Z" fill="#b49873"/><path d="m320 374 109-33v16l-109 33Z" fill="#d0b086"/>
-                    <path d="m129 305 105-30 188 60-104 31Z" fill="#f2e9d3"/><path d="m181 292 52-17 187 60-55 17Z" fill="url(#quilt)"/>
-                    <path d="m143 302 33-10 40 13-34 11Z" fill="#fff8e8"/>
-                    <path d="M123 315v126m197-67v126m109-159v126m-196-187v126" stroke="#8b7359" stroke-width="9"/>
-                    <path d="m123 405 110-35 196 61-109 33Z" fill="#b4926b"/><path d="m131 399 102-29 186 60-100 28Z" fill="#a5bace"/>
-                    <path d="m155 394 42-11 33 10-39 12Z" fill="#eee8d9"/>
-                    <path d="m237 372 150 49-79 24-150-47Z" fill="#899eae" stroke="none"/>
-                    <path d="m123 315v-32m197 91v-32m109-1v-32m-306-26 197 59 109-33" fill="none" stroke="#8b7359" stroke-width="5"/>
-                    <path d="m343 364 12 121m28-133 12 120m-50-87 40-12m-37 40 40-12m-37 40 40-12m-37 40 40-12" stroke="#947b5e" stroke-width="5"/>
-                    <path d="m157 342 42 13v24l-42-13Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/>
-                    <text x="165" y="360" font-size="11" fill="#6b785c" stroke="none" transform="rotate(17 165 360)">皓轩</text>
-                    <path d="m239 457 45 13v23l-45-12Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="247" y="476" font-size="11" fill="#6b7891" stroke="none" transform="rotate(17 247 476)">李睿</text>
-                  </g>
-                  <g id="right-bunk" filter="url(#soft-shadow)">
-                    <path d="m713 334 92-28 83 26-93 29Z" fill="#d3b88b"/>
-                    <path d="m713 334 82 27v17l-82-26Z" fill="#b89975"/><path d="m795 361 93-29v17l-93 29Z" fill="#b99b73"/>
-                    <path d="m719 326 86-24 75 27-85 25Z" fill="url(#pink-quilt)"/><path d="m781 309 23-7 47 16-24 7Z" fill="#fff4e0"/>
-                    <path d="M713 334v136m82-109v138m93-167v132m-83-158v132" stroke="#8b7359" stroke-width="9"/>
-                    <path d="m713 425 92-28 83 26-93 29Z" fill="#b79a77"/><path d="m721 418 83-22 76 26-85 22Z" fill="#e1b873"/>
-                    <path d="m784 402 21-6 42 14-25 7Z" fill="#fff0d5"/>
-                    <path d="M713 334v-33m82 60v-33m93 4v-33m-175 2 82 27 93-29" fill="none" stroke="#8b7359" stroke-width="5"/>
-                    <path d="m742 346 7 134m29-123 6 131m-41-117 35 11m-34 15 35 11m-34 15 35 11m-34 15 35 11" stroke="#947b5e" stroke-width="5"/>
-                    <path d="m806 364 55-16v22l-55 16Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="813" y="376" font-size="11" fill="#9b6562" stroke="none" transform="rotate(-17 813 376)">余浩铭</text>
-                    <path d="m803 461 55-16v22l-55 16Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="809" y="473" font-size="11" fill="#77875c" stroke="none" transform="rotate(-17 809 473)">余一男</text>
-                  </g>
-                  <g id="desk">
-                    <path d="m377 331 166-46 139 43-159 47Z" fill="#dfc29c"/><path d="m377 331 146 44v15l-146-43Z" fill="#b99c77"/><path d="m523 375 159-47v15l-159 47Z" fill="#c6a87d"/>
-                    <path d="m389 349 3 100m274-101-1 96m-141-55 2 104" stroke="#88765a" stroke-width="7"/>
-                    <path d="m435 302 78 23-3-61-77-24Z" fill="#626f67"/><path d="m441 295 63 19-2-44-62-19Z" fill="#b6d4cc" stroke="#d5ded1" stroke-width="2"/>
-                    <path d="m466 277 22 6m-29 3 22 7m-24 0 17 5" stroke="#769f91" stroke-width="2"/>
-                    <path d="m433 322 64 19-27 8-64-19Z" fill="#c9d1c1" stroke-width="1.2"/><path d="m426 326 51 15" stroke="#8d9a89" stroke-width="4"/>
-                    <path d="m548 312 41 12-28 9-41-13Z" fill="#f4ecd8" stroke-width="1.2"/><path d="m544 318 22 6m-28-3 13 4" stroke="#9a9a7f" stroke-width="1"/>
-                    <path d="m604 306 25 8v30l-25-8Z" fill="#d79781"/><path d="m629 319 7 2v15l-7-2" fill="none"/><path d="m614 302 0-9m6 10v-7" stroke="#eee3cc" stroke-width="3"/>
-                    <path d="m582 298 0-31m0 4 20-10" stroke="#717f68" stroke-width="4"/><path d="m596 253 20 7-9 11-18-7Z" fill="#dfb862"/>
-                    <path d="m573 299 20 6" stroke="#717f68" stroke-width="4"/>
-                  </g>
-                  <g id="plant"><path d="m112 403 26 8-6 31-17-6Z" fill="#c38f70"/><path d="M125 409v-39m0 18c-20-2-21-18-21-18 20-1 21 18 21 18Zm0-8s-1-22 18-24c4 14-18 24-18 24Z" fill="#7b9d70" stroke="#6b865e"/></g>
-                  <path d="m453 475 110-31 101 29-108 33Z" fill="#d4a385" stroke="none" opacity=".65"/><path d="m467 476 90 26 90-27" fill="none" stroke="#edd0b5" stroke-width="2"/>
-                  <g id="floor-clutter"><path d="m622 450 27 7v20l-27-7Z" fill="#c7a478"/><path d="m649 457 18-6v20l-18 6Z" fill="#b78c62"/><path d="m622 450 17-5 28 6-18 6Z" fill="#d8b58b"/><path d="m635 448 26 7" stroke="#e9d3ae" stroke-width="4"/>
-                    <path d="m395 465 25 8 17-3-10-7-11-3Z" fill="#899d8c"/><path d="m422 481 24 7 18-4-10-6-14-2Z" fill="#899d8c"/>
-                  </g>
-                  <g id="door"><path d="m835 250 47 14v54l-47-15Z" fill="#b19a79"/><text x="842" y="280" fill="#f8edcf" font-size="17" stroke="none" transform="rotate(17 842 280)">113</text></g>
-                </g>
-                <g id="room-people"></g>
-              </svg>
-              <div class="scene-note" id="scene-note"><span>☕</span> 实验可以晚点结束，夜宵最好趁热。</div>
+        <section class="arena-panel" aria-label="113宿舍游戏区域">
+          <div class="game-hud"><div class="level-badge"><span id="level-number">01</span><div><small id="level-caption">今晚第一场混乱</small><strong id="level-name">极限查寝</strong></div></div><div class="hud-timer" id="hud-timer"><small>剩余时间</small><strong id="time-value">00:50</strong></div><div class="hud-score"><small>本局得分</small><strong id="score-value">0000</strong></div><button class="pause-button" id="pause-button" aria-label="暂停游戏" disabled>Ⅱ</button></div>
+          <div class="canvas-wrap" id="canvas-wrap"><canvas id="game-canvas" width="1000" height="620" tabindex="0" aria-label="宿舍实时游戏。WASD或方向键移动，E或空格互动，Shift发动角色技能。也可以点击地面与物品移动。"></canvas>
+            <div class="combo-pop" id="combo-pop" aria-live="polite"></div>
+            <div class="canvas-overlay" id="game-overlay">
+              <div class="overlay-card" id="overlay-content"></div>
             </div>
-            <div class="room-bottom"><div class="online-members" id="online-members"></div><p id="room-occupancy">每个人都有自己的节奏。</p><span class="sketch-text">home, sweet dorm ♡</span></div>
-          </section>
-          <section class="roommates-section" aria-labelledby="roommates-heading"><div class="section-heading"><h2 id="roommates-heading">今天，大家干点什么？ <span>安排室友</span></h2><span>每人一件事，搭配有讲究。</span></div><div class="roommate-grid" id="roommate-grid"></div></section>
-        </div>
+            <div class="mobile-movement" id="movement-pad" aria-label="触屏方向控制"><span></span><div id="stick-thumb"></div></div>
+            <div class="mobile-action"><button id="touch-skill" aria-label="发动角色技能">技能<small id="touch-cooldown">READY</small></button><button id="touch-interact" aria-label="拾取或交付物品">互动<span>E</span></button></div>
+          </div>
+          <div class="arena-bottom"><div id="game-hint"><span>↳</span><span id="hint-text">选一位室友，进入113的午夜。</span></div><span class="keyboard-tip"><kbd>W A S D</kbd> 移动 <kbd>E</kbd> 互动 <kbd>Shift</kbd> 技能</span></div>
+          <div class="below-controls"><span>鼠标 / 触屏直接点物品和目的地，可自动走过去并互动。</span><button id="drop-button">放下手中物品 <kbd>Q</kbd></button></div>
+        </section>
         <aside class="sidebar">
-          <section class="status-card"><div class="section-heading"><h2>宿舍状态</h2><span class="status-label">一起好好过</span></div><div class="budget"><div><span>小金库余额</span><strong><small>¥</small><span id="money-value">180</span><span class="metric-delta" id="money-delta"></span></strong></div><span class="budget-icon"><svg class="icon"><use href="#i-coin"/></svg></span></div><div id="metrics" class="metrics"></div><p class="status-hint">任何一项耗尽，挑战就会提前结束。</p></section>
-          <section class="notice-card"><span class="tape"></span><span class="notice-kicker">寝室小黑板</span><h3 id="notice-title">本周目标<br>一个都不能掉队。</h3><p id="notice-text">撑过七天，顾好经费、卫生、友情、学业和精神状态。</p><div class="notice-doodle">↗ <span>忙归忙，记得回群。</span></div></section>
-          <section class="forecast-card"><div class="section-heading"><h2>今日安排预估</h2><svg class="icon"><use href="#i-spark"/></svg></div><div id="forecast"></div><p>已计入每日开销与自然消耗。<br>今晚还有一件意想不到的小事。</p></section>
-          <button class="advance-button" id="advance-button"><span><small>安排好了就出发</small><strong id="advance-label">过完这一天</strong></span><span class="button-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></button>
-          <button class="reset-button" id="reset-button"><svg class="icon"><use href="#i-reset"/></svg>重新过这一周</button>
+          <section class="mission-card"><div class="card-heading"><h2>今夜任务</h2><span id="mission-count">0 / 5</span></div><div class="level-route"><span class="active">01</span><i></i><span>02</span><i></i><span>03</span></div><p id="mission-description">把地上的杂物归位，赶在阿姨推门之前收拾完。</p><ul id="task-list"></ul><div class="carrying" id="carrying"><span>手上空空</span><small>一次拿一件，送对位置才得分。</small></div></section>
+          <section class="chaos-card"><div class="card-heading"><h2>宿舍混乱值</h2><span><strong id="chaos-value">0</strong> /100</span></div><div class="chaos-track" role="meter" aria-label="宿舍混乱值" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div id="chaos-fill"></div></div><p id="chaos-comment">风平浪静，暂时。</p></section>
+          <section class="skill-card"><div class="card-heading"><h2>你的救场技能</h2><span id="skill-key">SHIFT</span></div><button id="skill-button"><span class="skill-icon" id="skill-icon">🧹</span><span><strong id="skill-name">一键收拾</strong><small id="skill-description">附近两件物品直接归位</small></span><span id="skill-cooldown">就绪</span></button></section>
+          <section class="group-card"><div class="card-heading"><h2><span class="group-dot"></span>113不正经交流群</h2><span>4人</span></div><div id="chat-feed" class="chat-feed" aria-live="polite"></div></section>
         </aside>
       </div>
-      <section class="journal-section"><div class="section-heading"><h2><svg class="icon"><use href="#i-book"/></svg>宿舍碎碎念 <span>那些小小的日常</span></h2><span class="journal-count" id="journal-count">1 条记录</span></div><div id="journal" class="journal" aria-live="polite"></div></section>
+      <section class="cast-section"><div class="section-heading"><h2>今天谁来收拾这个烂摊子？</h2><span>开局前选人 · 四个人，四种救场方法</span></div><div id="character-select" class="character-select"></div></section>
     </main>
-    <footer><span>113 DORM DAYS <span class="footer-dot">·</span> 各自精彩，一起生活。</span><span>王皓轩 <i>×</i> 余浩铭 <i>×</i> 李睿 <i>×</i> 余一男</span></footer>
+    <footer><span>113 AFTER HOURS <i>✳</i> 关灯以后，故事才刚开始。</span><span>王皓轩 <i>×</i> 余浩铭 <i>×</i> 李睿 <i>×</i> 余一男</span></footer>
   </div>
-  <dialog id="action-dialog" aria-labelledby="action-title"><div class="modal-body"><button class="modal-close" data-close aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button><div id="action-person"></div><span class="modal-kicker">今日活动安排</span><h2 id="action-title"></h2><p id="action-description" class="modal-description"></p><div id="action-options" class="action-options"></div></div></dialog>
-  <dialog id="event-dialog" aria-labelledby="event-title"><div class="modal-body event-body"><div class="event-illustration" id="event-icon"></div><span class="modal-kicker" id="event-tag"></span><h2 id="event-title"></h2><p id="event-description" class="modal-description"></p><div id="event-choices" class="event-choices"></div><p class="event-footnote">一起做决定，也一起承担结果。</p></div></dialog>
-  <dialog id="help-dialog" aria-labelledby="help-title"><div class="modal-body"><button class="modal-close" data-close aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button><span class="modal-kicker">欢迎入住 113</span><h2 id="help-title">这周，靠你们了。</h2><div class="help-step"><b>01</b><div><strong>安排四个人的一天</strong><p>点击室友卡片，为每个人选一项活动。不同活动会改变宿舍状态，专属活动各有彩蛋。</p></div></div><div class="help-step"><b>02</b><div><strong>过完一天，处理小意外</strong><p>每天经费−28、整洁−8、情谊−6、学业−4、电量−10。随机事件的选择同样会影响状态。</p></div></div><div class="help-step"><b>03</b><div><strong>一起撑过七天</strong><p>任何一项降到零会提前结束。两人以上同时开黑，额外增加5点情谊。合理分工，解锁不同结局。</p></div></div><p class="help-save">进度保存在当前浏览器，可以随时回来继续。</p><button class="solid-button" data-close>明白了，一起过日子</button></div></dialog>
-  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="modal-body"><span class="modal-kicker">一个新的星期</span><h2 id="reset-title">重新开始这一周？</h2><p class="modal-description">当前这一局的进度会被清除，四位室友将回到星期一。</p><div class="reset-choices"><button class="secondary-button" data-close>接着过</button><button class="solid-button" id="confirm-reset">重新开始</button></div></div></dialog>
-  <dialog id="ending-dialog" aria-labelledby="ending-title"><div class="modal-body ending-body"><div class="ending-art" id="ending-art"></div><span class="ending-badge" id="ending-badge"></span><h2 id="ending-title"></h2><p id="ending-description" class="modal-description"></p><div id="ending-stats" class="ending-stats"></div><div class="ending-actions"><button class="solid-button" id="ending-restart">再过一周</button><button class="secondary-button" data-close>翻翻这周的回忆</button></div></div></dialog>
+  <dialog id="help-dialog"><div class="help-content"><button id="close-help" aria-label="关闭玩法说明">×</button><span class="dialog-kicker">操作指南 / HOW TO SURVIVE</span><h2>别急，先看这四条。</h2><ol><li><strong>走过去，再拿起来。</strong><p>WASD或方向键移动，靠近物品按E或空格捡起。鼠标和触屏可以直接点物品，角色会自动走过去。</p></li><li><strong>拿到哪，就送到哪。</strong><p>手里一次只能拿一件，目的地会发光。靠近后按E交付，或者直接点击目的地。Q可以暂时放下。</p></li><li><strong>连着送，分才高。</strong><p>十秒内连续交付会叠连击，最多五连击。捡金币加25分，提前过关还有时间奖励。</p></li><li><strong>技能别留到下一把。</strong><p>Shift或右侧按钮发动技能。避开飞来袜子、手机声波和实验推车。时间耗尽或混乱值到100，就要重开。</p></li></ol><div class="help-extra">Esc / P 暂停。切走页面会自动暂停，进度保存在当前浏览器。</div><button class="primary-button" id="help-done">懂了，交给我。</button></div></dialog>
   <div id="toast" class="toast" role="status"></div>
-  <script type="module">const SAVE_KEY = 'dorm-days-113-v1';
-const ROOMMATES = [
-  { id: 'wang', name: '王皓轩', short: '皓轩', role: '今日寝室长', line: '人可以不齐，饭必须吃齐。', color: '#e8aa69', special: '整顿夜宵', specialNote: '花12元，心情+8，电量+6', specialEffect: { money: -12, mood: 8, energy: 6 }, specialLine: '王皓轩煮了一锅面，连锅底都分得很公平。' },
-  { id: 'hao', name: '余浩铭', short: '浩铭', role: '恋爱出差中', line: '你们先睡，我今晚可能不回。', color: '#e48b83', special: '出去约会', specialNote: '花16元，心情+12，电量+4，整洁−3', specialEffect: { money: -16, mood: 12, energy: 4, clean: -3 }, specialLine: '余浩铭发来消息：和女朋友在一起，今晚不回了。' },
-  { id: 'li', name: '李睿', short: '李睿', role: '实验室常驻', line: '最后一组数据，真的最后一组。', color: '#8aabd1', special: '泡实验室', specialNote: '学业+12，电量−7，凌晨归来', specialEffect: { grade: 12, energy: -7 }, specialLine: '凌晨两点，李睿带着一组新数据轻轻推开了门。' },
-  { id: 'yi', name: '余一男', short: '一男', role: '快乐接应位', line: '我都行，记得带我一个。', color: '#a2b794', special: '跑腿接应', specialNote: '经费+12，整洁+3，心情+2，电量−1', specialEffect: { money: 12, clean: 3, mood: 2, energy: -1 }, specialLine: '余一男顺手取了四份快递，又赚了点跑腿费。' }
+  <script type="module">const WIDTH = 1000;
+const HEIGHT = 620;
+const CHARACTERS = [
+  { name: '王皓轩', title: '寝室长', color: '#f2b45e', ability: '一键收拾', description: '附近两件物品直接归位', cooldown: 17, icon: '🧹' },
+  { name: '余浩铭', title: '恋爱特派员', color: '#ed978b', ability: '约会冲刺', description: '4秒双倍移速，无视碰撞伤害', cooldown: 12, icon: '💨' },
+  { name: '李睿', title: '凌晨科研人', color: '#9fb9e7', ability: '时间暂停', description: '暂停倒计时与危险5秒', cooldown: 18, icon: '⏳' },
+  { name: '余一男', title: '跑腿接应位', color: '#adc989', ability: '隔空跑腿', description: '手中物品直接送到目的地', cooldown: 10, icon: '📦' }
 ];
-const ACTIONS = {
-  study: { name: '认真自习', icon: 'book', effect: { grade: 7, energy: -4, mood: -1 }, note: '学业+7 · 电量−4 · 心情−1', status: '知识加载中' },
-  clean: { name: '打扫宿舍', icon: 'broom', effect: { clean: 12, energy: -3, mood: 1 }, note: '整洁+12 · 电量−3 · 心情+1', status: '角落也不放过' },
-  work: { name: '出去兼职', icon: 'coin', effect: { money: 38, energy: -6, mood: -2 }, note: '经费+38 · 电量−6 · 心情−2', status: '努力赚夜宵钱' },
-  play: { name: '一起开黑', icon: 'game', effect: { mood: 9, energy: -3, clean: -2, grade: -1 }, note: '心情+9 · 电量−3 · 整洁−2 · 学业−1', status: '再赢一把就睡' },
-  rest: { name: '好好补觉', icon: 'moon', effect: { energy: 13 }, note: '电量+13', status: '请勿打扰充电' },
-  special: { name: '专属活动', icon: 'spark', effect: {}, note: '', status: '各有各的精彩' }
-};
-const METRICS = { clean: '宿舍整洁', mood: '室友情谊', grade: '学业进度', energy: '全员电量', money: '宿舍经费' };
-const DAY_NAMES = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
-const EVENTS = [
-  { icon: 'moon', tag: '22:30 · 晚点名', title: '四个人，三个定位。', text: '余浩铭在和女朋友约会，李睿还在实验室。寝室群里弹出一句「大家都安全吗？」王皓轩的手机响了。', choices: [
-    { text: '报个平安，约好回来的时间', detail: '情谊+7 · 电量−2', effect: { mood: 7, energy: -2 }, result: '四人群终于齐了四个「收到」。人没凑齐，牵挂先凑齐了。' },
-    { text: '让在宿舍的两人先好好休息', detail: '电量+8 · 情谊−3', effect: { energy: 8, mood: -3 }, result: '留了盏小夜灯。今晚先让一半的人睡个好觉。' }
+const OBSTACLES = [
+  { x: 78, y: 114, w: 198, h: 104, type: 'bed', owner: 0 },
+  { x: 724, y: 114, w: 198, h: 104, type: 'bed', owner: 1 },
+  { x: 78, y: 378, w: 198, h: 100, type: 'bed', owner: 2 },
+  { x: 724, y: 378, w: 198, h: 100, type: 'bed', owner: 3 },
+  { x: 415, y: 232, w: 170, h: 82, type: 'desk' }
+];
+const STATIONS = [
+  { id: 'bin', name: '垃圾桶', x: 106, y: 531, icon: '🗑️', color: '#a6c89a' },
+  { id: 'laundry', name: '洗衣篮', x: 274, y: 535, icon: '🧺', color: '#c7b2df' },
+  { id: 'door', name: '宿舍门', x: 898, y: 530, icon: '🚪', color: '#e5ac7a' },
+  { id: 'lab', name: '李睿的书桌', x: 500, y: 343, icon: '💻', color: '#9fb9e7' },
+  { id: 'phone', name: '来电静音', x: 500, y: 171, icon: '📱', color: '#ed978b' }
+];
+const LOCATIONS = [
+  [325, 160], [666, 160], [332, 290], [667, 290], [340, 430], [656, 436], [160, 297], [840, 296], [500, 510], [398, 525], [630, 535], [500, 110]
+];
+const LEVELS = [
+  { number: '01', title: '阿姨还有五十秒到门口', short: '极限查寝', time: 50, subtitle: '捡起地上的物品，把外卖盒送到垃圾桶，袜子放进洗衣篮。', speaker: 0, line: '袜子是谁的先不管，先捡起来！', items: [
+    { name: '外卖盒', icon: '🥡', to: 'bin' }, { name: '空饮料罐', icon: '🥤', to: 'bin' }, { name: '废纸团', icon: '🧻', to: 'bin' },
+    { name: '神秘袜子', icon: '🧦', to: 'laundry' }, { name: '另一只袜子', icon: '🧦', to: 'laundry' }
   ] },
-  { icon: 'flask', tag: '02:08 · 实验室来电', title: '最后一组，变成下一组。', text: '李睿发来一张实验台照片：「样品还得再等一会儿。」此时宿舍仅剩一包泡面。', choices: [
-    { text: '留好夜宵，再留一盏灯', detail: '经费−14 · 情谊+10 · 电量+3', effect: { money: -14, mood: 10, energy: 3 }, result: '李睿回来时面还是热的。他说了一句谢谢，然后又说了一遍。' },
-    { text: '视频陪他等，顺便一起复习', detail: '学业+8 · 情谊+3 · 电量−5', effect: { grade: 8, mood: 3, energy: -5 }, result: '实验没白等，课也没白复习。只是谁都不愿先承认自己困了。' }
+  { number: '02', title: '浩铭又双叒要出门了', short: '恋爱急送', time: 60, subtitle: '找齐钥匙、充电宝和奶茶，送到宿舍门。手机来电会放出声波，靠近手机按互动可静音。', speaker: 1, line: '女朋友在等我！钥匙呢？充电宝呢？！', items: [
+    { name: '宿舍钥匙', icon: '🔑', to: 'door' }, { name: '充电宝', icon: '🔋', to: 'door' }, { name: '约会奶茶', icon: '🧋', to: 'door' }
   ] },
-  { icon: 'heart', tag: '18:20 · 恋爱外派', title: '又双叒没回来吃饭。', text: '余浩铭：「今天和女朋友吃饭，你们不用等我。」宿舍夜宵团购还差一个人，另外三个人对视了一眼。', choices: [
-    { text: '祝约会愉快，拜托捎份奶茶', detail: '经费−12 · 情谊+9', effect: { money: -12, mood: 9 }, result: '浩铭送来四杯奶茶再出门。恋爱出差，也没忘了组织。' },
-    { text: '三人小聚，省下来的饭钱入公账', detail: '经费+15 · 情谊+3 · 整洁−3', effect: { money: 15, mood: 3, clean: -3 }, result: '三个人吃出了四个人的热闹，打扫时倒是很想第四个人。' }
-  ] },
-  { icon: 'broom', tag: '15:00 · 突击查寝', title: '阿姨已经到走廊了。', text: '桌上有外卖盒，椅背上有衣服，床底还有一只找了三天的袜子。门外传来了熟悉的钥匙声。', choices: [
-    { text: '全员起立，五分钟极限收拾', detail: '整洁+18 · 电量−9 · 情谊+3', effect: { clean: 18, energy: -9, mood: 3 }, result: '四个人第一次如此默契。袜子找到了，默契也找到了。' },
-    { text: '认真说明情况，补做卫生值日', detail: '整洁+8 · 学业−4 · 电量−3', effect: { clean: 8, grade: -4, energy: -3 }, result: '多了一张值日表，少了一点复习时间。好在宿舍真的变干净了。' }
-  ] },
-  { icon: 'book', tag: '20:40 · 截止日期', title: '作业今晚十二点交。', text: '寝室群突然安静了两秒。原来四个人都以为是下周。李睿说：「我能带大家过一遍思路。」', choices: [
-    { text: '关掉游戏，一起理清思路', detail: '学业+16 · 电量−9', effect: { grade: 16, energy: -9 }, result: '四盏台灯亮到最后。每个人都交上了自己写的作业。' },
-    { text: '先吃点东西，各自稳稳完成', detail: '经费−16 · 学业+8 · 电量+3', effect: { money: -16, grade: 8, energy: 3 }, result: '补充能量后，截止日期终于没那么像世界末日。' }
-  ] },
-  { icon: 'wifi', tag: '23:10 · 网络失踪', title: '网断了，人倒是齐了。', text: '余一男盯着卡住的进度条，王皓轩拉过一张椅子。难得四个人都在，今晚的娱乐计划需要换个方向。', choices: [
-    { text: '摆开纸牌，聊点有的没的', detail: '情谊+14 · 电量−4', effect: { mood: 14, energy: -4 }, result: '没有网络的一个小时，聊完了平时一周没聊完的话。' },
-    { text: '正好早睡，明天再战', detail: '电量+16 · 情谊−3', effect: { energy: 16, mood: -3 }, result: '群里最后一条消息是晚安。这次大家真的睡了。' }
-  ] },
-  { icon: 'spark', tag: '19:00 · 周末彩蛋', title: '今晚，终于能坐一桌。', text: '余浩铭提前安排好了约会，李睿也把实验收了尾。四个人坐在宿舍里，商量着这周最后一顿吃什么。', choices: [
-    { text: '来顿好的，庆祝一起撑过这周', detail: '经费−30 · 情谊+18 · 电量+5', effect: { money: -30, mood: 18, energy: 5 }, result: '饭吃到一半，已经有人开始说下周的离谱计划。' },
-    { text: '一锅泡面，加四颗蛋也很香', detail: '经费−10 · 情谊+10 · 电量+8', effect: { money: -10, mood: 10, energy: 8 }, result: '锅不大，四个人刚好围得下。普通的一周也有了纪念感。' }
+  { number: '03', title: '凌晨两点，科研人归来', short: '深夜接应', time: 60, subtitle: '把咖啡、实验数据和热夜宵送到李睿书桌。避开走廊里的实验小推车。', speaker: 2, line: '我回来了……咖啡、U盘、夜宵，救一下。', items: [
+    { name: '续命咖啡', icon: '☕', to: 'lab' }, { name: '实验数据U盘', icon: '💾', to: 'lab' }, { name: '留好的夜宵', icon: '🍜', to: 'lab' }
   ] }
 ];
-
-const clamp = (value, max = 100) => Math.min(max, Math.max(0, value));
-function eventOrder(seed) {
-  const middle = [1, 2, 3, 4, 5];
-  let random = (Math.abs(seed) || 1) % 2147483647;
-  for (let i = middle.length - 1; i > 0; i--) {
-    random = random * 16807 % 2147483647;
-    const j = random % (i + 1);
-    [middle[i], middle[j]] = [middle[j], middle[i]];
+function distance(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+function canStand(x, y, radius = 17) {
+  if (x < 55 + radius || x > 945 - radius || y < 88 + radius || y > 574 - radius) return false;
+  return !OBSTACLES.some(rect => x + radius > rect.x && x - radius < rect.x + rect.w && y + radius > rect.y && y - radius < rect.y + rect.h);
+}
+function random(game) {
+  game.seed = (game.seed * 16807) % 2147483647;
+  return game.seed / 2147483647;
+}
+function createRun(character = 0, seed = Date.now() % 2147483646 + 1) {
+  const game = {
+    version: 2, character: CHARACTERS[character] ? character : 0, seed: Math.max(1, seed), phase: 'playing', level: 0, time: 50, score: 0,
+    chaos: 0, combo: 0, comboTime: 0, maxCombo: 0, elapsed: 0, levelElapsed: 0, delivered: 0, totalDelivered: 0,
+    player: { x: 500, y: 515, direction: 1, moving: false, invincible: 0 }, carrying: null, items: [], coins: [], path: [],
+    hazards: [], particles: [], floaters: [], events: [], cooldown: 0, boost: 0, freeze: 0, nextHazard: 7, phoneQuiet: 0,
+    stageScore: 0, shake: 0, result: null, hint: '先找一件地上的物品，靠近按 E 或空格捡起。', hintTime: 6
+  };
+  setupLevel(game);
+  return game;
+}
+function emit(game, type, text, extra = {}) { game.events.push({ type, text, ...extra }); }
+function setupLevel(game) {
+  const level = LEVELS[game.level];
+  game.time = level.time;
+  game.levelElapsed = 0;
+  game.delivered = 0;
+  game.hazards = [];
+  game.path = [];
+  game.carrying = null;
+  game.boost = 0;
+  game.freeze = 0;
+  game.cooldown = 0;
+  game.phoneQuiet = 0;
+  game.nextHazard = game.level === 0 ? 9 : 4;
+  game.player.x = 500;
+  game.player.y = 515;
+  game.player.invincible = 1.5;
+  const available = LOCATIONS.map((_, i) => i);
+  for (let i = available.length - 1; i > 0; i--) {
+    const j = Math.floor(random(game) * (i + 1));
+    [available[i], available[j]] = [available[j], available[i]];
   }
-  return [0, ...middle, 6];
-}
-function newGame(seed = Date.now() % 2147483647) {
-  return { version: 1, day: 1, phase: 'planning', seed, eventOrder: eventOrder(seed), stats: { money: 180, clean: 66, mood: 64, grade: 60, energy: 64 }, assignments: ['clean', 'special', 'special', 'work'], logs: [{ day: 1, text: '新的星期，从一句「谁拿了我的充电器」开始。', type: 'start' }], lastDelta: null, event: null, outcome: null };
-}
-function actionFor(personIndex, actionId) {
-  const action = ACTIONS[actionId];
-  if (!action) throw new Error('未知活动');
-  const person = ROOMMATES[personIndex];
-  if (!person) throw new Error('未知室友');
-  return actionId === 'special' ? { ...action, name: person.special, effect: person.specialEffect, note: person.specialNote } : action;
-}
-function applyEffects(stats, effects) {
-  const next = { ...stats };
-  for (const [key, amount] of Object.entries(effects)) {
-    if (key in next) next[key] = clamp(next[key] + amount, key === 'money' ? 9999 : 100);
+  game.items = level.items.map((item, i) => ({ ...item, id: `${game.level}-${i}`, x: LOCATIONS[available[i]][0], y: LOCATIONS[available[i]][1], delivered: false }));
+  game.coins = [[325, 240], [666, 365], [380, 460], [620, 460], [500, 410]].map(([x, y]) => ({ x, y, collected: false }));
+  emit(game, 'chat', level.line, { speaker: level.speaker });
+  if (game.level === 2) {
+    game.hazards.push({ type: 'cart', x: 330, y: 351, vx: 112, radius: 24 }, { type: 'cart', x: 680, y: 495, vx: -130, radius: 24 });
   }
-  return next;
 }
-function projectedDelta(state) {
-  const result = { money: -28, clean: -8, mood: -6, grade: -4, energy: -10 };
-  state.assignments.forEach((id, index) => {
-    for (const [key, amount] of Object.entries(actionFor(index, id).effect)) result[key] += amount;
-  });
-  const players = state.assignments.filter(id => id === 'play').length;
-  if (players >= 2) result.mood += 5;
-  return result;
+function nextLevel(game) {
+  if (game.phase !== 'between') return;
+  game.level++;
+  game.phase = 'playing';
+  game.chaos = Math.max(0, game.chaos - 20);
+  setupLevel(game);
 }
-function assignAction(state, index, actionId) {
-  if (state.phase !== 'planning' || !Number.isInteger(index) || index < 0 || index >= 4 || !ACTIONS[actionId]) return state;
-  const assignments = [...state.assignments];
-  assignments[index] = actionId;
-  return { ...state, assignments };
+function setHint(game, text, seconds = 3) { game.hint = text; game.hintTime = seconds; }
+function particles(game, x, y, color, count = 18) {
+  for (let i = 0; i < count; i++) {
+    const angle = random(game) * Math.PI * 2;
+    const speed = 40 + random(game) * 160;
+    game.particles.push({ x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed - 35, life: .6 + random(game) * .5, color, size: 3 + random(game) * 4 });
+  }
 }
-function advanceDay(state) {
-  if (state.phase !== 'planning') return state;
-  const delta = projectedDelta(state);
-  const logs = [...state.logs];
-  state.assignments.forEach((id, i) => {
-    logs.push({ day: state.day, type: 'activity', text: id === 'special' ? ROOMMATES[i].specialLine : `${ROOMMATES[i].name}${{ study: '在自习室坐稳了，知识又多了一点。', clean: '打扫了宿舍，连床底也重见天日。', work: '兼职回来，把夜宵经费补上了。', play: '打了几局游戏，快乐到账。', rest: '补了个好觉，精神状态重新上线。' }[id]}` });
-  });
-  const stats = applyEffects(state.stats, delta);
-  const failed = Object.entries(stats).find(([, value]) => value === 0)?.[0];
-  if (failed) return { ...state, stats, logs, lastDelta: delta, event: null, phase: 'ended', outcome: getOutcome(stats, state.day, failed) };
-  return { ...state, stats, phase: 'event', event: state.eventOrder[state.day - 1], lastDelta: delta, logs };
+function floatText(game, text, x, y, color = '#f7d77c') { game.floaters.push({ text, x, y, life: 1.2, color }); }
+function finish(game, won, reason) {
+  game.phase = 'ended';
+  game.path = [];
+  game.result = { won, reason, score: game.score, maxCombo: game.maxCombo, delivered: game.totalDelivered, rank: won ? game.score >= 3000 ? '113 救场传说' : game.score >= 2200 ? '全寝唯一靠谱的人' : '室友们欠你一顿饭' : '下次一定，先吃夜宵' };
+  emit(game, won ? 'win' : 'lose', reason);
 }
-function chooseEvent(state, choiceIndex) {
-  if (state.phase !== 'event' || !Number.isInteger(choiceIndex)) return state;
-  const choice = EVENTS[state.event]?.choices[choiceIndex];
-  if (!choice) return state;
-  const stats = applyEffects(state.stats, choice.effect);
-  const logs = [...state.logs, { day: state.day, type: 'event', text: choice.result }];
-  const failed = Object.entries(stats).find(([, value]) => value === 0)?.[0];
-  if (failed || state.day === 7) return { ...state, stats, logs, event: null, phase: 'ended', outcome: getOutcome(stats, state.day, failed) };
-  return { ...state, stats, logs, event: null, day: state.day + 1, phase: 'planning' };
+function deliver(game, item, remote = false) {
+  const station = STATIONS.find(target => target.id === item.to);
+  item.delivered = true;
+  game.delivered++;
+  game.totalDelivered++;
+  game.carrying = null;
+  game.combo = game.comboTime > 0 ? Math.min(5, game.combo + 1) : 1;
+  game.maxCombo = Math.max(game.maxCombo, game.combo);
+  game.comboTime = 10;
+  const points = 100 + (game.combo - 1) * 50;
+  game.score += points;
+  game.chaos = Math.max(0, game.chaos - 6);
+  const x = remote ? game.player.x : station.x;
+  const y = remote ? game.player.y : station.y;
+  particles(game, x, y - 12, CHARACTERS[game.character].color, 24);
+  floatText(game, `+${points}${game.combo >= 2 ? `  ${game.combo}连击！` : ''}`, x, y - 30);
+  emit(game, 'deliver', `${item.name}送到了${station.name}`, { combo: game.combo });
+  setHint(game, game.combo >= 2 ? `${game.combo} 连击！十秒内再送一件，分数继续叠！` : '漂亮！十秒内再送一件，触发连击。');
+  if (game.delivered === LEVELS[game.level].items.length) {
+    const bonus = Math.ceil(game.time) * 8;
+    game.score += bonus;
+    game.stageScore = bonus;
+    game.path = [];
+    if (game.level === LEVELS.length - 1) finish(game, true, '查寝躲过了，恋爱送上路了，科研人也吃上饭了。');
+    else { game.phase = 'between'; emit(game, 'clear', `提前收工，时间奖励 +${bonus}`); }
+  }
 }
-function getOutcome(stats, day, failed) {
-  const average = Math.round((stats.clean + stats.mood + stats.grade + stats.energy) / 4);
-  if (failed) return { won: false, title: '这周需要重新安排一下', subtitle: `${METRICS[failed]}耗尽，挑战在第${day}天暂停。换个分工，再来一周。`, score: average, badge: '下周再战' };
-  if (average >= 72 && stats.money >= 40) return { won: true, title: '113，全员默契在线。', subtitle: '有各自的生活，也有一起撑过去的日常。这周的满分，属于四个人。', score: average, badge: '神仙室友' };
-  if (stats.mood >= 80) return { won: true, title: '条件有限，快乐无限。', subtitle: '生活偶尔一团乱，但你们总能把彼此接住。七天挑战完成！', score: average, badge: '最佳损友' };
-  return { won: true, title: '跌跌撞撞，全员到齐。', subtitle: '实验、约会、早八和夜宵，各忙各的，也一起过完了这周。', score: average, badge: '默契搭子' };
+function interact(game) {
+  if (game.phase !== 'playing') return;
+  const player = game.player;
+  if (game.carrying) {
+    const item = game.items.find(candidate => candidate.id === game.carrying);
+    const station = STATIONS.find(target => target.id === item.to);
+    if (distance(player, station) < 80) { deliver(game, item); return; }
+  }
+  const nearby = !game.carrying && game.items.filter(item => !item.delivered && distance(player, item) < 62).sort((a, b) => distance(player, a) - distance(player, b))[0];
+  if (nearby) {
+    game.carrying = nearby.id;
+    particles(game, nearby.x, nearby.y, '#fff0b2', 10);
+    emit(game, 'pickup', `拿到了${nearby.name}`);
+    setHint(game, `拿到${nearby.icon}${nearby.name}！送到${STATIONS.find(target => target.id === nearby.to).name}。`);
+    return;
+  }
+  if (game.level === 1 && game.phoneQuiet <= 0 && distance(player, STATIONS[4]) < 82) {
+    game.phoneQuiet = 12;
+    game.hazards = game.hazards.filter(hazard => hazard.type !== 'ring');
+    game.score += 30;
+    particles(game, 500, 171, '#b7ce92', 14);
+    floatText(game, '静音成功 +30', 500, 145);
+    emit(game, 'silence', '余浩铭：别催了，正在找！！');
+    return;
+  }
+  if (game.carrying) {
+    const item = game.items.find(candidate => candidate.id === game.carrying);
+    setHint(game, `把${item.name}送到发光的${STATIONS.find(target => target.id === item.to).name}。`);
+    return;
+  }
+  setHint(game, '靠近发光物品再按互动，或者直接点击物品自动走过去。');
 }
-function parseSave(value) {
+function dropItem(game) {
+  if (!game.carrying || game.phase !== 'playing') return;
+  const item = game.items.find(candidate => candidate.id === game.carrying);
+  item.x = game.player.x;
+  item.y = game.player.y;
+  game.carrying = null;
+  setHint(game, '物品放在脚边了，随时可以再拿。');
+  emit(game, 'drop', '先放一下，调整走位。');
+}
+function useAbility(game) {
+  if (game.phase !== 'playing' || game.cooldown > 0) return;
+  const character = CHARACTERS[game.character];
+  if (game.character === 0) {
+    const nearest = game.items.filter(item => !item.delivered && (item.id === game.carrying || distance(item, game.player) < 195)).sort((a, b) => (a.id === game.carrying ? 0 : distance(a, game.player)) - (b.id === game.carrying ? 0 : distance(b, game.player))).slice(0, 2);
+    if (!nearest.length) { setHint(game, '先走近物品，再开「一键收拾」！范围195。'); return; }
+    for (const item of nearest) {
+      if (game.phase !== 'playing') break;
+      deliver(game, item, true);
+    }
+  } else if (game.character === 1) {
+    game.boost = 4;
+    game.player.invincible = 4;
+    particles(game, game.player.x, game.player.y, character.color, 24);
+  } else if (game.character === 2) {
+    game.freeze = 5;
+    particles(game, game.player.x, game.player.y, character.color, 28);
+  } else {
+    if (!game.carrying) { setHint(game, '先拿起物品，再用「隔空跑腿」。'); return; }
+    deliver(game, game.items.find(item => item.id === game.carrying), true);
+  }
+  game.cooldown = character.cooldown;
+  setHint(game, `${character.name}发动了「${character.ability}」！`);
+  emit(game, 'ability', character.ability);
+}
+function hit(game, amount, text) {
+  if (game.player.invincible > 0) return;
+  game.chaos = Math.min(100, game.chaos + amount);
+  game.player.invincible = 1.5;
+  game.combo = 0;
+  game.comboTime = 0;
+  game.shake = .24;
+  floatText(game, `混乱 +${amount}`, game.player.x, game.player.y - 32, '#f2a092');
+  particles(game, game.player.x, game.player.y, '#e99788', 15);
+  emit(game, 'hit', text);
+  setHint(game, text);
+}
+function spawnHazard(game) {
+  if (game.level === 1) {
+    if (game.phoneQuiet <= 0) {
+      game.hazards.push({ type: 'ring', x: 500, y: 171, radius: 8, hit: false });
+      emit(game, 'chat', ['到哪了到哪了到哪了？', '浩铭，你手机快把全寝叫醒了！'][Math.floor(random(game) * 2)], { speaker: game.levelElapsed % 2 < 1 ? 1 : 3 });
+    }
+    game.nextHazard = 6;
+  } else {
+    const x = random(game) > .5 ? 305 : 690;
+    game.hazards.push({ type: 'sock', x, y: 275, vx: x < 500 ? 120 : -120, vy: 90 + random(game) * 60, radius: 17, life: 4 });
+    emit(game, 'chat', game.level === 0 ? '余一男：这只袜子真不是我的！' : '小推车来了！李睿你到底搬了什么回来？', { speaker: 3 });
+    game.nextHazard = game.level === 0 ? 8 : 9;
+  }
+}
+function update(game, dt, input = { x: 0, y: 0 }) {
+  dt = Math.min(.05, Math.max(0, dt));
+  if (game.phase !== 'playing') return;
+  game.elapsed += dt;
+  game.levelElapsed += dt;
+  game.cooldown = Math.max(0, game.cooldown - dt);
+  game.boost = Math.max(0, game.boost - dt);
+  game.player.invincible = Math.max(0, game.player.invincible - dt);
+  game.shake = Math.max(0, game.shake - dt);
+  game.hintTime = Math.max(0, game.hintTime - dt);
+  const frozen = game.freeze > 0;
+  game.freeze = Math.max(0, game.freeze - dt);
+  if (!frozen) {
+    game.time = Math.max(0, game.time - dt);
+    game.chaos = Math.min(100, game.chaos + dt * .1);
+    game.comboTime = Math.max(0, game.comboTime - dt);
+    if (game.comboTime === 0) game.combo = 0;
+    game.phoneQuiet = Math.max(0, game.phoneQuiet - dt);
+    game.nextHazard -= dt;
+    if (game.nextHazard <= 0) spawnHazard(game);
+  }
+  let dx = input.x || 0;
+  let dy = input.y || 0;
+  if (dx || dy) game.path = [];
+  else if (game.path.length) {
+    const point = game.path[0];
+    const remaining = distance(game.player, point);
+    if (remaining < 8) {
+      game.path.shift();
+      if (!game.path.length && game.autoInteract) { game.autoInteract = false; interact(game); }
+    } else { dx = point.x - game.player.x; dy = point.y - game.player.y; }
+  }
+  const length = Math.hypot(dx, dy);
+  if (game.phase !== 'playing') return;
+  game.player.moving = length > .01;
+  if (length) {
+    const magnitude = Math.min(1, length);
+    const speed = (game.boost > 0 ? 420 : 220) * magnitude;
+    const mx = dx / length * speed * dt;
+    const my = dy / length * speed * dt;
+    if (canStand(game.player.x + mx, game.player.y)) game.player.x += mx;
+    if (canStand(game.player.x, game.player.y + my)) game.player.y += my;
+    if (dx) game.player.direction = dx > 0 ? 1 : -1;
+  }
+  for (const coin of game.coins) {
+    if (!coin.collected && distance(game.player, coin) < 28) {
+      coin.collected = true;
+      game.score += 25;
+      floatText(game, '+25', coin.x, coin.y - 15);
+      particles(game, coin.x, coin.y, '#e5bf65', 7);
+      emit(game, 'coin', '+25');
+    }
+  }
+  if (!frozen) {
+    for (const hazard of game.hazards) {
+      if (hazard.type === 'ring') {
+        hazard.radius += dt * 165;
+        if (!hazard.hit && Math.abs(distance(game.player, hazard) - hazard.radius) < 22) { hit(game, 13, '来电声波打断了连击！靠近手机可以静音。'); hazard.hit = true; }
+      } else if (hazard.type === 'cart') {
+        hazard.x += hazard.vx * dt;
+        if (hazard.x < 305 || hazard.x > 695) { hazard.x = Math.max(305, Math.min(695, hazard.x)); hazard.vx *= -1; }
+        if (distance(game.player, hazard) < 39) hit(game, 17, '撞上实验小推车了，绕着走！');
+      } else {
+        hazard.x += hazard.vx * dt;
+        hazard.y += hazard.vy * dt;
+        hazard.life -= dt;
+        if (distance(game.player, hazard) < 33) { hit(game, 11, '被飞来的袜子击中了！谁的，自己领走。'); hazard.life = 0; }
+      }
+    }
+    game.hazards = game.hazards.filter(hazard => hazard.type === 'ring' ? hazard.radius < 1050 : hazard.type === 'cart' || hazard.life > 0);
+  }
+  game.particles.forEach(particle => { particle.life -= dt; particle.x += particle.vx * dt; particle.y += particle.vy * dt; particle.vy += dt * 140; });
+  game.particles = game.particles.filter(particle => particle.life > 0);
+  game.floaters.forEach(floater => { floater.life -= dt; floater.y -= dt * 27; });
+  game.floaters = game.floaters.filter(floater => floater.life > 0);
+  if (game.time <= 0) finish(game, false, ['阿姨推门了！地上的东西还没收完。', '奶茶都快凉了，浩铭还没带齐东西。', '李睿等到打瞌睡，夜宵还在半路。'][game.level]);
+  else if (game.chaos >= 100) finish(game, false, '混乱值爆表，全寝室被你们吵醒了！');
+}
+function findPath(start, target) {
+  const step = 28;
+  const cols = 33;
+  const rows = 18;
+  const cell = (x, y) => ({ x: 60 + x * step, y: 102 + y * step });
+  const walkable = [];
+  let startId = -1;
+  let targetId = -1;
+  let startDistance = Infinity;
+  let targetDistance = Infinity;
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      const id = row * cols + col;
+      const point = cell(col, row);
+      walkable[id] = canStand(point.x, point.y, 20);
+      if (!walkable[id]) continue;
+      if (distance(point, start) < startDistance) { startDistance = distance(point, start); startId = id; }
+      if (distance(point, target) < targetDistance) { targetDistance = distance(point, target); targetId = id; }
+    }
+  }
+  if (startId < 0 || targetId < 0) return [];
+  const queue = [startId];
+  const previous = new Map([[startId, -1]]);
+  for (let cursor = 0; cursor < queue.length; cursor++) {
+    const id = queue[cursor];
+    if (id === targetId) break;
+    const col = id % cols;
+    const row = Math.floor(id / cols);
+    for (const [nx, ny] of [[col - 1, row], [col + 1, row], [col, row - 1], [col, row + 1]]) {
+      if (nx < 0 || nx >= cols || ny < 0 || ny >= rows) continue;
+      const next = ny * cols + nx;
+      if (!walkable[next] || previous.has(next)) continue;
+      previous.set(next, id);
+      queue.push(next);
+    }
+  }
+  if (!previous.has(targetId)) return [];
+  const path = [];
+  for (let id = targetId; id >= 0; id = previous.get(id)) path.unshift(cell(id % cols, Math.floor(id / cols)));
+  return path;
+}
+function moveTo(game, point, autoInteract = true) {
+  if (game.phase !== 'playing') return;
+  game.path = findPath(game.player, point);
+  game.autoInteract = autoInteract;
+}
+function restoreRun(value) {
   try {
-    const state = JSON.parse(value);
-    if (!state || state.version !== 1 || !Number.isInteger(state.day) || state.day < 1 || state.day > 7 || !['planning', 'event', 'ended'].includes(state.phase)) return null;
-    if (!state.stats || Object.keys(METRICS).some(key => !Number.isFinite(state.stats[key]) || state.stats[key] < 0 || state.stats[key] > (key === 'money' ? 9999 : 100))) return null;
-    if (!Array.isArray(state.assignments) || state.assignments.length !== 4 || state.assignments.some(id => !ACTIONS[id])) return null;
-    if (!Array.isArray(state.logs) || state.logs.some(log => !log || typeof log.text !== 'string' || !Number.isInteger(log.day) || log.day < 1 || log.day > 7)) return null;
-    if (!Array.isArray(state.eventOrder) || state.eventOrder.length !== 7 || new Set(state.eventOrder).size !== 7 || state.eventOrder.some(id => !Number.isInteger(id) || id < 0 || id >= EVENTS.length)) return null;
-    if (state.phase === 'event' && state.event !== state.eventOrder[state.day - 1]) return null;
-    if (state.phase === 'ended' && (!state.outcome || typeof state.outcome.title !== 'string' || typeof state.outcome.subtitle !== 'string' || typeof state.outcome.badge !== 'string' || !Number.isFinite(state.outcome.score))) return null;
-    return state;
+    const game = JSON.parse(value);
+    if (!game || game.version !== 2 || !Number.isInteger(game.character) || !CHARACTERS[game.character] || !Number.isInteger(game.level) || !LEVELS[game.level]) return null;
+    if (!['playing', 'paused', 'between'].includes(game.phase) || !game.player || !canStand(game.player.x, game.player.y, 16)) return null;
+    if (!['time', 'score', 'chaos', 'elapsed', 'cooldown', 'freeze', 'boost', 'nextHazard', 'comboTime', 'seed'].every(key => Number.isFinite(game[key]))) return null;
+    if (game.time < 0 || game.time > 65 || game.chaos < 0 || game.chaos > 100 || !Array.isArray(game.items) || game.items.length !== LEVELS[game.level].items.length) return null;
+    if (game.items.some(item => !Number.isFinite(item.x) || !Number.isFinite(item.y) || !STATIONS.some(station => station.id === item.to))) return null;
+    if (game.carrying && !game.items.some(item => item.id === game.carrying && !item.delivered)) return null;
+    if (![game.coins, game.hazards, game.particles, game.floaters, game.events, game.path].every(Array.isArray)) return null;
+    game.phase = game.phase === 'playing' ? 'paused' : game.phase;
+    game.events = [];
+    return game;
   } catch { return null; }
 }
 
 
 const $ = selector => document.querySelector(selector);
-const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
-let state = newGame();
-let storageAvailable = true;
-let soundEnabled = false;
-let audioContext;
-let toastTimer;
+const canvas = $('#game-canvas');
+const ctx = canvas.getContext('2d');
+const SAVE = 'dorm-113-arcade-v2';
+const BEST = 'dorm-113-arcade-best';
+const escape = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[character]));
+let best = 0;
+let selected = 0;
+let sound = false;
+let savedGame = null;
+let audio;
+let storageWorks = true;
 try {
-  const saved = localStorage.getItem(SAVE_KEY);
-  const parsed = saved && parseSave(saved);
-  if (parsed) state = parsed;
-  soundEnabled = localStorage.getItem(`${SAVE_KEY}-sound`) === 'on';
-} catch { storageAvailable = false; }
-
-const metricPresentation = {
-  clean: { icon: 'broom', color: '#95ac7c', short: '整洁' },
-  mood: { icon: 'heart', color: '#d69a83', short: '情谊' },
-  grade: { icon: 'book', color: '#94aeb7', short: '学业' },
-  energy: { icon: 'battery', color: '#d6b46b', short: '电量' },
-  money: { icon: 'coin', color: '#d6b46b', short: '经费' }
-};
+  best = Math.max(0, Number(localStorage.getItem(BEST)) || 0);
+  const preferredCharacter = Number(localStorage.getItem(`${SAVE}-character`));
+  selected = CHARACTERS[preferredCharacter] ? preferredCharacter : 0;
+  sound = localStorage.getItem(`${SAVE}-sound`) === 'on';
+  savedGame = restoreRun(localStorage.getItem(SAVE));
+} catch { storageWorks = false; }
+let game = createRun(selected, 113);
+game.phase = 'menu';
+let keys = new Set();
+let touch = { x: 0, y: 0 };
+let lastTime = 0;
+let hudClock = 0;
+let saveClock = 0;
+let taskSignature = '';
+let overlayPhase = '';
+let chats = [{ speaker: 1, text: '你们先忙，我今晚……可能又不回。' }, { speaker: 2, text: '我还在实验室，回来给你们带点数据。' }];
+let toastTimer;
+let lastCombo = 0;
+let recordThisRun = false;
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function avatar(index) {
-  const person = ROOMMATES[index];
-  const hair = [
-    '<path d="M16 28C13 8 28 7 35 11c13-4 18 5 17 18l-8-8-3 3-9-6-8 7Z" fill="#454737"/>',
-    '<path d="M16 28c-6-14 4-19 13-19l-2-5 10 6c17-3 21 7 15 21l-7-11-9 4-4-6-10 7Z" fill="#55483c"/>',
-    '<path d="M15 29C12 12 24 8 34 10c15-5 23 6 18 22l-7-10-24 0Z" fill="#434842"/>',
-    '<path d="M15 28C9 16 21 10 30 10c15-3 25 4 23 19l-10-6-7-7-5 9-10-2Z" fill="#484b3c"/>'
-  ][index];
-  return `<svg viewBox="0 0 68 76" aria-hidden="true"><path d="M7 76V64c1-11 12-17 27-17s26 6 27 17v12Z" fill="${person.color}" stroke="#685d4b" stroke-width="1.2"/><path d="m25 48 9 11 9-11" fill="#f5d2ad" stroke="#685d4b" stroke-width="1.1"/><path d="M28 45v9l6 5 6-5v-9" fill="#e9b990"/><ellipse cx="17" cy="34" rx="4" ry="6" fill="#efc8a0"/><ellipse cx="51" cy="34" rx="4" ry="6" fill="#efc8a0"/><path d="M17 25c0-19 34-19 34 0v13c-1 11-10 17-17 17S18 49 17 38Z" fill="#f3d0a9" stroke="#685d4b" stroke-width="1.2"/>${hair}<path d="M24 33h3m14 0h3" stroke="#5d5443" stroke-width="2.2" stroke-linecap="round"/><path d="m34 34-1 6h3m-7 5q5 4 10-1" fill="none" stroke="#aa7b5b" stroke-width="1.3" stroke-linecap="round"/>${index === 2 ? '<g fill="none" stroke="#555f53" stroke-width="1.5"><rect x="20" y="29" width="12" height="10" rx="3"/><rect x="37" y="29" width="12" height="10" rx="3"/><path d="M32 33h5m-20-1h3m29 0h3"/></g>' : ''}${index === 3 ? '<path d="M12 28c0-27 45-27 45 0" fill="none" stroke="#7a825d" stroke-width="4"/><path d="M13 27v13m43-13v13" stroke="#818b68" stroke-width="7" stroke-linecap="round"/>' : ''}${index === 1 ? '<path d="m47 59 3-3 3 3-3 4Z" fill="#faf3dc"/>' : ''}<path d="M18 64v12m32-12v12" stroke="#685d4b" stroke-width="1.1" opacity=".4"/></svg>`;
+  const person = CHARACTERS[index];
+  return `<svg viewBox="0 0 64 76" aria-hidden="true"><path d="M6 76V62c2-11 16-15 26-15s24 4 26 15v14" fill="${person.color}" stroke="#625a47" stroke-width="1.5"/><path d="m24 48 8 10 8-10" fill="#edc298"/><ellipse cx="15" cy="31" rx="4" ry="6" fill="#ebc69d"/><ellipse cx="49" cy="31" rx="4" ry="6" fill="#ebc69d"/><path d="M15 22c1-19 34-19 34 0v14c-1 12-10 18-17 18s-16-6-17-18Z" fill="#f0cba1" stroke="#625a47" stroke-width="1.2"/><path d="M14 27C8 7 25 5 31 8c18-5 27 8 19 22l-7-12-7 5-7-7-8 10Z" fill="${index === 1 ? '#5e5143' : '#414c3d'}"/><path d="M23 32h2m15 0h2" stroke="#5b5541" stroke-width="2.8" stroke-linecap="round"/><path d="m32 34-1 6h3m-7 5q5 3 10-1" fill="none" stroke="#ab7b56" stroke-width="1.3"/>${index === 2 ? '<g fill="none" stroke="#586252" stroke-width="1.6"><rect x="18" y="27" width="12" height="12" rx="3"/><rect x="35" y="27" width="12" height="12" rx="3"/><path d="M30 32h5"/></g>' : ''}${index === 3 ? '<path d="M12 28c0-27 41-27 41 0" fill="none" stroke="#899265" stroke-width="4"/><path d="M11 28v12m42-12v12" stroke="#939d74" stroke-width="6" stroke-linecap="round"/>' : ''}</svg>`;
 }
-
-function save() {
-  try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); storageAvailable = true; }
-  catch { storageAvailable = false; }
-  $('#save-status').innerHTML = `<span></span>${storageAvailable ? '进度已自动保存' : '当前浏览器无法保存进度'}`;
+function storageSet(key, value) {
+  try { localStorage.setItem(key, value); return true; }
+  catch { storageWorks = false; return false; }
 }
-
-function notify(text) {
-  const toast = $('#toast');
-  toast.textContent = text;
-  toast.classList.add('visible');
+function persist() {
+  if (['playing', 'paused', 'between'].includes(game.phase)) storageSet(SAVE, JSON.stringify({ ...game, events: [], particles: [], floaters: [], path: [], autoInteract: false }));
+}
+function clearSave() { try { localStorage.removeItem(SAVE); } catch { storageWorks = false; } savedGame = null; }
+function notify(message) {
+  $('#toast').textContent = message;
+  $('#toast').classList.add('visible');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('visible'), 3600);
+  toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 3000);
 }
-
-function playSound(kind = 'select') {
-  if (!soundEnabled) return;
+function beep(type) {
+  if (!sound) return;
   try {
     const Audio = window.AudioContext || window.webkitAudioContext;
     if (!Audio) return;
-    audioContext ||= new Audio();
-    if (audioContext.state === 'suspended') audioContext.resume().catch(() => {});
-    const notes = kind === 'finish' ? [392, 494, 587, 784] : kind === 'day' ? [392, 523] : [660];
+    audio ||= new Audio();
+    if (audio.state === 'suspended') audio.resume().catch(() => {});
+    const notes = { pickup: [640, 820], coin: [980], deliver: [523, 659, 784], ability: [392, 587, 880], clear: [523, 659, 784, 1047], win: [523, 659, 784, 1047, 1319], hit: [160, 110], lose: [330, 247, 165], silence: [740, 440] }[type] || [];
     notes.forEach((frequency, i) => {
-      const oscillator = audioContext.createOscillator();
-      const gain = audioContext.createGain();
-      const start = audioContext.currentTime + i * .12;
-      oscillator.type = 'sine';
-      oscillator.frequency.value = frequency;
-      gain.gain.setValueAtTime(0, start);
-      gain.gain.linearRampToValueAtTime(.045, start + .015);
-      gain.gain.exponentialRampToValueAtTime(.001, start + .22);
+      const oscillator = audio.createOscillator();
+      const gain = audio.createGain();
+      const start = audio.currentTime + i * .075;
+      oscillator.type = type === 'hit' ? 'sawtooth' : 'triangle';
+      oscillator.frequency.setValueAtTime(frequency, start);
+      gain.gain.setValueAtTime(.0001, start);
+      gain.gain.linearRampToValueAtTime(.035, start + .008);
+      gain.gain.exponentialRampToValueAtTime(.0001, start + .16);
       oscillator.connect(gain);
-      gain.connect(audioContext.destination);
+      gain.connect(audio.destination);
       oscillator.start(start);
-      oscillator.stop(start + .23);
+      oscillator.stop(start + .18);
     });
-  } catch { /* Sound is optional; game state remains available. */ }
+  } catch { /* Audio can be unavailable in embedded browsers. */ }
 }
-
-function showDialog(id) {
-  const dialog = $(id);
-  if (!dialog.open) dialog.showModal();
+function flushEvents() {
+  for (const event of game.events.splice(0)) {
+    beep(event.type);
+    if (event.type === 'chat') {
+      chats.unshift({ speaker: event.speaker, text: event.text });
+      chats = chats.slice(0, 3);
+      renderChats();
+    }
+    if (event.type === 'deliver') {
+      if (game.combo >= 2) $('#combo-pop').innerHTML = `${game.combo} COMBO!<small>默契加倍 · 得分 ×${1 + (game.combo - 1) * .5}</small>`;
+      persist();
+    }
+    if (event.type === 'hit' || event.type === 'ability') notify(event.text);
+    if (event.type === 'win' || event.type === 'lose') {
+      recordThisRun = game.score > best;
+      best = Math.max(best, game.score);
+      storageSet(BEST, String(best));
+      clearSave();
+    }
+  }
 }
-
-function render() {
-  $('#day-label').textContent = `第 ${state.day} 天`;
-  $('#day-dots').innerHTML = DAY_NAMES.map((name, i) => `<li class="${i + 1 === state.day ? 'current' : i + 1 < state.day ? 'complete' : ''}" ${i + 1 === state.day ? 'aria-current="step"' : ''}><b>${i + 1 < state.day ? icon('check') : `0${i + 1}`}</b><span>${name.slice(-1)}</span></li>`).join('');
-  $('#room-time').textContent = `${DAY_NAMES[state.day - 1]} · ${state.phase === 'event' ? '22:30' : '16:30'}`;
-  $('.room-card').classList.toggle('night', state.phase === 'event');
-  $('#money-value').textContent = state.stats.money;
-  $('#metrics').innerHTML = ['clean', 'mood', 'grade', 'energy'].map(key => `<div class="metric ${state.stats[key] <= 25 ? 'low' : ''}" style="--metric-color:${metricPresentation[key].color};--value:${state.stats[key]}%"><div class="metric-top">${icon(metricPresentation[key].icon)}<span>${METRICS[key]}</span><span class="metric-number">${state.stats[key]}<small>/100</small></span></div><div class="metric-track" role="meter" aria-label="${METRICS[key]}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.stats[key]}"><div class="metric-fill"></div></div></div>`).join('');
-  $('#roommate-grid').innerHTML = ROOMMATES.map((person, i) => {
-    const action = actionFor(i, state.assignments[i]);
-    const tag = i === 1 && state.assignments[i] === 'special' ? '今晚外出 · 群里报平安' : i === 2 && state.assignments[i] === 'special' ? '凌晨归来 · 留盏小夜灯' : '点击更换今天的活动';
-    return `<button class="roommate-card" data-person="${i}" style="--person-color:${person.color}" aria-label="给${person.name}安排活动，当前${action.name}" ${state.phase !== 'planning' ? 'disabled' : ''}><div class="person-top"><div class="avatar">${avatar(i)}</div><div><h3>${person.name}</h3><span class="person-role">${person.role}</span></div></div><p class="person-quote">「${person.line}」</p><div class="assigned-activity"><span>${icon(action.icon)}${action.name}</span>${icon('arrow')}</div><span class="person-tag">${tag}</span></button>`;
-  }).join('');
-  const delta = projectedDelta(state);
-  $('#forecast').innerHTML = `<div class="forecast-chips">${['money', 'clean', 'mood', 'grade', 'energy'].map(key => `<span class="forecast-chip ${delta[key] < 0 ? 'negative' : ''}">${icon(metricPresentation[key].icon)}${metricPresentation[key].short} ${delta[key] > 0 ? '+' : ''}${delta[key]}</span>`).join('')}</div>`;
-  $('#advance-label').textContent = state.phase === 'ended' ? '查看本周结局' : state.phase === 'event' ? '处理今晚的小事' : state.day === 7 ? '迎接这周的结局' : '过完这一天';
-  $('.advance-button small').textContent = state.phase === 'ended' ? '这周的故事写完了' : state.phase === 'event' ? '四个人，一起做决定' : '安排好了就出发';
-  $('#online-members').innerHTML = ROOMMATES.map((_, i) => `<span class="mini-avatar" title="${ROOMMATES[i].name}">${avatar(i)}</span>`).join('');
-  renderScene();
-  renderJournal();
-  renderNotice();
-  renderSoundButton();
-  $('#save-status').innerHTML = `<span></span>${storageAvailable ? '进度自动保存' : '当前浏览器无法保存进度'}`;
+function renderChats() {
+  $('#chat-feed').innerHTML = chats.map(message => `<div class="chat-message"><div class="chat-avatar">${avatar(message.speaker)}</div><div><strong>${CHARACTERS[message.speaker].name}</strong><p>${escape(message.text)}</p></div></div>`).join('');
 }
-
-function renderScene() {
-  const haoAway = state.assignments[1] === 'special';
-  const liAway = state.assignments[2] === 'special';
-  const positions = [[382, 383, .9], [747, 371, .86], [567, 361, .86], [494, 430, 1]];
-  const quotes = ['人齐了，但没完全齐。', '早八那么远，床却那么近。', '今天的空气，有夜宵的香气。', '忙归忙，回来记得轻点关门。', '撑住，离周末只差一点点。', '有时候，发呆也是正经事。', '这周的故事，终于快写完了。'];
-  $('#scene-quote').textContent = state.phase === 'ended' ? '四个人的故事，还会继续。' : quotes[state.day - 1];
-  $('#scene-subtitle').textContent = state.phase === 'ended' ? '翻翻碎碎念，看看这一周留下了什么' : '点击室友卡片，安排今天的日常';
-  $('#room-occupancy').textContent = [haoAway ? '浩铭今晚外出' : '浩铭留在宿舍', liAway ? '李睿凌晨归来' : '李睿难得早回'].join(' · ');
-  const notes = ['实验可以晚点结束，夜宵最好趁热。', '约会有约会的甜，宿舍有宿舍的暖。', '请勿擅动他人床位上的零食。', '刚扫完的地，值得全寝室尊重。', '一起赶过的作业，也算一起看过日出。', '今天没有早八，快乐可以慢一点。', '普通的一周，也值得认真纪念。'];
-  $('#scene-note').textContent = `☕ ${notes[state.day - 1]}`;
-  $('#room-people').innerHTML = positions.map(([x, y, scale], i) => {
-    const actionId = state.assignments[i];
-    const away = (i === 1 || i === 2) && actionId === 'special';
-    const person = ROOMMATES[i];
-    const action = actionFor(i, actionId);
-    const bubble = away ? (i === 1 ? '约会中 ♡' : '实验室 · 凌晨回') : actionId === 'rest' ? 'Z z z …' : actionId === 'special' ? action.name : ACTIONS[actionId].status;
-    const portrait = avatar(i).replace('<svg viewBox="0 0 68 76" aria-hidden="true">', '<svg x="-31" y="-76" width="68" height="76" viewBox="0 0 68 76">');
-    return `<g class="room-character ${away ? 'away' : ''} ${actionId === 'rest' ? 'sleepy' : ''}" transform="translate(${x} ${y}) scale(${scale})" role="button" tabindex="${state.phase === 'planning' ? '0' : '-1'}" data-roommate="${i}" aria-label="安排${person.name}的活动"><ellipse cx="2" cy="35" rx="34" ry="10" fill="#776e4a" opacity=".12"/><g class="character-float"><g class="character-body"><path d="M-15-2v26l-5 9H-3l5-31 8 30h17l-5-9-6-25Z" fill="${i === 2 ? '#73899b' : '#677968'}" stroke="#68624e" stroke-width="1.5"/>${portrait}</g></g><g class="bubble"><rect x="-70" y="-111" width="140" height="27" rx="8" fill="#fffbed" stroke="#d4c9ad" stroke-width="1"/><path d="m-4-84 5 6 5-6" fill="#fffbed" stroke="#d4c9ad" stroke-width="1"/><path d="M-3-84h8" stroke="#fffbed" stroke-width="2"/><text x="0" y="-93" text-anchor="middle" fill="${away ? '#af836c' : '#7b856b'}" font-size="11">${bubble}</text></g><rect x="-30" y="37" width="61" height="20" rx="10" fill="#fff8e6" opacity=".94"/><text x="0" y="51" text-anchor="middle" font-size="10" fill="#736e5b">${person.name}</text></g>`;
-  }).join('');
+function renderCharacters() {
+  $('#character-select').innerHTML = CHARACTERS.map((person, index) => `<button class="character-card ${index === selected ? 'selected' : ''}" data-character="${index}" aria-pressed="${index === selected}" ${['playing', 'paused', 'between'].includes(game.phase) ? 'disabled' : ''}><span class="character-portrait">${avatar(index)}</span><span class="character-info"><strong>${person.name}</strong><span>${person.title}</span><p>${person.icon} ${person.ability}<br>${person.description}</p></span>${index === selected ? '<small class="selected-label">本局出战</small>' : ''}</button>`).join('');
 }
-
-function renderJournal() {
-  $('#journal-count').textContent = `${state.logs.length} 条记录`;
-  const entries = [...state.logs].reverse().slice(0, 6);
-  $('#journal').innerHTML = entries.map(log => `<article class="journal-item ${escape(log.type)} ${state.logs.length === 1 ? 'journal-empty' : ''}"><span class="journal-day">0${log.day}</span><p>${escape(log.text)}<span>第 ${log.day} 天 · ${DAY_NAMES[log.day - 1]}</span></p></article>`).join('');
+function renderHud(force = false) {
+  const level = LEVELS[game.level];
+  const person = CHARACTERS[game.character];
+  $('#level-number').textContent = level.number;
+  $('#level-caption').textContent = ['今晚第一场混乱', '今晚第二场混乱', '今晚最后一场混乱'][game.level];
+  $('#level-name').textContent = level.short;
+  $('#time-value').textContent = `00:${Math.ceil(game.time).toString().padStart(2, '0')}`;
+  $('#hud-timer').classList.toggle('urgent', game.time <= 12 && game.phase === 'playing');
+  $('#hud-timer').classList.toggle('freeze-badge', game.freeze > 0);
+  $('#score-value').textContent = String(game.score).padStart(4, '0');
+  $('#best-score').textContent = String(best).padStart(4, '0');
+  $('#mission-count').textContent = `${game.delivered} / ${level.items.length}`;
+  $('#mission-description').textContent = level.subtitle;
+  $('#chaos-value').textContent = Math.round(game.chaos);
+  $('#chaos-fill').style.width = `${game.chaos}%`;
+  $('.chaos-track').setAttribute('aria-valuenow', String(Math.round(game.chaos)));
+  $('.chaos-card').classList.toggle('danger', game.chaos > 60);
+  $('#chaos-comment').textContent = game.chaos > 75 ? '全寝快醒了！送达物品能降低混乱。' : game.chaos > 40 ? '有点吵了，注意躲开危险。' : '风平浪静，暂时。';
+  $('#hint-text').textContent = game.phase === 'menu' ? '选一位室友，进入113的午夜。' : game.hintTime > 0 ? game.hint : game.carrying ? '发光的圈就是目的地。靠近按互动交付！' : '找一件发光物品，靠近按互动拿起。';
+  const item = game.items.find(candidate => candidate.id === game.carrying);
+  const station = item && STATIONS.find(target => target.id === item.to);
+  const signature = `${game.level}|${game.phase}|${game.carrying}|${game.items.map(candidate => candidate.delivered).join('')}`;
+  if (force || signature !== taskSignature) {
+    taskSignature = signature;
+    $('#task-list').innerHTML = game.items.map(candidate => `<li class="${candidate.delivered ? 'done' : ''}"><button class="task-button" data-item="${escape(candidate.id)}" ${game.phase !== 'playing' || candidate.delivered || game.carrying ? 'disabled' : ''} aria-label="前往${escape(candidate.name)}"><span>${candidate.icon}</span><span>${candidate.name}</span><small>${candidate.delivered ? '✓' : candidate.id === game.carrying ? '手持中' : '去拿 ↗'}</small></button></li>`).join('');
+    $('#carrying').classList.toggle('active', Boolean(item));
+    $('#carrying').innerHTML = item ? `<span>${item.icon} ${item.name}</span><button id="deliver-button" ${game.phase !== 'playing' ? 'disabled' : ''}>送到${station.name} ↗</button><small>可点按钮自动前往，沿途注意危险。</small>` : '<span>手上空空</span><small>点任务去拿，拿好后送到发光的位置。</small>';
+    $('.level-route').innerHTML = LEVELS.map((_, index) => `${index ? '<i></i>' : ''}<span class="${index === game.level ? 'active' : index < game.level ? 'done' : ''}">${index < game.level ? '✓' : `0${index + 1}`}</span>`).join('');
+  }
+  $('#skill-icon').textContent = person.icon;
+  $('#skill-name').textContent = person.ability;
+  $('#skill-description').textContent = person.description;
+  $('#skill-cooldown').textContent = game.cooldown > 0 ? `${Math.ceil(game.cooldown)}s` : '就绪';
+  $('#touch-cooldown').textContent = game.cooldown > 0 ? `${Math.ceil(game.cooldown)}s` : 'READY';
+  $('#skill-button').disabled = game.phase !== 'playing' || game.cooldown > 0;
+  $('#touch-skill').disabled = game.phase !== 'playing' || game.cooldown > 0;
+  $('#pause-button').disabled = !['playing', 'paused'].includes(game.phase);
+  $('#pause-button').setAttribute('aria-label', game.phase === 'paused' ? '继续游戏' : '暂停游戏');
+  $('#drop-button').disabled = game.phase !== 'playing' || !game.carrying;
+  $('#canvas-wrap').classList.toggle('urgent-frame', game.phase === 'playing' && game.time < 12);
+  document.body.classList.toggle('running', game.phase === 'playing');
+  if (lastCombo !== game.combo) { if (game.combo < 2) $('#combo-pop').textContent = ''; lastCombo = game.combo; }
+  renderOverlay();
 }
-
-function renderNotice() {
-  const low = Object.entries(state.stats).filter(([key, value]) => value < (key === 'money' ? 45 : 30));
-  if (state.phase === 'ended') {
-    $('#notice-title').textContent = state.outcome.badge;
-    $('#notice-text').textContent = state.outcome.subtitle;
-  } else if (low.length) {
-    $('#notice-title').textContent = `${METRICS[low[0][0]]}，需要照顾一下。`;
-    $('#notice-text').textContent = low[0][0] === 'money' ? '小金库快见底了。安排兼职或者跑腿，把生活费补回来。' : `${METRICS[low[0][0]]}有点吃紧，调整今天的活动，让这一项缓一缓。`;
+function renderOverlay() {
+  if (overlayPhase === game.phase) return;
+  overlayPhase = game.phase;
+  const overlay = $('#game-overlay');
+  const content = $('#overlay-content');
+  overlay.classList.toggle('hidden', game.phase === 'playing');
+  content.classList.toggle('end-card', game.phase === 'ended');
+  if (game.phase === 'playing') return;
+  keys.clear();
+  touch = { x: 0, y: 0 };
+  if (game.phase === 'menu') {
+    content.innerHTML = `<span class="overlay-kicker">WELCOME TO 113 · AFTER HOURS</span><h2>有事，<em>真得你上。</em></h2><p>限时跑腿 × 室友救场 × 连击挑战<br>全寝室的靠谱值，今晚由你拉满。</p><div class="overlay-instructions"><span><b>🥡</b>极限查寝</span><span><b>🧋</b>约会急送</span><span><b>☕</b>深夜接应</span></div><span class="overlay-selected">出战 <b>${CHARACTERS[selected].name}</b> · ${CHARACTERS[selected].ability}</span><button class="primary-button" data-command="${savedGame ? 'resume-saved' : 'start'}">${savedGame ? `继续上次 · 第${savedGame.level + 1}关 ↗` : '开始救场 ↗'}</button>${savedGame ? '<button class="secondary-button" data-command="start">重新开一局</button>' : ''}<div class="overlay-keyboard"><span>WASD 移动</span><span>E 互动</span><span>Shift 技能</span></div><div class="saved-note">${storageWorks ? '支持鼠标、键盘和触屏 · 自动保存未完进度' : '当前浏览器无法保存进度'}</div>`;
+  } else if (game.phase === 'paused') {
+    content.innerHTML = `<span class="overlay-kicker">TAKE A BREATH</span><h2>缓一口气，<em>继续救场。</em></h2><p>倒计时已暂停，室友们还在等你。<br>当前第${game.level + 1}关 · ${LEVELS[game.level].short}</p><button class="primary-button" data-command="resume">继续游戏 ↗</button><button class="secondary-button" data-command="menu">回去重新选人</button>`;
+  } else if (game.phase === 'between') {
+    const next = LEVELS[game.level + 1];
+    content.innerHTML = `<span class="overlay-kicker">MISSION ${game.level + 1} CLEAR</span><div class="overlay-grade">NICE!</div><h2>这波，<em>救到了。</em></h2><p>提前搞定${LEVELS[game.level].short}，时间奖励 +${game.stageScore}分。</p><div class="level-preview">接下来 · ${next.short}<br>${next.line}</div><button class="primary-button" data-command="next">下一关，走起 ↗</button><div class="saved-note">进入下一关会恢复20点秩序，技能重新就绪。</div>`;
   } else {
-    $('#notice-title').innerHTML = state.day === 7 ? '最后一天<br>今晚争取坐一桌。' : '本周目标<br>一个都不能掉队。';
-    $('#notice-text').textContent = '撑过七天，顾好经费、卫生、友情、学业和精神状态。';
+    const result = game.result;
+    content.innerHTML = `<span class="overlay-kicker">${result.won ? '113 ALL MISSIONS COMPLETE' : `MISSION ${game.level + 1} · TRY AGAIN`}</span><div class="overlay-grade">${result.won ? 'GG!' : '哎呀！'}</div>${recordThisRun ? '<span class="new-record">✦ 新纪录</span>' : ''}<h2>${result.won ? escape(result.rank) : '这把，差一点点。'}</h2><p>${escape(result.reason)}</p><div class="result-stat-row"><div><strong>${result.score}</strong><span>本局得分</span></div><div><strong>${result.maxCombo}</strong><span>最高连击</span></div><div><strong>${result.delivered}</strong><span>送达物品</span></div></div><button class="primary-button" data-command="start">${result.won ? '再来一把，冲个纪录 ↗' : '重新挑战 ↗'}</button><button class="secondary-button" data-command="menu">换个室友试试</button>`;
   }
 }
-
-function openActions(index) {
-  if (state.phase !== 'planning') return;
-  const person = ROOMMATES[index];
-  $('#action-person').innerHTML = `<div class="action-person"><div class="avatar">${avatar(index)}</div><div><strong>${person.name}</strong><small>${person.role}</small></div></div>`;
-  $('#action-title').textContent = `${person.short}，今天怎么安排？`;
-  $('#action-description').textContent = '每人选一项活动，明天还可以重新安排。';
-  $('#action-options').innerHTML = Object.keys(ACTIONS).map(id => {
-    const action = actionFor(index, id);
-    const selected = state.assignments[index] === id;
-    return `<button class="action-option ${selected ? 'selected' : ''}" data-action="${id}" data-index="${index}" aria-pressed="${selected}">${icon(action.icon)}<span><strong>${action.name}</strong><small>${action.note}</small></span>${selected ? `<span class="selected-tick">${icon('check')}</span>` : ''}</button>`;
-  }).join('');
-  showDialog('#action-dialog');
+function beginGame(resume = false) {
+  game = resume && savedGame ? savedGame : createRun(selected);
+  selected = game.character;
+  if (game.phase === 'paused') game.phase = 'playing';
+  taskSignature = '';
+  overlayPhase = '';
+  recordThisRun = false;
+  $('#combo-pop').textContent = '';
+  renderCharacters();
+  flushEvents();
+  renderHud(true);
+  persist();
+  canvas.focus({ preventScroll: true });
+  beep('pickup');
+}
+function pauseGame() {
+  if (game.phase === 'playing') game.phase = 'paused';
+  else if (game.phase === 'paused') game.phase = 'playing';
+  else return;
+  keys.clear();
+  touch = { x: 0, y: 0 };
+  persist();
+  renderHud(true);
+}
+function toMenu() {
+  clearSave();
+  game = createRun(selected, 113);
+  game.phase = 'menu';
+  overlayPhase = '';
+  taskSignature = '';
+  $('#combo-pop').textContent = '';
+  renderCharacters();
+  renderHud(true);
 }
 
-function openEvent() {
-  if (state.phase !== 'event') return;
-  const event = EVENTS[state.event];
-  $('#event-icon').innerHTML = icon(event.icon);
-  $('#event-tag').textContent = event.tag;
-  $('#event-title').textContent = event.title;
-  $('#event-description').textContent = event.text;
-  $('#event-choices').innerHTML = event.choices.map((choice, index) => `<button class="event-choice" data-choice="${index}"><span><strong>${choice.text}</strong><small>${choice.detail}</small></span>${icon('arrow')}</button>`).join('');
-  showDialog('#event-dialog');
+function roundedRect(x, y, w, h, radius, fill, stroke) {
+  ctx.beginPath();
+  ctx.roundRect(x, y, w, h, radius);
+  if (fill) { ctx.fillStyle = fill; ctx.fill(); }
+  if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = 2; ctx.stroke(); }
+}
+function text(value, x, y, size = 13, color = '#efe7ce', align = 'center', weight = '500') {
+  ctx.font = `${weight} ${size}px "Microsoft YaHei",sans-serif`;
+  ctx.textAlign = align;
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = color;
+  ctx.fillText(value, x, y);
+}
+function emoji(value, x, y, size = 31) { text(value, x, y, size, '#fff', 'center', '400'); }
+function drawFloor(t) {
+  ctx.fillStyle = '#263c35';
+  ctx.fillRect(0, 0, WIDTH, HEIGHT);
+  roundedRect(28, 40, 944, 551, 14, '#1e3029', '#1b2b25');
+  roundedRect(41, 55, 918, 523, 9, '#d5c19a');
+  ctx.save();
+  ctx.beginPath();ctx.roundRect(43, 79, 914, 496, 5);ctx.clip();
+  for (let row = 0; row < 12; row++) {
+    for (let col = 0; col < 20; col++) {
+      const x = 42 + col * 50 + (row % 2 ? -25 : 0);
+      const y = 78 + row * 45;
+      ctx.fillStyle = (col + row) % 4 === 0 ? '#d6c49f' : (col + row) % 3 === 0 ? '#d2bd94' : '#d9c7a4';
+      ctx.fillRect(x + 1, y + 1, 48, 43);
+      ctx.fillStyle = '#bda77f25';ctx.fillRect(x + 8, y + 21, 22, 1);
+    }
+  }
+  ctx.restore();
+  roundedRect(42, 53, 915, 38, 4, '#71836c', '#50644f');
+  for (let x = 60; x < 940; x += 90) { ctx.strokeStyle = '#88977a';ctx.beginPath();ctx.moveTo(x, 57);ctx.lineTo(x, 85);ctx.stroke(); }
+  roundedRect(395, 27, 210, 67, 4, '#c8bc94', '#4a604e');
+  roundedRect(403, 33, 194, 53, 2, '#334b53');
+  ctx.fillStyle = '#f8e5a4';ctx.beginPath();ctx.arc(556, 49, 12, 0, Math.PI * 2);ctx.fill();
+  ctx.fillStyle = '#334b53';ctx.beginPath();ctx.arc(561, 45, 11, 0, Math.PI * 2);ctx.fill();
+  ctx.fillStyle = '#8ca5a0';
+  for (const [x, y] of [[419, 49], [443, 67], [481, 43], [515, 65], [575, 72]]) ctx.fillRect(x, y, 2, 2);
+  ctx.fillStyle = '#cec59d';ctx.fillRect(496, 34, 6, 51);ctx.fillRect(404, 59, 190, 4);
+  roundedRect(74, 28, 100, 35, 5, '#ece1b7', '#45604b');text('113', 124, 47, 22, '#486147', 'center', '900');
+  roundedRect(758, 37, 155, 29, 3, '#e8dab0', '#8e946f');text('轻点关门 · 有人睡了', 836, 53, 11, '#85906d');
+  for (const x of [315, 684]) {
+    const glow = ctx.createRadialGradient(x, 105, 5, x, 135, 100);
+    glow.addColorStop(0, '#ffdf8268');glow.addColorStop(1, '#ffde8000');
+    ctx.fillStyle = glow;ctx.fillRect(x - 100, 65, 200, 170);
+    roundedRect(x - 13, 76, 26, 13, 3, '#ecd18a', '#a89766');
+  }
+  roundedRect(439, 455, 125, 84, 9, '#c0b08070');
+  ctx.strokeStyle = '#dfd1a280';ctx.strokeRect(448, 464, 107, 66);
+  text('113', 500, 499, 31, '#9c997153', 'center', '900');
+  if (game.level === 2) {
+    text('Z z z …', 183, 97 + Math.sin(t * 2) * 2, 15, '#d6e1bb');
+    text('Z z z …', 826, 365 + Math.sin(t * 2) * 2, 15, '#718765');
+  }
+}
+function drawFurniture(rect) {
+  const { x, y, w, h } = rect;
+  roundedRect(x + 6, y + 10, w, h, 5, '#6c60464a');
+  if (rect.type === 'bed') {
+    roundedRect(x, y, w, h, 5, '#9a815d', '#776c4f');
+    roundedRect(x + 7, y + 7, w - 14, h - 17, 3, '#e5d9b8');
+    const color = ['#9eb197', '#cd9488', '#91a6b4', '#cfb36f'][rect.owner];
+    roundedRect(x + 61, y + 12, w - 72, h - 29, 2, color);
+    ctx.strokeStyle = '#ffffff24';ctx.lineWidth = 1;
+    for (let tx = x + 77; tx < x + w - 15; tx += 21) { ctx.beginPath();ctx.moveTo(tx, y + 14);ctx.lineTo(tx, y + h - 20);ctx.stroke(); }
+    for (let ty = y + 25; ty < y + h - 15; ty += 18) { ctx.beginPath();ctx.moveTo(x + 63, ty);ctx.lineTo(x + w - 14, ty);ctx.stroke(); }
+    roundedRect(x + 12, y + 24, 40, h - 52, 7, '#f8edcd', '#d2c49f');
+    roundedRect(x + 16, y + h - 9, 80, 18, 3, '#ece0ba', '#b4a47e');
+    text(CHARACTERS[rect.owner].name, x + 56, y + h + 1, 10, '#7d8161');
+    ctx.fillStyle = '#aa9067';ctx.fillRect(x + 3, y + 3, 5, h - 5);ctx.fillRect(x + w - 8, y + 3, 5, h - 5);
+  } else {
+    roundedRect(x, y, w, h, 5, '#b2986b', '#817756');
+    roundedRect(x + 7, y + 5, w - 14, h - 13, 3, '#e0cd9f');
+    roundedRect(x + 53, y + 5, 62, 40, 3, '#465f52', '#63775b');
+    roundedRect(x + 58, y + 9, 52, 29, 1, game.level === 2 ? '#add0c0' : '#96b3a2');
+    ctx.fillStyle = '#63977e';ctx.fillRect(x + 64, y + 16, 24, 2);ctx.fillRect(x + 64, y + 22, 36, 2);ctx.fillRect(x + 64, y + 28, 18, 2);
+    roundedRect(x + 45, y + 48, 79, 17, 2, '#b9c3a6', '#8d9b7e');
+    emoji('📚', x + 23, y + 36, 24);emoji('🔬', x + 145, y + 31, 27);
+  }
+}
+function drawStation(station, t) {
+  const carried = game.items.find(item => item.id === game.carrying);
+  const target = carried?.to === station.id;
+  const relevant = game.items.some(item => !item.delivered && item.to === station.id) || (game.level === 1 && station.id === 'phone');
+  if (!relevant && station.id !== 'phone' && station.id !== 'door' && station.id !== 'bin') return;
+  ctx.save();
+  if (target) {
+    const gradient = ctx.createRadialGradient(station.x, station.y, 5, station.x, station.y, 61);
+    gradient.addColorStop(0, '#ffe38780');gradient.addColorStop(1, '#ffe38700');
+    ctx.fillStyle = gradient;ctx.fillRect(station.x - 65, station.y - 65, 130, 130);
+    ctx.beginPath();ctx.ellipse(station.x, station.y + 12, 42 + Math.sin(t * 6) * 3, 19, 0, 0, Math.PI * 2);ctx.strokeStyle = '#fff0a9';ctx.lineWidth = 3;ctx.stroke();
+    text('▼ 送这里', station.x, station.y - 49 + Math.sin(t * 5) * 3, 13, '#fff2bd', 'center', '900');
+  }
+  roundedRect(station.x - 29, station.y - 27, 58, 48, 8, station.id === 'phone' ? '#e3c8a3' : station.color, '#718265');
+  emoji(station.icon, station.x, station.y - 5, 30);
+  roundedRect(station.x - 42, station.y + 26, 84, 20, 5, '#f4e8c4d9');
+  text(station.name, station.x, station.y + 36, 10, '#7b815f');
+  if (station.id === 'phone' && game.level === 1 && game.phoneQuiet <= 0) {
+    ctx.strokeStyle = '#db8971';ctx.lineWidth = 2;ctx.beginPath();ctx.arc(station.x, station.y - 6, 34 + Math.sin(t * 12) * 4, -.8, .8);ctx.stroke();
+    text('E 静音', station.x, station.y - 42, 11, '#a36455', 'center', '700');
+  }
+  ctx.restore();
+}
+function drawItem(item, t) {
+  if (item.delivered || game.carrying === item.id) return;
+  const y = item.y - 4 + Math.sin(t * 3 + Number(item.id.at(-1))) * 3;
+  ctx.fillStyle = '#6d72512b';ctx.beginPath();ctx.ellipse(item.x, item.y + 13, 24, 8, 0, 0, Math.PI * 2);ctx.fill();
+  ctx.beginPath();ctx.arc(item.x, y, 25, 0, Math.PI * 2);ctx.fillStyle = '#fdf1bc70';ctx.fill();ctx.strokeStyle = '#fff4c1ba';ctx.lineWidth = 2;ctx.stroke();
+  emoji(item.icon, item.x, y - 2, 32);
+  if (distance(game.player, item) < 69 && !game.carrying && game.phase === 'playing') {
+    roundedRect(item.x - 24, y - 52, 48, 22, 5, '#395641');text('E 拾取', item.x, y - 41, 10, '#f5e8b9', 'center', '700');
+  }
+}
+function drawPerson(index, x, y, active, t) {
+  const person = CHARACTERS[index];
+  const bounce = active && game.player.moving && !reducedMotion ? Math.sin(t * 20) * 3 : Math.sin(t * 2) * 1;
+  ctx.save();
+  ctx.translate(x, y + bounce);
+  if (active && game.player.invincible > 0 && Math.sin(t * 28) > .3) ctx.globalAlpha = .6;
+  ctx.fillStyle = '#4b614447';ctx.beginPath();ctx.ellipse(0, 6 - bounce, 22, 9, 0, 0, Math.PI * 2);ctx.fill();
+  if (active) {
+    ctx.strokeStyle = game.boost > 0 ? '#ffe9b4' : '#fff5c1';ctx.lineWidth = 2;ctx.beginPath();ctx.ellipse(0, 7 - bounce, 25, 11, 0, 0, Math.PI * 2);ctx.stroke();
+    if (game.boost > 0) { ctx.strokeStyle = '#f5d18d';for (let i = 0; i < 3; i++) { ctx.beginPath();ctx.moveTo(-25 - i * 7 * game.player.direction, -10 - i * 8);ctx.lineTo(-40 - i * 7 * game.player.direction, -10 - i * 8);ctx.stroke(); } }
+  }
+  roundedRect(-14, -12, 12, 18, 4, '#54654e', '#4c5d47');roundedRect(3, -12, 12, 18, 4, '#54654e', '#4c5d47');
+  roundedRect(-21, -40, 42, 33, 11, person.color, '#706c4e');
+  roundedRect(-20, -75, 40, 40, 15, '#efc99c', '#77684a');
+  ctx.fillStyle = index === 1 ? '#605140' : '#46533e';ctx.beginPath();ctx.moveTo(-20, -54);ctx.lineTo(-23, -72);ctx.quadraticCurveTo(0, -94, 22, -73);ctx.lineTo(20, -53);ctx.lineTo(11, -68);ctx.lineTo(3, -61);ctx.lineTo(-5, -69);ctx.lineTo(-13, -57);ctx.closePath();ctx.fill();
+  ctx.fillStyle = '#545840';ctx.fillRect(-11, -55, 4, 4);ctx.fillRect(7, -55, 4, 4);
+  ctx.strokeStyle = '#b2825a';ctx.lineWidth = 1.5;ctx.beginPath();ctx.arc(0, -47, 5, .2, 2.9);ctx.stroke();
+  if (index === 2) { roundedRect(-16, -60, 14, 13, 4, null, '#59634c');roundedRect(2, -60, 14, 13, 4, null, '#59634c');ctx.beginPath();ctx.moveTo(-2, -54);ctx.lineTo(2, -54);ctx.stroke(); }
+  if (index === 3) { ctx.strokeStyle = '#879963';ctx.lineWidth = 5;ctx.beginPath();ctx.arc(0, -61, 24, Math.PI, Math.PI * 2);ctx.stroke();roundedRect(-27, -62, 7, 15, 3, '#94a375');roundedRect(20, -62, 7, 15, 3, '#94a375'); }
+  if (active && game.carrying) {
+    const item = game.items.find(candidate => candidate.id === game.carrying);
+    roundedRect(-22, -38, 44, 35, 7, '#fff1b9d9', '#c8af76');emoji(item.icon, 0, -22, 27);
+  }
+  if (active) { roundedRect(-39, 19, 78, 21, 8, '#f9edc9');text(person.name, 0, 30, 11, '#5d7354', 'center', '700'); }
+  ctx.restore();
+}
+function drawHazard(hazard, t) {
+  if (hazard.type === 'ring') {
+    ctx.strokeStyle = '#db7e6b';ctx.lineWidth = 6;ctx.setLineDash([12, 9]);ctx.beginPath();ctx.arc(hazard.x, hazard.y, hazard.radius, 0, Math.PI * 2);ctx.stroke();ctx.setLineDash([]);
+    ctx.strokeStyle = '#f0b09860';ctx.lineWidth = 15;ctx.stroke();
+  } else if (hazard.type === 'cart') {
+    roundedRect(hazard.x - 29, hazard.y - 25, 58, 42, 5, '#789d9a', '#547a73');
+    emoji('🧪', hazard.x - 9, hazard.y - 9, 25);emoji('⚗️', hazard.x + 13, hazard.y - 12, 21);
+    ctx.fillStyle = '#455c4d';ctx.beginPath();ctx.arc(hazard.x - 19, hazard.y + 21, 5, 0, Math.PI * 2);ctx.arc(hazard.x + 19, hazard.y + 21, 5, 0, Math.PI * 2);ctx.fill();
+    text(hazard.vx > 0 ? '→' : '←', hazard.x, hazard.y - 43, 24, '#b8634c', 'center', '700');
+  } else {
+    ctx.save();ctx.translate(hazard.x, hazard.y);ctx.rotate(t * 5);emoji('🧦', 0, 0, 31);ctx.restore();
+  }
+}
+function renderCanvas(t) {
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
+  ctx.save();
+  if (game.shake > 0 && !reducedMotion) ctx.translate(Math.sin(t * 91) * 5, Math.cos(t * 113) * 4);
+  drawFloor(t);
+  for (const station of STATIONS) drawStation(station, t);
+  for (const coin of game.coins) {
+    if (coin.collected) continue;
+    ctx.beginPath();ctx.ellipse(coin.x, coin.y, 8 + Math.sin(t * 5) * 3, 11, 0, 0, Math.PI * 2);ctx.fillStyle = '#e6bc55';ctx.fill();ctx.strokeStyle = '#fff0aa';ctx.lineWidth = 2;ctx.stroke();text('·', coin.x, coin.y, 18, '#a1813c');
+  }
+  if (game.path.length) {
+    ctx.setLineDash([5, 7]);ctx.beginPath();ctx.moveTo(game.player.x, game.player.y);game.path.forEach(point => ctx.lineTo(point.x, point.y));ctx.strokeStyle = '#f9f3cc80';ctx.lineWidth = 2;ctx.stroke();ctx.setLineDash([]);
+    const last = game.path.at(-1);ctx.strokeStyle = '#f6e19b';ctx.beginPath();ctx.arc(last.x, last.y, 9, 0, Math.PI * 2);ctx.stroke();
+  }
+  const objects = OBSTACLES.map(rect => ({ y: rect.y + rect.h, draw: () => drawFurniture(rect) }));
+  const npcs = [[0, 323, 354], [1, 859, 518], [2, 562, 362], [3, 836, 350]];
+  for (const [index, x, y] of npcs) {
+    if (index === game.character || (index === 1 && game.level !== 1) || (index === 2 && game.level !== 2)) continue;
+    objects.push({ y, draw: () => drawPerson(index, x, y, false, t) });
+  }
+  game.items.filter(item => !item.delivered && game.carrying !== item.id).forEach(item => objects.push({ y: item.y + 5, draw: () => drawItem(item, t) }));
+  objects.push({ y: game.player.y, draw: () => drawPerson(game.character, game.player.x, game.player.y, true, t) });
+  for (const object of objects.sort((a, b) => a.y - b.y)) object.draw();
+  for (const hazard of game.hazards) drawHazard(hazard, t);
+  for (const particle of game.particles) {
+    ctx.globalAlpha = Math.min(1, particle.life * 2);ctx.fillStyle = particle.color;ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
+  }
+  ctx.globalAlpha = 1;
+  for (const floater of game.floaters) {
+    ctx.globalAlpha = Math.min(1, floater.life * 2);text(floater.text, floater.x, floater.y, 19, '#35503a', 'center', '900');text(floater.text, floater.x, floater.y - 2, 19, floater.color, 'center', '900');
+  }
+  ctx.globalAlpha = 1;
+  if (game.freeze > 0) { ctx.fillStyle = '#8cceee22';ctx.fillRect(0, 0, WIDTH, HEIGHT);roundedRect(416, 97, 170, 33, 8, '#355565');text(`⏳ 时间暂停 ${game.freeze.toFixed(1)}s`, 500, 115, 13, '#d9f0f6', 'center', '700'); }
+  if (game.time < 12 && game.phase === 'playing') { ctx.strokeStyle = '#de8b6c90';ctx.lineWidth = 8;ctx.strokeRect(7, 7, WIDTH - 14, HEIGHT - 14); }
+  ctx.restore();
+}
+function frame(timestamp) {
+  const dt = lastTime ? Math.min(.05, (timestamp - lastTime) / 1000) : 0;
+  lastTime = timestamp;
+  const input = { x: (keys.has('d') || keys.has('arrowright') ? 1 : 0) - (keys.has('a') || keys.has('arrowleft') ? 1 : 0) + touch.x, y: (keys.has('s') || keys.has('arrowdown') ? 1 : 0) - (keys.has('w') || keys.has('arrowup') ? 1 : 0) + touch.y };
+  update(game, dt, input);
+  flushEvents();
+  renderCanvas(timestamp / 1000);
+  hudClock += dt;
+  saveClock += dt;
+  if (hudClock >= .08 || overlayPhase !== game.phase) { renderHud();hudClock = 0; }
+  if (saveClock >= 3) { persist();saveClock = 0; }
+  requestAnimationFrame(frame);
 }
 
-function openEnding() {
-  if (state.phase !== 'ended') return;
-  $('#ending-art').innerHTML = ROOMMATES.map((_, i) => `<span class="avatar">${avatar(i)}</span>`).join('');
-  $('#ending-badge').textContent = state.outcome.badge;
-  $('#ending-title').textContent = state.outcome.title;
-  $('#ending-description').textContent = state.outcome.subtitle;
-  $('#ending-stats').innerHTML = ['money', 'clean', 'mood', 'grade', 'energy'].map(key => `<div class="ending-stat"><strong>${key === 'money' ? '¥' : ''}${state.stats[key]}</strong><span>${metricPresentation[key].short}</span></div>`).join('');
-  showDialog('#ending-dialog');
-}
-
-function restart() {
-  document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
-  state = newGame();
-  save();
-  render();
-  playSound('day');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  notify('新的星期一，四个人又集合了。');
-}
-
-function renderSoundButton() {
-  $('#sound-button').innerHTML = icon(soundEnabled ? 'volume' : 'muted');
-  $('#sound-button').setAttribute('aria-label', soundEnabled ? '关闭音效' : '开启音效');
-  $('#sound-button').setAttribute('title', soundEnabled ? '关闭音效' : '开启音效');
-  $('#sound-button').setAttribute('aria-pressed', String(soundEnabled));
-}
-
-$('#roommate-grid').addEventListener('click', event => {
-  const card = event.target.closest('[data-person]');
-  if (card) openActions(Number(card.dataset.person));
+$('#overlay-content').addEventListener('click', event => {
+  const button = event.target.closest('[data-command]');
+  if (!button) return;
+  const command = button.dataset.command;
+  if (command === 'start') beginGame();
+  if (command === 'resume-saved') beginGame(true);
+  if (command === 'resume') { game.phase = 'playing';renderHud(true);canvas.focus({ preventScroll: true }); }
+  if (command === 'menu') toMenu();
+  if (command === 'next') { nextLevel(game);flushEvents();persist();renderHud(true);canvas.focus({ preventScroll: true }); }
 });
-$('#room-people').addEventListener('click', event => {
-  const character = event.target.closest('[data-roommate]');
-  if (character) openActions(Number(character.dataset.roommate));
+$('#character-select').addEventListener('click', event => {
+  const button = event.target.closest('[data-character]');
+  if (!button || !['menu', 'ended'].includes(game.phase)) return;
+  selected = Number(button.dataset.character);
+  storageSet(`${SAVE}-character`, String(selected));
+  game = createRun(selected, 113);
+  game.phase = 'menu';
+  overlayPhase = '';
+  taskSignature = '';
+  renderCharacters();
+  renderHud(true);
+  beep('pickup');
 });
-$('#room-people').addEventListener('keydown', event => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    const character = event.target.closest('[data-roommate]');
-    if (character) openActions(Number(character.dataset.roommate));
+$('#task-list').addEventListener('click', event => {
+  const button = event.target.closest('[data-item]');
+  if (!button || game.phase !== 'playing') return;
+  const item = game.items.find(candidate => candidate.id === button.dataset.item);
+  if (item && !item.delivered && !game.carrying) moveTo(game, item, true);
+});
+$('#carrying').addEventListener('click', event => {
+  if (!event.target.closest('#deliver-button') || !game.carrying) return;
+  const item = game.items.find(candidate => candidate.id === game.carrying);
+  moveTo(game, STATIONS.find(station => station.id === item.to), true);
+});
+canvas.addEventListener('pointerdown', event => {
+  if (game.phase !== 'playing' || event.button > 0) return;
+  event.preventDefault();
+  canvas.focus({ preventScroll: true });
+  const rect = canvas.getBoundingClientRect();
+  const point = { x: (event.clientX - rect.left) / rect.width * WIDTH, y: (event.clientY - rect.top) / rect.height * HEIGHT };
+  const item = game.items.filter(candidate => !candidate.delivered && candidate.id !== game.carrying && distance(candidate, point) < 48).sort((a, b) => distance(a, point) - distance(b, point))[0];
+  const station = STATIONS.filter(candidate => distance(candidate, point) < 46).sort((a, b) => distance(a, point) - distance(b, point))[0];
+  moveTo(game, item || station || point, Boolean(item || station));
+});
+document.addEventListener('keydown', event => {
+  if ($('#help-dialog').open || event.target.matches('input,textarea,select')) return;
+  const key = event.key.toLowerCase();
+  if (key === 'escape' || key === 'p') { event.preventDefault();if (!event.repeat) pauseGame();return; }
+  if (game.phase !== 'playing') return;
+  if (['w', 'a', 's', 'd', 'arrowup', 'arrowleft', 'arrowdown', 'arrowright', ' ', 'e', 'shift', 'q'].includes(key)) event.preventDefault();
+  keys.add(key);
+  if (!event.repeat) {
+    if (key === ' ' || key === 'e') interact(game);
+    if (key === 'shift') useAbility(game);
+    if (key === 'q') dropItem(game);
   }
 });
-$('#action-options').addEventListener('click', event => {
-  const option = event.target.closest('[data-action]');
-  if (!option || state.phase !== 'planning') return;
-  const index = Number(option.dataset.index);
-  state = assignAction(state, index, option.dataset.action);
-  save();
-  render();
-  $('#action-dialog').close();
-  playSound();
-  notify(`${ROOMMATES[index].name}的安排已更新：${actionFor(index, option.dataset.action).name}`);
-});
-$('#advance-button').addEventListener('click', () => {
-  if (state.phase === 'ended') return openEnding();
-  if (state.phase === 'event') return openEvent();
-  state = advanceDay(state);
-  save();
-  render();
-  playSound('day');
-  if (state.phase === 'ended') openEnding();
-  else openEvent();
-});
-$('#event-choices').addEventListener('click', event => {
-  const option = event.target.closest('[data-choice]');
-  if (!option || state.phase !== 'event') return;
-  const result = EVENTS[state.event].choices[Number(option.dataset.choice)].result;
-  state = chooseEvent(state, Number(option.dataset.choice));
-  save();
-  $('#event-dialog').close();
-  render();
-  playSound(state.phase === 'ended' ? 'finish' : 'select');
-  if (state.phase === 'ended') openEnding();
-  else notify(result);
-});
-$('#event-dialog').addEventListener('cancel', event => event.preventDefault());
-document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
-document.querySelectorAll('dialog:not(#event-dialog)').forEach(dialog => dialog.addEventListener('click', event => {
-  if (event.target === dialog) {
-    const rect = dialog.getBoundingClientRect();
-    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
-  }
-}));
-$('#help-button').addEventListener('click', () => showDialog('#help-dialog'));
-$('#reset-button').addEventListener('click', () => showDialog('#reset-dialog'));
-$('#confirm-reset').addEventListener('click', restart);
-$('#ending-restart').addEventListener('click', restart);
-$('#sound-button').addEventListener('click', () => {
-  soundEnabled = !soundEnabled;
-  try { localStorage.setItem(`${SAVE_KEY}-sound`, soundEnabled ? 'on' : 'off'); } catch { /* Optional preference. */ }
-  renderSoundButton();
-  if (soundEnabled) playSound();
-  notify(soundEnabled ? '轻轻的音效，已开启。' : '音效已关闭。');
-});
+document.addEventListener('keyup', event => keys.delete(event.key.toLowerCase()));
+window.addEventListener('blur', () => { keys.clear();touch = { x: 0, y: 0 };if (game.phase === 'playing') pauseGame(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden && game.phase === 'playing') pauseGame(); });
+window.addEventListener('pagehide', persist);
+$('#pause-button').addEventListener('click', pauseGame);
+$('#skill-button').addEventListener('click', () => useAbility(game));
+$('#touch-skill').addEventListener('pointerdown', event => { event.preventDefault();useAbility(game); });
+$('#touch-interact').addEventListener('pointerdown', event => { event.preventDefault();interact(game); });
+$('#drop-button').addEventListener('click', () => dropItem(game));
+const pad = $('#movement-pad');
+let stickPointer = null;
+function updateStick(event) {
+  const rect = pad.getBoundingClientRect();
+  const radius = rect.width * .32;
+  const dx = event.clientX - rect.left - rect.width / 2;
+  const dy = event.clientY - rect.top - rect.height / 2;
+  const length = Math.hypot(dx, dy);
+  const scale = Math.min(1, radius / Math.max(length, 1));
+  touch = { x: dx * scale / radius, y: dy * scale / radius };
+  $('#stick-thumb').style.transform = `translate(${dx * scale}px,${dy * scale}px)`;
+}
+pad.addEventListener('pointerdown', event => { if (game.phase !== 'playing') return;event.preventDefault();stickPointer = event.pointerId;pad.setPointerCapture(event.pointerId);updateStick(event); });
+pad.addEventListener('pointermove', event => { if (event.pointerId === stickPointer) { event.preventDefault();updateStick(event); } });
+function releaseStick() { stickPointer = null;touch = { x: 0, y: 0 };$('#stick-thumb').style.transform = ''; }
+pad.addEventListener('pointerup', releaseStick);
+pad.addEventListener('pointercancel', releaseStick);
+$('#help-button').addEventListener('click', () => { if (game.phase === 'playing') pauseGame();$('#help-dialog').showModal(); });
+$('#close-help').addEventListener('click', () => $('#help-dialog').close());
+$('#help-done').addEventListener('click', () => $('#help-dialog').close());
+function renderSound() { $('#sound-button').innerHTML = sound ? '♫' : '♫<span class="off-mark">×</span>';$('#sound-button').setAttribute('aria-label', sound ? '关闭音效' : '开启音效');$('#sound-button').setAttribute('aria-pressed', String(sound)); }
+$('#sound-button').addEventListener('click', () => { sound = !sound;storageSet(`${SAVE}-sound`, sound ? 'on' : 'off');renderSound();if (sound) beep('deliver'); });
 
-render();
-save();
-if (state.phase === 'event') openEvent();
-if (state.phase === 'ended') openEnding();
+renderChats();
+renderCharacters();
+renderSound();
+renderHud(true);
+requestAnimationFrame(frame);
 </script>
 </body>
 </html>
