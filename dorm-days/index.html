@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ee">
+  <meta name="description" content="王皓轩、余浩铭、李睿、余一男的七天宿舍生存计划。安排日常，处理夜归、约会与查寝，一起把日子过好。">
+  <title>404宿舍 · 室友生存计划</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%233e6655'/%3E%3Cpath d='M14 48V22l18-9 18 9v26M24 48V33h16v15' fill='none' stroke='%23f8f5ee' stroke-width='5'/%3E%3C/svg%3E">
+  <style>@charset "UTF-8";
+:root{--paper:#f8f5ee;--white:#fffdf8;--ink:#293d33;--muted:#818778;--line:#e5e2d6;--green:#426653;--coral:#d47758;--gold:#d8a952;--shadow:0 6px 20px #3f4b3310;--radius:18px;font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,a,select{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button,a{touch-action:manipulation}button{color:inherit}button:disabled{cursor:default;opacity:.65}button:focus-visible,a:focus-visible,[role=button]:focus-visible{outline:3px solid var(--coral);outline-offset:5px}a{color:inherit;text-decoration:none}.icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.icon-definitions{position:absolute;width:0;height:0;overflow:hidden}.site-shell{max-width:1440px;margin:auto;padding:0 58px}.topbar{height:108px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:14px}.brand-mark{height:52px;width:58px;border:1.8px solid var(--green);border-radius:7px;background:var(--green);color:#f6f1dd;font:900 28px/33px Georgia,serif;text-align:center;transform:rotate(-5deg);box-shadow:3px 3px 0 #c4c9af;letter-spacing:-2px}.brand-mark span{display:block;font:8px/9px Arial,sans-serif;letter-spacing:3px;margin-left:3px}.brand-name{font-weight:800;font-size:21px;letter-spacing:1px}.brand-name small{display:block;font-weight:400;font-size:11px;letter-spacing:2px;color:var(--muted);margin-top:5px}.top-actions{display:flex;align-items:center;gap:16px}.save-status{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);margin-right:5px}.save-status>span,.live-dot{width:6px;height:6px;border-radius:50%;background:#77947c;display:inline-block}.icon-button{background:none;border:1px solid var(--line);border-radius:50%;width:37px;height:37px;display:grid;place-items:center}.icon-button .icon{width:18px;height:18px}.icon-button:hover,.help-button:hover{background:#eeecdf}.help-button{display:flex;align-items:center;gap:6px;background:none;border:0;font-size:12px;padding:10px 0 10px 5px}.help-button .icon{width:18px;height:18px}.intro{display:flex;align-items:center;justify-content:space-between;padding:36px 8px 28px;gap:30px}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;display:flex;align-items:center;gap:9px}.tiny-star{font-size:21px;color:var(--coral)}.edition{margin-left:8px;color:#9a9f8e;font-size:9px;letter-spacing:1px;font-weight:400}.intro h1{position:relative;font-size:clamp(28px,3vw,43px);line-height:1.45;letter-spacing:1px;margin:7px 0 15px;font-weight:900;display:inline-block}.intro h1>span{color:var(--coral)}.title-squiggle{position:absolute;width:54%;height:12px;bottom:-3px;right:0;fill:none;stroke:#dba087;stroke-width:2.3;stroke-linecap:round}.intro p{margin:0;font-size:12px;color:#808679;line-height:1.9;letter-spacing:.3px}.mobile-break{display:none}.week-sticker{background:#f0ead7;position:relative;padding:16px 26px;border:1px solid #dcd4b8;outline:1px dashed #d4c7a7;outline-offset:-6px;transform:rotate(6deg);text-align:center;white-space:nowrap;margin-right:15px}.week-sticker span{display:block;font-size:8px;color:#92876d;letter-spacing:3px;line-height:1.8}.week-sticker strong{display:block;font-size:18px;letter-spacing:3px;padding:3px 0;color:#777c56}.week-progress{display:flex;align-items:center;gap:28px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 6px;margin-bottom:25px}.week-label{display:flex;align-items:center;gap:9px;font-size:12px;white-space:nowrap}.week-label>.icon{color:var(--coral);width:18px;height:18px}.week-label>span{font-size:11px;color:#9a9e90}.day-dots{display:flex;align-items:center;justify-content:space-between;flex:1;max-width:560px;list-style:none;margin:0;padding:0;position:relative}.day-dots:before{content:"";height:1px;background:var(--line);position:absolute;top:15px;left:3%;right:3%}.day-dots li{display:flex;align-items:center;gap:5px;position:relative;background:var(--paper);padding:0 5px;color:#999f90;font-size:10px}.day-dots b{display:grid;place-items:center;font-family:Georgia,serif;font-size:12px;width:29px;height:29px;border:1px solid #dfe1d4;border-radius:50%;font-weight:400}.day-dots .current{color:var(--green);font-weight:700}.day-dots .current b{background:var(--green);color:var(--paper);border-color:var(--green);box-shadow:0 0 0 4px #42665310}.day-dots .complete b{background:#e1e7da;border-color:#d5ddcd;color:var(--green)}.day-dots .icon{width:13px;height:13px}.week-caption{margin-left:auto;color:#9a9e90;font-size:10px}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 282px;gap:26px}.game-main{min-width:0}.room-card{border:1px solid #dedfd0;background:#eeeede;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}.room-bar{display:flex;align-items:center;height:49px;background:#f6f6eb;border-bottom:1px solid #e0e2d3;padding:0 22px;gap:18px;font-size:10px;color:#858b78}.room-bar h2{display:flex;align-items:center;gap:8px;font-size:12px;margin:0;letter-spacing:1px;color:var(--ink)}.weather{display:flex;align-items:center;gap:6px;margin-left:auto;font-size:10px}.weather .icon{width:15px;height:15px;color:#caa35e}.room-scene{position:relative;background:radial-gradient(ellipse at 48% 50%,#f8f4e5 20%,#f0efdf 70%);isolation:isolate;aspect-ratio:1000/600}.room-scene:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#b9b8a1 .7px,transparent .7px);background-size:6px 6px;z-index:-1}.room-caption{position:absolute;top:23px;left:27px;z-index:1}.room-caption strong{display:block;font-size:16px;font-weight:700;letter-spacing:1px}.room-caption>span:last-child{display:block;font-size:10px;color:#9a9d89;margin-top:8px}.paper-pin{display:none}.dorm-illustration{display:block;width:100%;height:100%;position:absolute;inset:0;overflow:visible}.scene-note{position:absolute;bottom:13px;right:22px;font-size:10px;color:#9c937e;letter-spacing:.3px;transform:rotate(-2deg)}.scene-note>span{font-size:15px;margin-right:4px}.room-bottom{display:flex;align-items:center;min-height:49px;padding:8px 20px;background:#f7f6eb;border-top:1px solid #e1e1d3;gap:12px}.room-bottom p{font-size:10px;color:#8a907d;margin:0}.online-members{display:flex;padding-left:5px}.mini-avatar{width:25px;height:25px;overflow:hidden;border-radius:50%;border:2px solid #f7f6eb;background:#e5e6d7;margin-left:-5px}.mini-avatar svg{width:100%;height:100%;transform:scale(1.5) translateY(2px)}.sketch-text{font:italic 13px Georgia,serif;color:#a09b7f;margin-left:auto;white-space:nowrap}.roommates-section{margin-top:25px}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:15px}.section-heading h2{font-size:14px;letter-spacing:.5px;margin:0;display:flex;align-items:center;gap:9px}.section-heading h2>span{font-size:10px;color:#939985;font-weight:400;letter-spacing:0}.section-heading>span{font-size:10px;color:#939985}.roommate-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.roommate-card{text-align:left;width:100%;border:1px solid var(--line);background:#fffdf8;border-radius:14px;padding:15px 12px 12px;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative;overflow:hidden;box-shadow:0 3px 0 #e7e5da55}.roommate-card:hover{transform:translateY(-4px);border-color:#b9c7ae;box-shadow:0 8px 16px #3f4b3310}.roommate-card:before{content:"";position:absolute;width:75px;height:75px;top:-20px;right:-28px;border-radius:50%;background:var(--person-color);opacity:.12}.person-top{display:flex;align-items:center;gap:9px;position:relative}.avatar{width:43px;height:47px;background:var(--avatar-bg,#f1e5d1);border-radius:50%;flex-shrink:0;overflow:hidden}.avatar svg{width:100%;height:100%;transform:scale(1.1) translateY(2px)}.person-top h3{font-size:13px;letter-spacing:.5px;margin:0 0 5px}.person-role{font-size:9px;color:#8a8e7f;white-space:nowrap}.person-quote{font-size:10px;color:#a09d90;margin:12px 0 13px;line-height:1.65;min-height:32px}.assigned-activity{display:flex;align-items:center;justify-content:space-between;background:#f1f4eb;border-radius:7px;padding:8px 7px;gap:4px}.assigned-activity>span{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--green);white-space:nowrap}.assigned-activity .icon{width:13px;height:13px}.assigned-activity>.icon{width:13px;height:13px;color:#9fa98e;transform:rotate(-35deg)}.person-tag{display:inline-flex;align-items:center;gap:4px;font-size:8px;color:#9e8877;margin-top:10px;white-space:nowrap}.person-tag:before{content:"";height:4px;width:4px;background:#c8ad8f;border-radius:50%}.roommate-card[data-person="1"] .assigned-activity{background:#f8ebe6}.roommate-card[data-person="1"] .assigned-activity>span{color:#b57562}.roommate-card[data-person="2"] .assigned-activity{background:#eaf0f5}.roommate-card[data-person="2"] .assigned-activity>span{color:#6b8da9}.sidebar{display:flex;flex-direction:column;gap:17px}.status-card{border:1px solid var(--line);border-radius:16px;background:var(--white);padding:20px}.status-card .section-heading{margin-bottom:19px}.status-card .section-heading h2{font-size:13px}.status-label{font-size:9px!important;background:#eff3e8;color:#809073!important;padding:4px 7px;border-radius:4px}.budget{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;margin-bottom:16px;border-bottom:1px dashed #dfdfd1}.budget>div>span{display:block;font-size:10px;color:#8d937f;letter-spacing:.5px}.budget strong{display:flex;align-items:baseline;gap:4px;font-family:Georgia,"Microsoft YaHei",serif;font-size:35px;line-height:1.1;margin-top:8px;font-weight:400}.budget strong small{font-size:18px;margin-right:3px}.budget-icon{width:39px;height:39px;border-radius:50%;background:#f5ecce;color:#b99b54;display:grid;place-items:center}.budget-icon .icon{width:22px;height:22px}.metric{margin-top:14px}.metric-top{display:flex;align-items:center;gap:7px;margin-bottom:7px;font-size:10px}.metric-top>.icon{width:14px;height:14px;color:var(--metric-color)}.metric-number{margin-left:auto;display:flex;align-items:baseline;gap:3px;font-family:Arial,sans-serif;font-weight:700;font-size:12px}.metric-number small{font-size:9px;font-weight:400;color:#9ba18e}.metric-track{height:5px;background:#eeeee4;border-radius:20px;overflow:hidden}.metric-fill{height:100%;width:var(--value);background:var(--metric-color);border-radius:20px;transition:width .6s}.metric.low .metric-fill{background:#cf765c}.metric.low .metric-number{color:#c96952}.metric-delta{font-size:11px;font-family:Arial,sans-serif;color:#7b9270;margin-left:8px}.metric-delta.negative{color:#c68b70}.status-hint{font-size:9px;color:#a6a68e;margin:16px 0 0;line-height:1.7}.notice-card{position:relative;background:#f2e7c8;padding:21px 21px 15px;transform:rotate(1deg);border-radius:2px 2px 16px 2px;border:1px solid #e8dcb7;box-shadow:2px 4px 0 #e2d6b344}.tape{position:absolute;top:-7px;left:38%;width:66px;height:18px;background:#d8d9b3b0;transform:rotate(-7deg);clip-path:polygon(0 0,100% 4%,96% 91%,3% 100%)}.notice-kicker{font-size:9px;letter-spacing:2px;color:#9c8c62}.notice-card h3{font-size:21px;line-height:1.55;letter-spacing:1px;margin:11px 0 9px;font-weight:700;color:#655e3c}.notice-card p{font-size:10px;line-height:1.9;color:#9b8d65;margin:0}.notice-doodle{margin-top:12px;font-size:24px;color:#a8986d;text-align:right;transform:rotate(-5deg)}.notice-doodle span{font-size:10px;margin-left:4px}.forecast-card{padding:3px 3px 0}.forecast-card .section-heading{margin-bottom:9px}.forecast-card h2{font-size:11px}.forecast-card .section-heading>.icon{width:14px;height:14px;color:#c6a165}.forecast-chips{display:flex;flex-wrap:wrap;gap:6px}.forecast-chip{display:flex;align-items:center;gap:4px;font-size:9px;border:1px solid #e3e5d6;border-radius:5px;padding:5px 6px;background:#f2f4ea;color:#718367}.forecast-chip.negative{background:#f8eee5;color:#ad856d;border-color:#eddfd1}.forecast-chip .icon{width:11px;height:11px}.forecast-card p{font-size:9px;color:#a4a58f;line-height:1.8;margin:10px 0 0}.advance-button{display:flex;align-items:center;justify-content:space-between;background:var(--green);border:0;border-radius:11px;color:#f8f5e8;text-align:left;padding:16px 17px;box-shadow:0 4px 0 #2a4f3e;transition:transform .15s,background .15s}.advance-button:hover{background:#355945;transform:translateY(-2px)}.advance-button small{display:block;font-size:9px;color:#c4d3bb;font-weight:400;letter-spacing:1px;margin-bottom:4px}.advance-button strong{font-size:17px;letter-spacing:1px}.button-arrow{width:33px;height:33px;background:#ffffff14;border-radius:50%;display:grid;place-items:center}.button-arrow .icon{width:20px;height:20px}.reset-button{background:none;border:0;font-size:10px;color:#929985;display:flex;align-items:center;justify-content:center;gap:6px;margin:0}.reset-button:hover{color:var(--coral)}.reset-button .icon{width:12px;height:12px}.journal-section{margin:30px 0 0}.journal-section .section-heading{margin-bottom:13px}.journal-section h2>.icon{width:17px;height:17px;color:#879675}.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.journal-item{border:1px solid var(--line);border-radius:10px;padding:15px 17px;display:flex;gap:12px;background:#f5f3e9}.journal-day{font:italic 20px/1.4 Georgia,serif;color:#c1b79f;min-width:22px}.journal-item.event .journal-day{color:#cd9278}.journal-item p{font-size:11px;line-height:1.9;margin:0;color:#858b79}.journal-item p>span{font-size:9px;color:#aaa994;display:block;margin-top:4px}.journal-item:first-child{background:#faf2e4;border-color:#eadbc3}.journal-item:first-child p{color:#8e7f66}.journal-empty{grid-column:1/-1}footer{margin-top:37px;border-top:1px solid var(--line);padding:22px 0 25px;display:flex;justify-content:space-between;font-size:9px;letter-spacing:1px;color:#9ca18f;gap:14px}footer>span:first-child{font-size:8px}footer i{font-style:normal;padding:0 6px;color:#c5c4b3}.footer-dot{padding:0 8px}.room-character{cursor:pointer;transition:opacity .3s}.room-character:hover .character-body{filter:brightness(1.04)}.room-character .character-float{animation:breathe 4s ease-in-out infinite;transform-origin:50% 80%}.room-character:nth-child(2n) .character-float{animation-delay:-2s}.room-character .bubble{animation:float 6s ease-in-out infinite}.room-character.sleepy .character-float{animation:none}.room-character.sleepy .zzz{animation:float 3s ease-in-out infinite}.room-character.away .character-body{opacity:.25}.room-character text{font-family:"Microsoft YaHei",sans-serif}.night .room-scene{background:radial-gradient(ellipse at 48% 50%,#e4e6dd 20%,#daddcf 70%)}.night .weather{color:#78837b}.night .dorm-illustration{filter:saturate(.78)}
+dialog{padding:0;border:1px solid #e0dfd0;border-radius:23px;background:var(--white);color:var(--ink);max-width:min(530px,calc(100vw - 30px));width:100%;box-shadow:0 25px 100px #1e352f35;max-height:90dvh;overflow:auto}dialog::backdrop{background:#203b3480;backdrop-filter:blur(5px)}dialog[open]{animation:modal-in .2s ease-out}.modal-body{padding:34px;position:relative}.modal-close{position:absolute;right:17px;top:16px;width:30px;height:30px;border:0;background:#f0f0e6;display:grid;place-items:center;border-radius:50%;color:#8a927f}.modal-close .icon{width:16px;height:16px}.modal-kicker{display:block;font-size:10px;letter-spacing:2px;color:#909c7f;margin-bottom:8px}.modal-body h2{font-size:25px;letter-spacing:.5px;line-height:1.5;margin:0 0 12px}.modal-description{font-size:12px;line-height:2;color:#89917d;margin:0 0 23px}.action-person{display:flex;align-items:center;gap:12px;margin-bottom:18px}.action-person .avatar{height:58px;width:58px}.action-person strong{display:block;font-size:16px}.action-person small{display:block;color:#9a9f8c;font-size:10px;margin-top:6px}.action-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.action-option{display:flex;align-items:flex-start;gap:10px;border:1px solid var(--line);border-radius:11px;background:#faf9f1;text-align:left;padding:14px 10px;position:relative;min-height:89px}.action-option.selected{border-color:var(--green);background:#edf3e6}.action-option>.icon{width:20px;height:20px;color:#8e9d7f;margin-top:2px}.action-option strong{font-size:12px;display:block;line-height:1.6}.action-option small{display:block;font-size:9px;line-height:1.8;margin-top:5px;color:#989e88}.selected-tick{position:absolute;right:6px;top:6px;background:var(--green);color:#fff;border-radius:50%;width:13px;height:13px;display:grid;place-items:center}.selected-tick .icon{width:9px;height:9px}.event-body{text-align:center;padding:33px 34px 27px}.event-illustration{width:82px;height:82px;background:#f2e7c8;border-radius:23px;display:grid;place-items:center;margin:0 auto 22px;transform:rotate(-7deg);border:1px solid #e5d6ad;color:#ac8b50}.event-illustration>.icon{width:42px;height:42px;transform:rotate(7deg);stroke-width:1.3}.event-body>.modal-description{text-align:left;margin:0 0 22px}.event-body h2{font-size:25px}.event-choices{display:grid;gap:10px}.event-choice{border:1px solid #d9dfcc;background:#f3f5eb;border-radius:11px;padding:15px 17px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px;transition:background .15s,transform .15s}.event-choice:hover{background:#e7efdd;transform:translateY(-1px)}.event-choice strong{font-size:12px;display:block;line-height:1.7}.event-choice small{font-size:10px;display:block;color:#9a9e85;margin-top:6px}.event-choice>.icon{width:17px;height:17px;color:#8c9c7b}.event-choice:nth-child(2){background:#faf7ee;border-color:#e5e0cf}.event-choice:nth-child(2):hover{background:#f1e9d8}.event-footnote{font-size:9px;color:#aaa993;letter-spacing:.6px;margin:22px 0 0}.help-step{display:flex;gap:16px;margin:23px 0}.help-step>b{font:italic 24px Georgia,serif;color:#c8b992}.help-step strong{font-size:13px}.help-step p{font-size:11px;line-height:1.9;color:#939b86;margin:6px 0 0}.help-save{font-size:10px;color:#a3a68f;margin:25px 0 17px}.solid-button{border:0;background:var(--green);color:#fffdf0;border-radius:9px;padding:13px 19px;font-size:12px;font-weight:700}.solid-button:hover{background:#355644}.help-save+.solid-button{width:100%}.secondary-button{border:1px solid var(--line);background:#f6f5eb;border-radius:9px;padding:12px 17px;font-size:12px}.reset-choices{display:flex;justify-content:flex-end;gap:9px}.ending-body{text-align:center}.ending-art{display:flex;align-items:flex-end;justify-content:center;margin:4px 0 22px}.ending-art .avatar{height:72px;width:65px;margin:0 -3px;border:3px solid var(--white);transform:rotate(-6deg)}.ending-art .avatar:nth-child(2n){transform:rotate(6deg);height:80px}.ending-badge{display:inline-block;background:#f0e4bc;color:#9b823e;border-radius:20px;padding:7px 15px;font-size:11px;letter-spacing:2px;margin-bottom:14px}.ending-body h2{font-size:25px}.ending-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:15px 0 25px}.ending-stat{min-width:60px}.ending-stat strong{display:block;font:25px Georgia,serif;color:#75886a}.ending-stat span{display:block;font-size:9px;color:#a1a48e;margin-top:6px}.ending-actions{display:flex;justify-content:center;gap:9px}.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,20px);padding:13px 22px;background:#314f41;color:#f8f5e8;box-shadow:0 4px 20px #253b3330;font-size:12px;line-height:1.7;border-radius:11px;max-width:min(600px,calc(100vw - 32px));width:max-content;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;z-index:99;pointer-events:none}.toast.visible{opacity:1;transform:translate(-50%,0);visibility:visible}
+@keyframes breathe{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes modal-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1600px){.site-shell{max-width:1500px}.room-scene{aspect-ratio:1000/565}.intro{padding-top:40px;padding-bottom:33px}}
+@media(max-width:1180px){.site-shell{padding:0 30px}.game-layout{grid-template-columns:minmax(0,1fr) 252px;gap:20px}.week-caption{display:none}.day-dots{max-width:none}.intro h1{font-size:35px}.room-bar{padding:0 16px;gap:12px}.room-caption{top:18px;left:20px}.room-caption strong{font-size:13px}.roommates-section .section-heading>span{display:none}.person-top{gap:7px}.avatar{width:34px;height:38px}.person-top h3{font-size:12px}.person-role{font-size:8px}.roommate-card{padding:12px 9px}.roommate-grid{gap:8px}.person-quote{font-size:9px}.assigned-activity{padding:7px 4px}.assigned-activity>span{font-size:9px;gap:3px}.person-tag{font-size:7px}.sidebar{gap:14px}.status-card{padding:17px}.notice-card{padding:19px 17px 13px}.notice-card h3{font-size:19px}.scene-note{bottom:10px;font-size:8px}.sketch-text{font-size:11px}.room-bottom{padding:8px 14px;gap:7px}.room-bottom p{font-size:9px}.journal-item{padding:12px}.journal-item p{font-size:10px}}
+@media(max-width:900px){.site-shell{padding:0 23px}.topbar{height:90px}.intro{padding:30px 0 25px}.intro h1{font-size:32px}.week-sticker{padding:12px 17px;margin-right:4px}.week-sticker strong{font-size:15px}.week-sticker span{font-size:7px;letter-spacing:2px}.game-layout{grid-template-columns:minmax(0,1fr) 225px;gap:16px}.week-progress{gap:16px;padding:14px 0}.day-dots li{padding:0 3px}.day-dots li>span{display:none}.roommate-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.person-top .avatar{width:40px;height:43px}.person-top h3{font-size:13px}.person-role{font-size:9px}.person-quote{min-height:16px;margin:9px 0;font-size:10px}.assigned-activity{padding:8px}.assigned-activity>span{font-size:10px}.person-tag{font-size:8px;margin-top:7px}.weather{display:none}.room-scene{aspect-ratio:1000/680}.dorm-illustration{top:30px;height:calc(100% - 30px)}.room-caption strong{font-size:12px}.room-caption>span:last-child{font-size:8px}.scene-note{right:12px;font-size:7px}.sketch-text{display:none}.room-bottom p{font-size:8px}.notice-card h3{font-size:18px}.budget strong{font-size:31px}.journal{grid-template-columns:1fr 1fr}.journal-item:last-child{display:none}.journal-empty:last-child{display:flex}.week-label{font-size:11px;gap:7px}.section-heading h2{font-size:13px}.section-heading h2>span{font-size:9px}}
+@media(max-width:680px){.site-shell{padding:0 18px}.topbar{height:83px;gap:10px}.brand-mark{width:46px;height:44px;font-size:24px;line-height:28px}.brand-mark span{font-size:7px;line-height:8px;letter-spacing:2px}.brand-name{font-size:17px}.brand-name small{font-size:8px;letter-spacing:1.1px}.brand{gap:11px}.top-actions{gap:10px}.save-status{display:none}.help-button{padding-left:0;font-size:10px}.help-button>.icon{width:17px;height:17px}.icon-button{height:32px;width:32px}.icon-button .icon{width:16px;height:16px}.intro{padding:28px 0 23px;position:relative}.eyebrow{font-size:9px;letter-spacing:1px;gap:7px}.tiny-star{font-size:18px}.edition{font-size:8px;margin-left:2px}.intro h1{font-size:clamp(25px,6.7vw,37px);letter-spacing:.1px;line-height:1.5;margin:9px 0 12px}.intro p{font-size:10px;line-height:1.9}.mobile-break{display:block}.week-sticker{display:none}.week-progress{gap:12px;margin-bottom:18px;padding:13px 0}.week-label{font-size:10px;gap:5px}.week-label>.icon{width:15px;height:15px}.week-label>span{font-size:9px}.day-dots b{width:23px;height:23px;font-size:10px}.day-dots:before{top:11px}.day-dots li{padding:0 2px}.game-layout{grid-template-columns:1fr;gap:20px}.room-bar{height:42px;font-size:9px;padding:0 15px}.room-bar h2{font-size:11px}.room-bar>span:nth-child(2){margin-left:auto}.weather{display:none}.room-scene{aspect-ratio:1000/660}.room-caption{left:18px;top:17px}.room-caption strong{font-size:13px;letter-spacing:.3px}.room-caption>span:last-child{font-size:8px;margin-top:6px}.dorm-illustration{top:30px;height:calc(100% - 30px)}.scene-note{font-size:7px;right:15px;bottom:8px}.scene-note>span{font-size:11px}.room-bottom{padding:8px 15px;min-height:42px;gap:8px}.room-bottom p{font-size:9px}.roommates-section{margin-top:22px}.roommates-section .section-heading h2{font-size:13px;gap:6px}.section-heading h2>span{font-size:8px}.roommate-grid{gap:11px}.roommate-card{padding:14px 12px 12px}.person-top{gap:10px}.person-top .avatar{width:42px;height:46px}.person-top h3{font-size:14px}.person-role{font-size:9px}.person-quote{font-size:10px;margin:10px 0 12px;min-height:29px}.assigned-activity{padding:8px}.assigned-activity>span{font-size:11px}.person-tag{font-size:8px}.sidebar{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;align-items:start}.status-card{grid-row:span 2;padding:15px 13px}.status-card .section-heading{gap:3px;margin-bottom:15px}.status-card .section-heading h2{font-size:12px}.status-label{font-size:7px!important;padding:3px 4px}.budget{padding-bottom:13px;margin-bottom:12px}.budget>div>span{font-size:9px}.budget strong{font-size:29px}.budget-icon{width:30px;height:30px}.budget-icon .icon{width:18px;height:18px}.budget strong small{font-size:15px}.metric{margin-top:13px}.metric-top{font-size:9px;gap:5px}.metric-top>.icon{height:12px;width:12px}.metric-number{font-size:11px}.metric-number small{font-size:8px}.status-hint{font-size:8px;line-height:1.9;margin-top:16px}.notice-card{padding:17px 13px 12px}.notice-kicker{font-size:8px;letter-spacing:1px}.notice-card h3{font-size:16px;margin:10px 0 8px;letter-spacing:.4px}.notice-card p{font-size:9px}.notice-doodle{margin-top:5px;font-size:20px}.notice-doodle span{font-size:8px}.forecast-card{padding:0 2px}.forecast-card h2{font-size:10px}.forecast-card .section-heading{margin-bottom:8px}.forecast-card p{font-size:8px;margin-top:8px}.forecast-chip{font-size:8px;padding:4px 5px;gap:3px}.forecast-chips{gap:4px}.advance-button{grid-column:1/-1;padding:15px 20px}.advance-button small{font-size:9px}.advance-button strong{font-size:18px}.reset-button{grid-column:1/-1;margin-top:-3px;font-size:10px;padding:3px}.journal-section{margin-top:25px}.journal{grid-template-columns:1fr;gap:9px}.journal-item{padding:13px 15px}.journal-item:nth-child(n+4){display:none}.journal-item:last-child{display:flex}.journal-item p{font-size:11px}.journal-item p>span{font-size:8px}.journal-section .section-heading{gap:5px}.journal-section h2{font-size:12px;gap:6px}.journal-count{font-size:9px!important}.journal-section h2>span{font-size:8px}footer{margin-top:27px;padding:18px 0;flex-direction:column;align-items:center;gap:12px;font-size:8px;letter-spacing:.6px}.modal-body{padding:29px 22px}.modal-body h2{font-size:23px}.modal-description{font-size:12px}.event-body{padding:29px 23px 23px}.event-body h2{font-size:23px}.event-illustration{width:68px;height:68px;margin-bottom:20px;border-radius:19px}.event-illustration>.icon{width:35px;height:35px}.event-choice{padding:13px 12px}.event-choice strong{font-size:11px}.event-choice small{font-size:9px}.action-options{gap:8px}.action-option{padding:12px 9px;gap:7px}.action-option strong{font-size:11px}.action-option small{font-size:8px}.action-option>.icon{width:18px;height:18px}.ending-art .avatar{width:57px;height:63px}.ending-art .avatar:nth-child(2n){height:70px}.ending-stats{gap:10px}.ending-stat{min-width:45px}.ending-stat strong{font-size:22px}.ending-stat span{font-size:8px}.ending-actions{gap:7px}.ending-actions button{padding:12px;font-size:11px}.toast{font-size:11px;bottom:20px;padding:12px 17px}.week-progress:has(.day-dots .current:last-child) .week-label{color:var(--coral)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3Z"/><path d="M9 20v-7h6v7"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 8h-4a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4H9m3-10v12"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 5c-3-3-7-1-8 2-1-3-5-5-8-2-5 5 3 11 8 15 5-4 13-10 8-15Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6C9 4 5 4 3 5v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-2-1-6-1-9 1v14"/></symbol>
+    <symbol id="i-broom" viewBox="0 0 24 24"><path d="m16 3-7 11m-2-2 8 5-3 5-10-4 5-6Zm1 4-2 4m5-2-2 3"/></symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24"><rect x="2" y="6" width="17" height="12" rx="3"/><path d="M22 10v4M6 10v4m4-4v4m4-4v4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14A9 9 0 0 1 10 3 9 9 0 1 0 20 14Z"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 7h10c3 0 5 11 3 12-2 1-5-3-5-3H9s-3 4-5 3C2 18 4 7 7 7Z"/><path d="M8 10v5m-2.5-2.5h5M16 11h.1m2 3h.1"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v7l-6 9c-1 2 0 2 2 2h12c2 0 3 0 2-2l-6-9V3M7 15h10"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1-1 7M3 4v6h6"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 4 3c-1 .4-1 1-1 2m0 3h.01"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="m3 9 4 0 5-5v16l-5-5H3V9Zm13-2c4 2 4 8 0 10m3-13c6 4 6 12 0 16"/></symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3V9Zm13 0 6 6m0-6-6 6"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M3 8a15 15 0 0 1 18 0M6 12a10 10 0 0 1 12 0m-9 4a5 5 0 0 1 6 0m-3 4h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/></symbol>
+  </defs></svg>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="./" class="brand" aria-label="404宿舍首页"><span class="brand-mark">404<span>ROOM</span></span><span class="brand-name">404 宿舍<small>一屋四人，七天故事。</small></span></a>
+      <div class="top-actions"><span class="save-status" id="save-status"><span></span>进度自动保存</span><button class="icon-button" id="sound-button" aria-label="开启音效" title="开启音效"><svg class="icon"><use href="#i-muted"/></svg></button><button class="help-button" id="help-button"><svg class="icon"><use href="#i-help"/></svg><span>怎么玩</span></button></div>
+    </header>
+    <main>
+      <section class="intro">
+        <div><div class="eyebrow"><span class="tiny-star">✳</span> 室友生存计划 <span class="edition">VOL. 01</span></div><h1>有福同享，<span>有早八各上。</span><svg class="title-squiggle" viewBox="0 0 320 15" aria-hidden="true"><path d="M3 10Q105-2 211 8T315 6"/></svg></h1><p>约会的、做实验的、等饭的，还有一个操心的你。<br class="mobile-break">让四个人的小日子，顺利过完这一周。</p></div>
+        <div class="week-sticker"><span>OUR LITTLE</span><strong>混乱，但快乐</strong><span>ROOMMATE LIFE ↗</span></div>
+      </section>
+      <section class="week-progress" aria-label="七天挑战进度"><div class="week-label"><svg class="icon"><use href="#i-sun"/></svg><strong id="day-label">第 1 天</strong><span>/ 7 天</span></div><ol id="day-dots" class="day-dots"></ol><span class="week-caption">把平凡的一周，过成我们的故事。</span></section>
+      <div class="game-layout">
+        <div class="game-main">
+          <section class="room-card" aria-labelledby="room-heading"><div class="room-bar"><h2 id="room-heading"><span class="live-dot"></span>404 号寝室</h2><span id="room-time">星期一 · 16:30</span><span class="weather"><svg class="icon"><use href="#i-sun"/></svg>窗外有点阳光</span></div>
+            <div class="room-scene" id="room-scene">
+              <div class="room-caption"><span class="paper-pin"></span><strong id="scene-quote">人齐了，但没完全齐。</strong><span id="scene-subtitle">点击下方室友，安排今天的日常</span></div>
+              <svg class="dorm-illustration" viewBox="0 0 1000 575" role="img" aria-labelledby="room-art-title"><title id="room-art-title">暖色手绘四人宿舍，有双层床、书桌、实验笔记和恋爱便签</title>
+                <defs>
+                  <pattern id="floorboards" width="95" height="62" patternUnits="userSpaceOnUse" patternTransform="skewX(-30)"><rect width="95" height="62" fill="#e5c4a2"/><path d="M0 0h95v62H0Z" fill="none" stroke="#cfab87" stroke-width="1.2"/><path d="M13 31h37m19 0h12" stroke="#d8b391" stroke-width="1"/></pattern>
+                  <pattern id="quilt" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#96b4a4"/><path d="M0 0h30v30H0Zm0 15h30M15 0v30" fill="none" stroke="#e8eee0" stroke-opacity=".5"/></pattern>
+                  <pattern id="pink-quilt" width="25" height="25" patternUnits="userSpaceOnUse"><rect width="25" height="25" fill="#d99a91"/><path d="M0 12h25M12 0v25" stroke="#eabdb3" stroke-width="2"/></pattern>
+                  <linearGradient id="window-sky" x2="0" y2="1"><stop stop-color="#b8d4d6"/><stop offset="1" stop-color="#e9e7ce"/></linearGradient>
+                  <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#8d7151" flood-opacity=".13"/></filter>
+                </defs>
+                <ellipse cx="501" cy="518" rx="397" ry="35" fill="#b59a7b" opacity=".12"/>
+                <g stroke="#6d6654" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M87 222 480 91 914 223v235L515 557 87 408Z" fill="#d8c3a8" stroke="none"/>
+                  <path d="M87 215 480 83v260L87 411Z" fill="#e1e6d7"/>
+                  <path d="m480 83 434 132v242L480 343Z" fill="#efdfc6"/>
+                  <path d="m87 411 393-68 434 114-399 100Z" fill="url(#floorboards)"/>
+                  <path d="M87 400 480 332l434 114v11L480 343 87 411Z" fill="#b1b69e"/>
+                  <path d="m96 227 370-123" stroke="#c0ccb7"/><path d="m491 104 411 124" stroke="#ddc9ab"/>
+                  <path d="m530 137 157 48v130l-157-40Z" fill="#899e93"/>
+                  <path d="m540 149 137 42v111l-137-36Z" fill="url(#window-sky)" stroke="#f8f4e5" stroke-width="6"/>
+                  <path d="m550 247 25-24 15 8 20-41 17 13 18 61 25 9v23l-120-31Z" fill="#a4b9a8" stroke="none"/>
+                  <path d="m610 171 0 111m-67-65 132 37" stroke="#fffaf0" stroke-width="5"/>
+                  <path d="m527 130 170 53" stroke="#74654e" stroke-width="5"/>
+                  <path d="m530 134 19 6v139l-20 0Z" fill="#e5bd75"/><path d="m676 178 18 6v130l-18-14Z" fill="#e5bd75"/>
+                  <path d="m541 156 0 112m146-61v84" stroke="#c59e5c" stroke-width="1.6"/>
+                  <path d="m702 226 114 32v79l-114-28Z" fill="#bb9470"/>
+                  <path d="m715 240 39 11-3 39-40-10Z" fill="#fff2c9" stroke="none" transform="rotate(-3 732 264)"/><path d="m764 254 38 10v40l-38-10Z" fill="#e7ad9c" stroke="none"/>
+                  <text x="717" y="266" font-size="10" fill="#746550" stroke="none" transform="rotate(15 717 266)">实验顺利</text><text x="767" y="282" font-size="10" fill="#765348" stroke="none" transform="rotate(15 767 282)">约会中 ♡</text>
+                  <path d="m196 204 100-32v66l-100 30Z" fill="#f8f0dc"/><path d="m207 212 78-25" stroke="#dfb05e" stroke-width="6"/>
+                  <text x="213" y="239" fill="#71806b" stroke="none" font-size="14" font-weight="bold" transform="rotate(-17 213 239)">好好吃饭</text>
+                  <path d="m318 183 74-22v53l-74 20Z" fill="#d0b290"/><path d="m325 188 25-8v22l-25 7Z" fill="#f5dfac" stroke="none"/><path d="m356 179 28-8v24l-28 7Z" fill="#a8bdaf" stroke="none"/>
+                  <path d="M142 274 450 183" stroke="#79755d" stroke-width="1.2"/>
+                  <g fill="#ffe6a2" stroke="#b9a071" stroke-width="1.4"><circle cx="163" cy="274" r="5"/><circle cx="216" cy="258" r="5"/><circle cx="271" cy="241" r="5"/><circle cx="326" cy="225" r="5"/><circle cx="381" cy="209" r="5"/><circle cx="434" cy="193" r="5"/></g>
+                  <g id="left-bunk" filter="url(#soft-shadow)">
+                    <path d="m123 315 110-35 196 61-109 33Z" fill="#aa8a65"/><path d="m123 315 197 59v16l-197-59Z" fill="#b49873"/><path d="m320 374 109-33v16l-109 33Z" fill="#d0b086"/>
+                    <path d="m129 305 105-30 188 60-104 31Z" fill="#f2e9d3"/><path d="m181 292 52-17 187 60-55 17Z" fill="url(#quilt)"/>
+                    <path d="m143 302 33-10 40 13-34 11Z" fill="#fff8e8"/>
+                    <path d="M123 315v126m197-67v126m109-159v126m-196-187v126" stroke="#8b7359" stroke-width="9"/>
+                    <path d="m123 405 110-35 196 61-109 33Z" fill="#b4926b"/><path d="m131 399 102-29 186 60-100 28Z" fill="#a5bace"/>
+                    <path d="m155 394 42-11 33 10-39 12Z" fill="#eee8d9"/>
+                    <path d="m237 372 150 49-79 24-150-47Z" fill="#899eae" stroke="none"/>
+                    <path d="m123 315v-32m197 91v-32m109-1v-32m-306-26 197 59 109-33" fill="none" stroke="#8b7359" stroke-width="5"/>
+                    <path d="m343 364 12 121m28-133 12 120m-50-87 40-12m-37 40 40-12m-37 40 40-12m-37 40 40-12" stroke="#947b5e" stroke-width="5"/>
+                    <path d="m157 342 42 13v24l-42-13Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/>
+                    <text x="165" y="360" font-size="11" fill="#6b785c" stroke="none" transform="rotate(17 165 360)">皓轩</text>
+                    <path d="m239 457 45 13v23l-45-12Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="247" y="476" font-size="11" fill="#6b7891" stroke="none" transform="rotate(17 247 476)">李睿</text>
+                  </g>
+                  <g id="right-bunk" filter="url(#soft-shadow)">
+                    <path d="m713 334 92-28 83 26-93 29Z" fill="#d3b88b"/>
+                    <path d="m713 334 82 27v17l-82-26Z" fill="#b89975"/><path d="m795 361 93-29v17l-93 29Z" fill="#b99b73"/>
+                    <path d="m719 326 86-24 75 27-85 25Z" fill="url(#pink-quilt)"/><path d="m781 309 23-7 47 16-24 7Z" fill="#fff4e0"/>
+                    <path d="M713 334v136m82-109v138m93-167v132m-83-158v132" stroke="#8b7359" stroke-width="9"/>
+                    <path d="m713 425 92-28 83 26-93 29Z" fill="#b79a77"/><path d="m721 418 83-22 76 26-85 22Z" fill="#e1b873"/>
+                    <path d="m784 402 21-6 42 14-25 7Z" fill="#fff0d5"/>
+                    <path d="M713 334v-33m82 60v-33m93 4v-33m-175 2 82 27 93-29" fill="none" stroke="#8b7359" stroke-width="5"/>
+                    <path d="m742 346 7 134m29-123 6 131m-41-117 35 11m-34 15 35 11m-34 15 35 11m-34 15 35 11" stroke="#947b5e" stroke-width="5"/>
+                    <path d="m806 364 55-16v22l-55 16Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="813" y="376" font-size="11" fill="#9b6562" stroke="none" transform="rotate(-17 813 376)">余浩铭</text>
+                    <path d="m803 461 55-16v22l-55 16Z" fill="#faf3dc" stroke="#b99f77" stroke-width="1.5"/><text x="809" y="473" font-size="11" fill="#77875c" stroke="none" transform="rotate(-17 809 473)">余一男</text>
+                  </g>
+                  <g id="desk">
+                    <path d="m377 331 166-46 139 43-159 47Z" fill="#dfc29c"/><path d="m377 331 146 44v15l-146-43Z" fill="#b99c77"/><path d="m523 375 159-47v15l-159 47Z" fill="#c6a87d"/>
+                    <path d="m389 349 3 100m274-101-1 96m-141-55 2 104" stroke="#88765a" stroke-width="7"/>
+                    <path d="m435 302 78 23-3-61-77-24Z" fill="#626f67"/><path d="m441 295 63 19-2-44-62-19Z" fill="#b6d4cc" stroke="#d5ded1" stroke-width="2"/>
+                    <path d="m466 277 22 6m-29 3 22 7m-24 0 17 5" stroke="#769f91" stroke-width="2"/>
+                    <path d="m433 322 64 19-27 8-64-19Z" fill="#c9d1c1" stroke-width="1.2"/><path d="m426 326 51 15" stroke="#8d9a89" stroke-width="4"/>
+                    <path d="m548 312 41 12-28 9-41-13Z" fill="#f4ecd8" stroke-width="1.2"/><path d="m544 318 22 6m-28-3 13 4" stroke="#9a9a7f" stroke-width="1"/>
+                    <path d="m604 306 25 8v30l-25-8Z" fill="#d79781"/><path d="m629 319 7 2v15l-7-2" fill="none"/><path d="m614 302 0-9m6 10v-7" stroke="#eee3cc" stroke-width="3"/>
+                    <path d="m582 298 0-31m0 4 20-10" stroke="#717f68" stroke-width="4"/><path d="m596 253 20 7-9 11-18-7Z" fill="#dfb862"/>
+                    <path d="m573 299 20 6" stroke="#717f68" stroke-width="4"/>
+                  </g>
+                  <g id="plant"><path d="m112 403 26 8-6 31-17-6Z" fill="#c38f70"/><path d="M125 409v-39m0 18c-20-2-21-18-21-18 20-1 21 18 21 18Zm0-8s-1-22 18-24c4 14-18 24-18 24Z" fill="#7b9d70" stroke="#6b865e"/></g>
+                  <path d="m453 475 110-31 101 29-108 33Z" fill="#d4a385" stroke="none" opacity=".65"/><path d="m467 476 90 26 90-27" fill="none" stroke="#edd0b5" stroke-width="2"/>
+                  <g id="floor-clutter"><path d="m622 450 27 7v20l-27-7Z" fill="#c7a478"/><path d="m649 457 18-6v20l-18 6Z" fill="#b78c62"/><path d="m622 450 17-5 28 6-18 6Z" fill="#d8b58b"/><path d="m635 448 26 7" stroke="#e9d3ae" stroke-width="4"/>
+                    <path d="m395 465 25 8 17-3-10-7-11-3Z" fill="#899d8c"/><path d="m422 481 24 7 18-4-10-6-14-2Z" fill="#899d8c"/>
+                  </g>
+                  <g id="door"><path d="m835 250 47 14v54l-47-15Z" fill="#b19a79"/><text x="842" y="280" fill="#f8edcf" font-size="17" stroke="none" transform="rotate(17 842 280)">404</text></g>
+                </g>
+                <g id="room-people"></g>
+              </svg>
+              <div class="scene-note" id="scene-note"><span>☕</span> 实验可以晚点结束，夜宵最好趁热。</div>
+            </div>
+            <div class="room-bottom"><div class="online-members" id="online-members"></div><p id="room-occupancy">每个人都有自己的节奏。</p><span class="sketch-text">home, sweet dorm ♡</span></div>
+          </section>
+          <section class="roommates-section" aria-labelledby="roommates-heading"><div class="section-heading"><h2 id="roommates-heading">今天，大家干点什么？ <span>安排室友</span></h2><span>每人一件事，搭配有讲究。</span></div><div class="roommate-grid" id="roommate-grid"></div></section>
+        </div>
+        <aside class="sidebar">
+          <section class="status-card"><div class="section-heading"><h2>宿舍状态</h2><span class="status-label">一起好好过</span></div><div class="budget"><div><span>小金库余额</span><strong><small>¥</small><span id="money-value">180</span><span class="metric-delta" id="money-delta"></span></strong></div><span class="budget-icon"><svg class="icon"><use href="#i-coin"/></svg></span></div><div id="metrics" class="metrics"></div><p class="status-hint">任何一项耗尽，挑战就会提前结束。</p></section>
+          <section class="notice-card"><span class="tape"></span><span class="notice-kicker">寝室小黑板</span><h3 id="notice-title">本周目标<br>一个都不能掉队。</h3><p id="notice-text">撑过七天，顾好经费、卫生、友情、学业和精神状态。</p><div class="notice-doodle">↗ <span>忙归忙，记得回群。</span></div></section>
+          <section class="forecast-card"><div class="section-heading"><h2>今日安排预估</h2><svg class="icon"><use href="#i-spark"/></svg></div><div id="forecast"></div><p>已计入每日开销与自然消耗。<br>今晚还有一件意想不到的小事。</p></section>
+          <button class="advance-button" id="advance-button"><span><small>安排好了就出发</small><strong id="advance-label">过完这一天</strong></span><span class="button-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></button>
+          <button class="reset-button" id="reset-button"><svg class="icon"><use href="#i-reset"/></svg>重新过这一周</button>
+        </aside>
+      </div>
+      <section class="journal-section"><div class="section-heading"><h2><svg class="icon"><use href="#i-book"/></svg>宿舍碎碎念 <span>那些小小的日常</span></h2><span class="journal-count" id="journal-count">1 条记录</span></div><div id="journal" class="journal" aria-live="polite"></div></section>
+    </main>
+    <footer><span>404 DORM DAYS <span class="footer-dot">·</span> 各自精彩，一起生活。</span><span>王皓轩 <i>×</i> 余浩铭 <i>×</i> 李睿 <i>×</i> 余一男</span></footer>
+  </div>
+  <dialog id="action-dialog" aria-labelledby="action-title"><div class="modal-body"><button class="modal-close" data-close aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button><div id="action-person"></div><span class="modal-kicker">今日活动安排</span><h2 id="action-title"></h2><p id="action-description" class="modal-description"></p><div id="action-options" class="action-options"></div></div></dialog>
+  <dialog id="event-dialog" aria-labelledby="event-title"><div class="modal-body event-body"><div class="event-illustration" id="event-icon"></div><span class="modal-kicker" id="event-tag"></span><h2 id="event-title"></h2><p id="event-description" class="modal-description"></p><div id="event-choices" class="event-choices"></div><p class="event-footnote">一起做决定，也一起承担结果。</p></div></dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="modal-body"><button class="modal-close" data-close aria-label="关闭"><svg class="icon"><use href="#i-close"/></svg></button><span class="modal-kicker">欢迎入住 404</span><h2 id="help-title">这周，靠你们了。</h2><div class="help-step"><b>01</b><div><strong>安排四个人的一天</strong><p>点击室友卡片，为每个人选一项活动。不同活动会改变宿舍状态，专属活动各有彩蛋。</p></div></div><div class="help-step"><b>02</b><div><strong>过完一天，处理小意外</strong><p>每天经费−28、整洁−8、情谊−6、学业−4、电量−10。随机事件的选择同样会影响状态。</p></div></div><div class="help-step"><b>03</b><div><strong>一起撑过七天</strong><p>任何一项降到零会提前结束。两人以上同时开黑，额外增加5点情谊。合理分工，解锁不同结局。</p></div></div><p class="help-save">进度保存在当前浏览器，可以随时回来继续。</p><button class="solid-button" data-close>明白了，一起过日子</button></div></dialog>
+  <dialog id="reset-dialog" aria-labelledby="reset-title"><div class="modal-body"><span class="modal-kicker">一个新的星期</span><h2 id="reset-title">重新开始这一周？</h2><p class="modal-description">当前这一局的进度会被清除，四位室友将回到星期一。</p><div class="reset-choices"><button class="secondary-button" data-close>接着过</button><button class="solid-button" id="confirm-reset">重新开始</button></div></div></dialog>
+  <dialog id="ending-dialog" aria-labelledby="ending-title"><div class="modal-body ending-body"><div class="ending-art" id="ending-art"></div><span class="ending-badge" id="ending-badge"></span><h2 id="ending-title"></h2><p id="ending-description" class="modal-description"></p><div id="ending-stats" class="ending-stats"></div><div class="ending-actions"><button class="solid-button" id="ending-restart">再过一周</button><button class="secondary-button" data-close>翻翻这周的回忆</button></div></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module">const SAVE_KEY = 'dorm-days-404-v1';
+const ROOMMATES = [
+  { id: 'wang', name: '王皓轩', short: '皓轩', role: '今日寝室长', line: '人可以不齐，饭必须吃齐。', color: '#e8aa69', special: '整顿夜宵', specialNote: '花12元，心情+8，电量+6', specialEffect: { money: -12, mood: 8, energy: 6 }, specialLine: '王皓轩煮了一锅面，连锅底都分得很公平。' },
+  { id: 'hao', name: '余浩铭', short: '浩铭', role: '恋爱出差中', line: '你们先睡，我今晚可能不回。', color: '#e48b83', special: '出去约会', specialNote: '花16元，心情+12，电量+4，整洁−3', specialEffect: { money: -16, mood: 12, energy: 4, clean: -3 }, specialLine: '余浩铭发来消息：和女朋友在一起，今晚不回了。' },
+  { id: 'li', name: '李睿', short: '李睿', role: '实验室常驻', line: '最后一组数据，真的最后一组。', color: '#8aabd1', special: '泡实验室', specialNote: '学业+12，电量−7，凌晨归来', specialEffect: { grade: 12, energy: -7 }, specialLine: '凌晨两点，李睿带着一组新数据轻轻推开了门。' },
+  { id: 'yi', name: '余一男', short: '一男', role: '快乐接应位', line: '我都行，记得带我一个。', color: '#a2b794', special: '跑腿接应', specialNote: '经费+12，整洁+3，心情+2，电量−1', specialEffect: { money: 12, clean: 3, mood: 2, energy: -1 }, specialLine: '余一男顺手取了四份快递，又赚了点跑腿费。' }
+];
+const ACTIONS = {
+  study: { name: '认真自习', icon: 'book', effect: { grade: 7, energy: -4, mood: -1 }, note: '学业+7 · 电量−4 · 心情−1', status: '知识加载中' },
+  clean: { name: '打扫宿舍', icon: 'broom', effect: { clean: 12, energy: -3, mood: 1 }, note: '整洁+12 · 电量−3 · 心情+1', status: '角落也不放过' },
+  work: { name: '出去兼职', icon: 'coin', effect: { money: 38, energy: -6, mood: -2 }, note: '经费+38 · 电量−6 · 心情−2', status: '努力赚夜宵钱' },
+  play: { name: '一起开黑', icon: 'game', effect: { mood: 9, energy: -3, clean: -2, grade: -1 }, note: '心情+9 · 电量−3 · 整洁−2 · 学业−1', status: '再赢一把就睡' },
+  rest: { name: '好好补觉', icon: 'moon', effect: { energy: 13 }, note: '电量+13', status: '请勿打扰充电' },
+  special: { name: '专属活动', icon: 'spark', effect: {}, note: '', status: '各有各的精彩' }
+};
+const METRICS = { clean: '宿舍整洁', mood: '室友情谊', grade: '学业进度', energy: '全员电量', money: '宿舍经费' };
+const DAY_NAMES = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'];
+const EVENTS = [
+  { icon: 'moon', tag: '22:30 · 晚点名', title: '四个人，三个定位。', text: '余浩铭在和女朋友约会，李睿还在实验室。寝室群里弹出一句「大家都安全吗？」王皓轩的手机响了。', choices: [
+    { text: '报个平安，约好回来的时间', detail: '情谊+7 · 电量−2', effect: { mood: 7, energy: -2 }, result: '四人群终于齐了四个「收到」。人没凑齐，牵挂先凑齐了。' },
+    { text: '让在宿舍的两人先好好休息', detail: '电量+8 · 情谊−3', effect: { energy: 8, mood: -3 }, result: '留了盏小夜灯。今晚先让一半的人睡个好觉。' }
+  ] },
+  { icon: 'flask', tag: '02:08 · 实验室来电', title: '最后一组，变成下一组。', text: '李睿发来一张实验台照片：「样品还得再等一会儿。」此时宿舍仅剩一包泡面。', choices: [
+    { text: '留好夜宵，再留一盏灯', detail: '经费−14 · 情谊+10 · 电量+3', effect: { money: -14, mood: 10, energy: 3 }, result: '李睿回来时面还是热的。他说了一句谢谢，然后又说了一遍。' },
+    { text: '视频陪他等，顺便一起复习', detail: '学业+8 · 情谊+3 · 电量−5', effect: { grade: 8, mood: 3, energy: -5 }, result: '实验没白等，课也没白复习。只是谁都不愿先承认自己困了。' }
+  ] },
+  { icon: 'heart', tag: '18:20 · 恋爱外派', title: '又双叒没回来吃饭。', text: '余浩铭：「今天和女朋友吃饭，你们不用等我。」宿舍夜宵团购还差一个人，另外三个人对视了一眼。', choices: [
+    { text: '祝约会愉快，拜托捎份奶茶', detail: '经费−12 · 情谊+9', effect: { money: -12, mood: 9 }, result: '浩铭送来四杯奶茶再出门。恋爱出差，也没忘了组织。' },
+    { text: '三人小聚，省下来的饭钱入公账', detail: '经费+15 · 情谊+3 · 整洁−3', effect: { money: 15, mood: 3, clean: -3 }, result: '三个人吃出了四个人的热闹，打扫时倒是很想第四个人。' }
+  ] },
+  { icon: 'broom', tag: '15:00 · 突击查寝', title: '阿姨已经到走廊了。', text: '桌上有外卖盒，椅背上有衣服，床底还有一只找了三天的袜子。门外传来了熟悉的钥匙声。', choices: [
+    { text: '全员起立，五分钟极限收拾', detail: '整洁+18 · 电量−9 · 情谊+3', effect: { clean: 18, energy: -9, mood: 3 }, result: '四个人第一次如此默契。袜子找到了，默契也找到了。' },
+    { text: '认真说明情况，补做卫生值日', detail: '整洁+8 · 学业−4 · 电量−3', effect: { clean: 8, grade: -4, energy: -3 }, result: '多了一张值日表，少了一点复习时间。好在宿舍真的变干净了。' }
+  ] },
+  { icon: 'book', tag: '20:40 · 截止日期', title: '作业今晚十二点交。', text: '寝室群突然安静了两秒。原来四个人都以为是下周。李睿说：「我能带大家过一遍思路。」', choices: [
+    { text: '关掉游戏，一起理清思路', detail: '学业+16 · 电量−9', effect: { grade: 16, energy: -9 }, result: '四盏台灯亮到最后。每个人都交上了自己写的作业。' },
+    { text: '先吃点东西，各自稳稳完成', detail: '经费−16 · 学业+8 · 电量+3', effect: { money: -16, grade: 8, energy: 3 }, result: '补充能量后，截止日期终于没那么像世界末日。' }
+  ] },
+  { icon: 'wifi', tag: '23:10 · 网络失踪', title: '网断了，人倒是齐了。', text: '余一男盯着卡住的进度条，王皓轩拉过一张椅子。难得四个人都在，今晚的娱乐计划需要换个方向。', choices: [
+    { text: '摆开纸牌，聊点有的没的', detail: '情谊+14 · 电量−4', effect: { mood: 14, energy: -4 }, result: '没有网络的一个小时，聊完了平时一周没聊完的话。' },
+    { text: '正好早睡，明天再战', detail: '电量+16 · 情谊−3', effect: { energy: 16, mood: -3 }, result: '群里最后一条消息是晚安。这次大家真的睡了。' }
+  ] },
+  { icon: 'spark', tag: '19:00 · 周末彩蛋', title: '今晚，终于能坐一桌。', text: '余浩铭提前安排好了约会，李睿也把实验收了尾。四个人坐在宿舍里，商量着这周最后一顿吃什么。', choices: [
+    { text: '来顿好的，庆祝一起撑过这周', detail: '经费−30 · 情谊+18 · 电量+5', effect: { money: -30, mood: 18, energy: 5 }, result: '饭吃到一半，已经有人开始说下周的离谱计划。' },
+    { text: '一锅泡面，加四颗蛋也很香', detail: '经费−10 · 情谊+10 · 电量+8', effect: { money: -10, mood: 10, energy: 8 }, result: '锅不大，四个人刚好围得下。普通的一周也有了纪念感。' }
+  ] }
+];
+
+const clamp = (value, max = 100) => Math.min(max, Math.max(0, value));
+function eventOrder(seed) {
+  const middle = [1, 2, 3, 4, 5];
+  let random = (Math.abs(seed) || 1) % 2147483647;
+  for (let i = middle.length - 1; i > 0; i--) {
+    random = random * 16807 % 2147483647;
+    const j = random % (i + 1);
+    [middle[i], middle[j]] = [middle[j], middle[i]];
+  }
+  return [0, ...middle, 6];
+}
+function newGame(seed = Date.now() % 2147483647) {
+  return { version: 1, day: 1, phase: 'planning', seed, eventOrder: eventOrder(seed), stats: { money: 180, clean: 66, mood: 64, grade: 60, energy: 64 }, assignments: ['clean', 'special', 'special', 'work'], logs: [{ day: 1, text: '新的星期，从一句「谁拿了我的充电器」开始。', type: 'start' }], lastDelta: null, event: null, outcome: null };
+}
+function actionFor(personIndex, actionId) {
+  const action = ACTIONS[actionId];
+  if (!action) throw new Error('未知活动');
+  const person = ROOMMATES[personIndex];
+  if (!person) throw new Error('未知室友');
+  return actionId === 'special' ? { ...action, name: person.special, effect: person.specialEffect, note: person.specialNote } : action;
+}
+function applyEffects(stats, effects) {
+  const next = { ...stats };
+  for (const [key, amount] of Object.entries(effects)) {
+    if (key in next) next[key] = clamp(next[key] + amount, key === 'money' ? 9999 : 100);
+  }
+  return next;
+}
+function projectedDelta(state) {
+  const result = { money: -28, clean: -8, mood: -6, grade: -4, energy: -10 };
+  state.assignments.forEach((id, index) => {
+    for (const [key, amount] of Object.entries(actionFor(index, id).effect)) result[key] += amount;
+  });
+  const players = state.assignments.filter(id => id === 'play').length;
+  if (players >= 2) result.mood += 5;
+  return result;
+}
+function assignAction(state, index, actionId) {
+  if (state.phase !== 'planning' || !Number.isInteger(index) || index < 0 || index >= 4 || !ACTIONS[actionId]) return state;
+  const assignments = [...state.assignments];
+  assignments[index] = actionId;
+  return { ...state, assignments };
+}
+function advanceDay(state) {
+  if (state.phase !== 'planning') return state;
+  const delta = projectedDelta(state);
+  const logs = [...state.logs];
+  state.assignments.forEach((id, i) => {
+    logs.push({ day: state.day, type: 'activity', text: id === 'special' ? ROOMMATES[i].specialLine : `${ROOMMATES[i].name}${{ study: '在自习室坐稳了，知识又多了一点。', clean: '打扫了宿舍，连床底也重见天日。', work: '兼职回来，把夜宵经费补上了。', play: '打了几局游戏，快乐到账。', rest: '补了个好觉，精神状态重新上线。' }[id]}` });
+  });
+  const stats = applyEffects(state.stats, delta);
+  const failed = Object.entries(stats).find(([, value]) => value === 0)?.[0];
+  if (failed) return { ...state, stats, logs, lastDelta: delta, event: null, phase: 'ended', outcome: getOutcome(stats, state.day, failed) };
+  return { ...state, stats, phase: 'event', event: state.eventOrder[state.day - 1], lastDelta: delta, logs };
+}
+function chooseEvent(state, choiceIndex) {
+  if (state.phase !== 'event' || !Number.isInteger(choiceIndex)) return state;
+  const choice = EVENTS[state.event]?.choices[choiceIndex];
+  if (!choice) return state;
+  const stats = applyEffects(state.stats, choice.effect);
+  const logs = [...state.logs, { day: state.day, type: 'event', text: choice.result }];
+  const failed = Object.entries(stats).find(([, value]) => value === 0)?.[0];
+  if (failed || state.day === 7) return { ...state, stats, logs, event: null, phase: 'ended', outcome: getOutcome(stats, state.day, failed) };
+  return { ...state, stats, logs, event: null, day: state.day + 1, phase: 'planning' };
+}
+function getOutcome(stats, day, failed) {
+  const average = Math.round((stats.clean + stats.mood + stats.grade + stats.energy) / 4);
+  if (failed) return { won: false, title: '这周需要重新安排一下', subtitle: `${METRICS[failed]}耗尽，挑战在第${day}天暂停。换个分工，再来一周。`, score: average, badge: '下周再战' };
+  if (average >= 72 && stats.money >= 40) return { won: true, title: '404，模范宿舍已找到。', subtitle: '有各自的生活，也有一起撑过去的日常。这周的满分，属于四个人。', score: average, badge: '神仙室友' };
+  if (stats.mood >= 80) return { won: true, title: '条件有限，快乐无限。', subtitle: '生活偶尔一团乱，但你们总能把彼此接住。七天挑战完成！', score: average, badge: '最佳损友' };
+  return { won: true, title: '跌跌撞撞，全员到齐。', subtitle: '实验、约会、早八和夜宵，各忙各的，也一起过完了这周。', score: average, badge: '默契搭子' };
+}
+function parseSave(value) {
+  try {
+    const state = JSON.parse(value);
+    if (!state || state.version !== 1 || !Number.isInteger(state.day) || state.day < 1 || state.day > 7 || !['planning', 'event', 'ended'].includes(state.phase)) return null;
+    if (!state.stats || Object.keys(METRICS).some(key => !Number.isFinite(state.stats[key]) || state.stats[key] < 0 || state.stats[key] > (key === 'money' ? 9999 : 100))) return null;
+    if (!Array.isArray(state.assignments) || state.assignments.length !== 4 || state.assignments.some(id => !ACTIONS[id])) return null;
+    if (!Array.isArray(state.logs) || state.logs.some(log => !log || typeof log.text !== 'string' || !Number.isInteger(log.day) || log.day < 1 || log.day > 7)) return null;
+    if (!Array.isArray(state.eventOrder) || state.eventOrder.length !== 7 || new Set(state.eventOrder).size !== 7 || state.eventOrder.some(id => !Number.isInteger(id) || id < 0 || id >= EVENTS.length)) return null;
+    if (state.phase === 'event' && state.event !== state.eventOrder[state.day - 1]) return null;
+    if (state.phase === 'ended' && (!state.outcome || typeof state.outcome.title !== 'string' || typeof state.outcome.subtitle !== 'string' || typeof state.outcome.badge !== 'string' || !Number.isFinite(state.outcome.score))) return null;
+    return state;
+  } catch { return null; }
+}
+
+
+const $ = selector => document.querySelector(selector);
+const escape = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
+let state = newGame();
+let storageAvailable = true;
+let soundEnabled = false;
+let audioContext;
+let toastTimer;
+try {
+  const saved = localStorage.getItem(SAVE_KEY);
+  const parsed = saved && parseSave(saved);
+  if (parsed) state = parsed;
+  soundEnabled = localStorage.getItem(`${SAVE_KEY}-sound`) === 'on';
+} catch { storageAvailable = false; }
+
+const metricPresentation = {
+  clean: { icon: 'broom', color: '#95ac7c', short: '整洁' },
+  mood: { icon: 'heart', color: '#d69a83', short: '情谊' },
+  grade: { icon: 'book', color: '#94aeb7', short: '学业' },
+  energy: { icon: 'battery', color: '#d6b46b', short: '电量' },
+  money: { icon: 'coin', color: '#d6b46b', short: '经费' }
+};
+
+function avatar(index) {
+  const person = ROOMMATES[index];
+  const hair = [
+    '<path d="M16 28C13 8 28 7 35 11c13-4 18 5 17 18l-8-8-3 3-9-6-8 7Z" fill="#454737"/>',
+    '<path d="M16 28c-6-14 4-19 13-19l-2-5 10 6c17-3 21 7 15 21l-7-11-9 4-4-6-10 7Z" fill="#55483c"/>',
+    '<path d="M15 29C12 12 24 8 34 10c15-5 23 6 18 22l-7-10-24 0Z" fill="#434842"/>',
+    '<path d="M15 28C9 16 21 10 30 10c15-3 25 4 23 19l-10-6-7-7-5 9-10-2Z" fill="#484b3c"/>'
+  ][index];
+  return `<svg viewBox="0 0 68 76" aria-hidden="true"><path d="M7 76V64c1-11 12-17 27-17s26 6 27 17v12Z" fill="${person.color}" stroke="#685d4b" stroke-width="1.2"/><path d="m25 48 9 11 9-11" fill="#f5d2ad" stroke="#685d4b" stroke-width="1.1"/><path d="M28 45v9l6 5 6-5v-9" fill="#e9b990"/><ellipse cx="17" cy="34" rx="4" ry="6" fill="#efc8a0"/><ellipse cx="51" cy="34" rx="4" ry="6" fill="#efc8a0"/><path d="M17 25c0-19 34-19 34 0v13c-1 11-10 17-17 17S18 49 17 38Z" fill="#f3d0a9" stroke="#685d4b" stroke-width="1.2"/>${hair}<path d="M24 33h3m14 0h3" stroke="#5d5443" stroke-width="2.2" stroke-linecap="round"/><path d="m34 34-1 6h3m-7 5q5 4 10-1" fill="none" stroke="#aa7b5b" stroke-width="1.3" stroke-linecap="round"/>${index === 2 ? '<g fill="none" stroke="#555f53" stroke-width="1.5"><rect x="20" y="29" width="12" height="10" rx="3"/><rect x="37" y="29" width="12" height="10" rx="3"/><path d="M32 33h5m-20-1h3m29 0h3"/></g>' : ''}${index === 3 ? '<path d="M12 28c0-27 45-27 45 0" fill="none" stroke="#7a825d" stroke-width="4"/><path d="M13 27v13m43-13v13" stroke="#818b68" stroke-width="7" stroke-linecap="round"/>' : ''}${index === 1 ? '<path d="m47 59 3-3 3 3-3 4Z" fill="#faf3dc"/>' : ''}<path d="M18 64v12m32-12v12" stroke="#685d4b" stroke-width="1.1" opacity=".4"/></svg>`;
+}
+
+function save() {
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); storageAvailable = true; }
+  catch { storageAvailable = false; }
+  $('#save-status').innerHTML = `<span></span>${storageAvailable ? '进度已自动保存' : '当前浏览器无法保存进度'}`;
+}
+
+function notify(text) {
+  const toast = $('#toast');
+  toast.textContent = text;
+  toast.classList.add('visible');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('visible'), 3600);
+}
+
+function playSound(kind = 'select') {
+  if (!soundEnabled) return;
+  try {
+    const Audio = window.AudioContext || window.webkitAudioContext;
+    if (!Audio) return;
+    audioContext ||= new Audio();
+    if (audioContext.state === 'suspended') audioContext.resume().catch(() => {});
+    const notes = kind === 'finish' ? [392, 494, 587, 784] : kind === 'day' ? [392, 523] : [660];
+    notes.forEach((frequency, i) => {
+      const oscillator = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      const start = audioContext.currentTime + i * .12;
+      oscillator.type = 'sine';
+      oscillator.frequency.value = frequency;
+      gain.gain.setValueAtTime(0, start);
+      gain.gain.linearRampToValueAtTime(.045, start + .015);
+      gain.gain.exponentialRampToValueAtTime(.001, start + .22);
+      oscillator.connect(gain);
+      gain.connect(audioContext.destination);
+      oscillator.start(start);
+      oscillator.stop(start + .23);
+    });
+  } catch { /* Sound is optional; game state remains available. */ }
+}
+
+function showDialog(id) {
+  const dialog = $(id);
+  if (!dialog.open) dialog.showModal();
+}
+
+function render() {
+  $('#day-label').textContent = `第 ${state.day} 天`;
+  $('#day-dots').innerHTML = DAY_NAMES.map((name, i) => `<li class="${i + 1 === state.day ? 'current' : i + 1 < state.day ? 'complete' : ''}" ${i + 1 === state.day ? 'aria-current="step"' : ''}><b>${i + 1 < state.day ? icon('check') : `0${i + 1}`}</b><span>${name.slice(-1)}</span></li>`).join('');
+  $('#room-time').textContent = `${DAY_NAMES[state.day - 1]} · ${state.phase === 'event' ? '22:30' : '16:30'}`;
+  $('.room-card').classList.toggle('night', state.phase === 'event');
+  $('#money-value').textContent = state.stats.money;
+  $('#metrics').innerHTML = ['clean', 'mood', 'grade', 'energy'].map(key => `<div class="metric ${state.stats[key] <= 25 ? 'low' : ''}" style="--metric-color:${metricPresentation[key].color};--value:${state.stats[key]}%"><div class="metric-top">${icon(metricPresentation[key].icon)}<span>${METRICS[key]}</span><span class="metric-number">${state.stats[key]}<small>/100</small></span></div><div class="metric-track" role="meter" aria-label="${METRICS[key]}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.stats[key]}"><div class="metric-fill"></div></div></div>`).join('');
+  $('#roommate-grid').innerHTML = ROOMMATES.map((person, i) => {
+    const action = actionFor(i, state.assignments[i]);
+    const tag = i === 1 && state.assignments[i] === 'special' ? '今晚外出 · 群里报平安' : i === 2 && state.assignments[i] === 'special' ? '凌晨归来 · 留盏小夜灯' : '点击更换今天的活动';
+    return `<button class="roommate-card" data-person="${i}" style="--person-color:${person.color}" aria-label="给${person.name}安排活动，当前${action.name}" ${state.phase !== 'planning' ? 'disabled' : ''}><div class="person-top"><div class="avatar">${avatar(i)}</div><div><h3>${person.name}</h3><span class="person-role">${person.role}</span></div></div><p class="person-quote">「${person.line}」</p><div class="assigned-activity"><span>${icon(action.icon)}${action.name}</span>${icon('arrow')}</div><span class="person-tag">${tag}</span></button>`;
+  }).join('');
+  const delta = projectedDelta(state);
+  $('#forecast').innerHTML = `<div class="forecast-chips">${['money', 'clean', 'mood', 'grade', 'energy'].map(key => `<span class="forecast-chip ${delta[key] < 0 ? 'negative' : ''}">${icon(metricPresentation[key].icon)}${metricPresentation[key].short} ${delta[key] > 0 ? '+' : ''}${delta[key]}</span>`).join('')}</div>`;
+  $('#advance-label').textContent = state.phase === 'ended' ? '查看本周结局' : state.phase === 'event' ? '处理今晚的小事' : state.day === 7 ? '迎接这周的结局' : '过完这一天';
+  $('.advance-button small').textContent = state.phase === 'ended' ? '这周的故事写完了' : state.phase === 'event' ? '四个人，一起做决定' : '安排好了就出发';
+  $('#online-members').innerHTML = ROOMMATES.map((_, i) => `<span class="mini-avatar" title="${ROOMMATES[i].name}">${avatar(i)}</span>`).join('');
+  renderScene();
+  renderJournal();
+  renderNotice();
+  renderSoundButton();
+  $('#save-status').innerHTML = `<span></span>${storageAvailable ? '进度自动保存' : '当前浏览器无法保存进度'}`;
+}
+
+function renderScene() {
+  const haoAway = state.assignments[1] === 'special';
+  const liAway = state.assignments[2] === 'special';
+  const positions = [[382, 383, .9], [747, 371, .86], [567, 361, .86], [494, 430, 1]];
+  const quotes = ['人齐了，但没完全齐。', '早八那么远，床却那么近。', '今天的空气，有夜宵的香气。', '忙归忙，回来记得轻点关门。', '撑住，离周末只差一点点。', '有时候，发呆也是正经事。', '这周的故事，终于快写完了。'];
+  $('#scene-quote').textContent = state.phase === 'ended' ? '四个人的故事，还会继续。' : quotes[state.day - 1];
+  $('#scene-subtitle').textContent = state.phase === 'ended' ? '翻翻碎碎念，看看这一周留下了什么' : '点击室友卡片，安排今天的日常';
+  $('#room-occupancy').textContent = [haoAway ? '浩铭今晚外出' : '浩铭留在宿舍', liAway ? '李睿凌晨归来' : '李睿难得早回'].join(' · ');
+  const notes = ['实验可以晚点结束，夜宵最好趁热。', '约会有约会的甜，宿舍有宿舍的暖。', '请勿擅动他人床位上的零食。', '刚扫完的地，值得全寝室尊重。', '一起赶过的作业，也算一起看过日出。', '今天没有早八，快乐可以慢一点。', '普通的一周，也值得认真纪念。'];
+  $('#scene-note').textContent = `☕ ${notes[state.day - 1]}`;
+  $('#room-people').innerHTML = positions.map(([x, y, scale], i) => {
+    const actionId = state.assignments[i];
+    const away = (i === 1 || i === 2) && actionId === 'special';
+    const person = ROOMMATES[i];
+    const action = actionFor(i, actionId);
+    const bubble = away ? (i === 1 ? '约会中 ♡' : '实验室 · 凌晨回') : actionId === 'rest' ? 'Z z z …' : actionId === 'special' ? action.name : ACTIONS[actionId].status;
+    const portrait = avatar(i).replace('<svg viewBox="0 0 68 76" aria-hidden="true">', '<svg x="-31" y="-76" width="68" height="76" viewBox="0 0 68 76">');
+    return `<g class="room-character ${away ? 'away' : ''} ${actionId === 'rest' ? 'sleepy' : ''}" transform="translate(${x} ${y}) scale(${scale})" role="button" tabindex="${state.phase === 'planning' ? '0' : '-1'}" data-roommate="${i}" aria-label="安排${person.name}的活动"><ellipse cx="2" cy="35" rx="34" ry="10" fill="#776e4a" opacity=".12"/><g class="character-float"><g class="character-body"><path d="M-15-2v26l-5 9H-3l5-31 8 30h17l-5-9-6-25Z" fill="${i === 2 ? '#73899b' : '#677968'}" stroke="#68624e" stroke-width="1.5"/>${portrait}</g></g><g class="bubble"><rect x="-70" y="-111" width="140" height="27" rx="8" fill="#fffbed" stroke="#d4c9ad" stroke-width="1"/><path d="m-4-84 5 6 5-6" fill="#fffbed" stroke="#d4c9ad" stroke-width="1"/><path d="M-3-84h8" stroke="#fffbed" stroke-width="2"/><text x="0" y="-93" text-anchor="middle" fill="${away ? '#af836c' : '#7b856b'}" font-size="11">${bubble}</text></g><rect x="-30" y="37" width="61" height="20" rx="10" fill="#fff8e6" opacity=".94"/><text x="0" y="51" text-anchor="middle" font-size="10" fill="#736e5b">${person.name}</text></g>`;
+  }).join('');
+}
+
+function renderJournal() {
+  $('#journal-count').textContent = `${state.logs.length} 条记录`;
+  const entries = [...state.logs].reverse().slice(0, 6);
+  $('#journal').innerHTML = entries.map(log => `<article class="journal-item ${escape(log.type)} ${state.logs.length === 1 ? 'journal-empty' : ''}"><span class="journal-day">0${log.day}</span><p>${escape(log.text)}<span>第 ${log.day} 天 · ${DAY_NAMES[log.day - 1]}</span></p></article>`).join('');
+}
+
+function renderNotice() {
+  const low = Object.entries(state.stats).filter(([key, value]) => value < (key === 'money' ? 45 : 30));
+  if (state.phase === 'ended') {
+    $('#notice-title').textContent = state.outcome.badge;
+    $('#notice-text').textContent = state.outcome.subtitle;
+  } else if (low.length) {
+    $('#notice-title').textContent = `${METRICS[low[0][0]]}，需要照顾一下。`;
+    $('#notice-text').textContent = low[0][0] === 'money' ? '小金库快见底了。安排兼职或者跑腿，把生活费补回来。' : `${METRICS[low[0][0]]}有点吃紧，调整今天的活动，让这一项缓一缓。`;
+  } else {
+    $('#notice-title').innerHTML = state.day === 7 ? '最后一天<br>今晚争取坐一桌。' : '本周目标<br>一个都不能掉队。';
+    $('#notice-text').textContent = '撑过七天，顾好经费、卫生、友情、学业和精神状态。';
+  }
+}
+
+function openActions(index) {
+  if (state.phase !== 'planning') return;
+  const person = ROOMMATES[index];
+  $('#action-person').innerHTML = `<div class="action-person"><div class="avatar">${avatar(index)}</div><div><strong>${person.name}</strong><small>${person.role}</small></div></div>`;
+  $('#action-title').textContent = `${person.short}，今天怎么安排？`;
+  $('#action-description').textContent = '每人选一项活动，明天还可以重新安排。';
+  $('#action-options').innerHTML = Object.keys(ACTIONS).map(id => {
+    const action = actionFor(index, id);
+    const selected = state.assignments[index] === id;
+    return `<button class="action-option ${selected ? 'selected' : ''}" data-action="${id}" data-index="${index}" aria-pressed="${selected}">${icon(action.icon)}<span><strong>${action.name}</strong><small>${action.note}</small></span>${selected ? `<span class="selected-tick">${icon('check')}</span>` : ''}</button>`;
+  }).join('');
+  showDialog('#action-dialog');
+}
+
+function openEvent() {
+  if (state.phase !== 'event') return;
+  const event = EVENTS[state.event];
+  $('#event-icon').innerHTML = icon(event.icon);
+  $('#event-tag').textContent = event.tag;
+  $('#event-title').textContent = event.title;
+  $('#event-description').textContent = event.text;
+  $('#event-choices').innerHTML = event.choices.map((choice, index) => `<button class="event-choice" data-choice="${index}"><span><strong>${choice.text}</strong><small>${choice.detail}</small></span>${icon('arrow')}</button>`).join('');
+  showDialog('#event-dialog');
+}
+
+function openEnding() {
+  if (state.phase !== 'ended') return;
+  $('#ending-art').innerHTML = ROOMMATES.map((_, i) => `<span class="avatar">${avatar(i)}</span>`).join('');
+  $('#ending-badge').textContent = state.outcome.badge;
+  $('#ending-title').textContent = state.outcome.title;
+  $('#ending-description').textContent = state.outcome.subtitle;
+  $('#ending-stats').innerHTML = ['money', 'clean', 'mood', 'grade', 'energy'].map(key => `<div class="ending-stat"><strong>${key === 'money' ? '¥' : ''}${state.stats[key]}</strong><span>${metricPresentation[key].short}</span></div>`).join('');
+  showDialog('#ending-dialog');
+}
+
+function restart() {
+  document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
+  state = newGame();
+  save();
+  render();
+  playSound('day');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  notify('新的星期一，四个人又集合了。');
+}
+
+function renderSoundButton() {
+  $('#sound-button').innerHTML = icon(soundEnabled ? 'volume' : 'muted');
+  $('#sound-button').setAttribute('aria-label', soundEnabled ? '关闭音效' : '开启音效');
+  $('#sound-button').setAttribute('title', soundEnabled ? '关闭音效' : '开启音效');
+  $('#sound-button').setAttribute('aria-pressed', String(soundEnabled));
+}
+
+$('#roommate-grid').addEventListener('click', event => {
+  const card = event.target.closest('[data-person]');
+  if (card) openActions(Number(card.dataset.person));
+});
+$('#room-people').addEventListener('click', event => {
+  const character = event.target.closest('[data-roommate]');
+  if (character) openActions(Number(character.dataset.roommate));
+});
+$('#room-people').addEventListener('keydown', event => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    const character = event.target.closest('[data-roommate]');
+    if (character) openActions(Number(character.dataset.roommate));
+  }
+});
+$('#action-options').addEventListener('click', event => {
+  const option = event.target.closest('[data-action]');
+  if (!option || state.phase !== 'planning') return;
+  const index = Number(option.dataset.index);
+  state = assignAction(state, index, option.dataset.action);
+  save();
+  render();
+  $('#action-dialog').close();
+  playSound();
+  notify(`${ROOMMATES[index].name}的安排已更新：${actionFor(index, option.dataset.action).name}`);
+});
+$('#advance-button').addEventListener('click', () => {
+  if (state.phase === 'ended') return openEnding();
+  if (state.phase === 'event') return openEvent();
+  state = advanceDay(state);
+  save();
+  render();
+  playSound('day');
+  if (state.phase === 'ended') openEnding();
+  else openEvent();
+});
+$('#event-choices').addEventListener('click', event => {
+  const option = event.target.closest('[data-choice]');
+  if (!option || state.phase !== 'event') return;
+  const result = EVENTS[state.event].choices[Number(option.dataset.choice)].result;
+  state = chooseEvent(state, Number(option.dataset.choice));
+  save();
+  $('#event-dialog').close();
+  render();
+  playSound(state.phase === 'ended' ? 'finish' : 'select');
+  if (state.phase === 'ended') openEnding();
+  else notify(result);
+});
+$('#event-dialog').addEventListener('cancel', event => event.preventDefault());
+document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
+document.querySelectorAll('dialog:not(#event-dialog)').forEach(dialog => dialog.addEventListener('click', event => {
+  if (event.target === dialog) {
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  }
+}));
+$('#help-button').addEventListener('click', () => showDialog('#help-dialog'));
+$('#reset-button').addEventListener('click', () => showDialog('#reset-dialog'));
+$('#confirm-reset').addEventListener('click', restart);
+$('#ending-restart').addEventListener('click', restart);
+$('#sound-button').addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  try { localStorage.setItem(`${SAVE_KEY}-sound`, soundEnabled ? 'on' : 'off'); } catch { /* Optional preference. */ }
+  renderSoundButton();
+  if (soundEnabled) playSound();
+  notify(soundEnabled ? '轻轻的音效，已开启。' : '音效已关闭。');
+});
+
+render();
+save();
+if (state.phase === 'event') openEvent();
+if (state.phase === 'ended') openEnding();
+</script>
+</body>
+</html>
+
